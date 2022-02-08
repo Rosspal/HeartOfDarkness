@@ -3,10 +3,33 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class Person : MonoBehaviour
+public class Person
 {
-    public Health Health;
-    public Characteristic Characteristic;
+    public Health Health = new Health();
+    public Characteristic Characteristic = new Characteristic();
+    public Skills Skills = new Skills();
+    public Abilities Abilities = new Abilities();
 
-    private string name = "void";
+    private string nickname = "void";
+    private short level = 1;
+    private int exp = 0;
+    private string specialization = "void";
+    private string race = "void";
+    private short skillBonus = 2;
+    private short initiative = 0;
+
+
+
+    public string Nickname { get => nickname; set => nickname = value; }
+    public short Level { get => level; set => level = value; }
+    public int Exp { get => exp; set => exp = value; }
+    public string Specialization { get => specialization; set => specialization = value; }
+    public string Race { get => race; set => race = value; }
+    public short SkillBonus { get => skillBonus; set => skillBonus = value; }
+    public short Initiative { get => initiative; set => initiative = value; }
+
+    public string Info()
+    {
+        return nickname + "/" + race + "/" + specialization + "/" + level + "/" + exp + "/"+ Health.Info() + "/" + Characteristic.Info();
+    }
 }

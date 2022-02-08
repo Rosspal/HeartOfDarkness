@@ -3,17 +3,21 @@ using System.Collections.Generic;
 using System.Drawing;
 using UnityEngine;
 
-public class Health : MonoBehaviour
+public class Health
 {
     private short maxHP = 0;
     private short hp = 0;
     private short maxTempHP = 0; //подумать над её необходимотью
     private short tempHp = 0;
     private Point boneHits = new Point(0,0); // X - количество, Y - значение (1d8,2d12 ...)
+    private short hpForLevel = 0;
 
     public delegate void handler(string code);
     public event handler Signal;
 
+    /// <summary>
+    /// конструктор 
+    /// </summary>
     public Health(short _maxHp, short _hp, short _tempHp, int x, int y)
     {
         maxHP = _maxHp;
@@ -23,17 +27,24 @@ public class Health : MonoBehaviour
         boneHits.Y = y;
     }
 
+
+    public Health()
+    {
+
+    }
+
     
     public short MaxHP { get => maxHP; set => maxHP = value; }
     public short MaxTempHP { get => maxTempHP; set => maxTempHP = value; }
     public short TempHp { get => tempHp; set => tempHp = value; }
     public Point BoneHits { get => boneHits; set => boneHits = value; }
     public short Hp { get => hp; set => hp = value; }
+    public short HpForLevel { get => hpForLevel; set => hpForLevel = value; }
 
     /// <summary>
     /// проверка умер ли герой
     /// </summary>
-    private void checkDead()
+    private void CheckDead()
     {
         if (hp <= 0)
         {
@@ -41,7 +52,12 @@ public class Health : MonoBehaviour
         }
     }
 
-    public void damageHP(short n)
+    public void SetHPOneLevel(short phy)
+    {
+        hp = maxHP = (short)(boneHits.Y + phy);
+    }
+
+    public void DamageHP(short n)
     {
         if (tempHp > 0)
         {
@@ -50,13 +66,13 @@ public class Health : MonoBehaviour
             {
                 hp += tempHp; //прибавляем оставшийся урон к основному здоровью
                 tempHp = 0;
-                checkDead();
+                CheckDead();
             }
         }
         else
         {
             hp -= n;
-            checkDead();
+            CheckDead();
         }
     }
 
@@ -73,28 +89,39 @@ public class Health : MonoBehaviour
     }  
 
     //кость хитов
-    public void addBone(int n)
+    public void AddBone(int n)
     {
         boneHits.X += n;
     }
 
-    public void setBoneValue(int n)
+    public void SetBoneValue(int n)
     {
         boneHits.Y = n;
     }
 
-    public void setBoneCount(int n)
+    public void SetBoneCount(int n)
     {
         boneHits.X = n;
     }
 
-    public int countBone()
+    public void SetBone(int x, int y)
+    {
+        boneHits.X = x;
+        boneHits.Y = y;
+    }
+
+    public int CountBone()
     {
         return boneHits.X;
     }
 
-    public int boneValue()
+    public int BoneValue()
     {
         return boneHits.Y;
+    }
+
+    public string Info()
+    {
+        return maxHP + "/" + hp + "/" + tempHp + "/" + boneHits.X + "d" + boneHits.Y;
     }
 }

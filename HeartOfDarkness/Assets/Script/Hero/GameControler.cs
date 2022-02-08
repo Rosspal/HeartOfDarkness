@@ -5,12 +5,11 @@ using UnityEngine;
 public class GameControler : MonoBehaviour
 {
     private EnemyTeam EnemyTeam;
-    private HeroTeam Team;
+    private HeroTeam Team = new HeroTeam();
 
-    //объект содержащий класс спелов
 
     private void Start()
     {
-        
+
     }
 }

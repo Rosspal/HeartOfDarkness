@@ -11,4 +11,5 @@ public class HeroTeam : Team
             new Hero(),
             new Hero()
         };
+    public int count;
 }

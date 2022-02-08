@@ -15,19 +15,19 @@
  </tile>
  <tile id="9" probability="25">
   <properties>
-   <property name="speedCost" type="int" value="5"/>
+   <property name="speedCost" type="int" value="6"/>
   </properties>
   <image width="32" height="48" source="ground/foresAndMeadow.png"/>
  </tile>
  <tile id="10" probability="25">
   <properties>
-   <property name="speedCost" type="int" value="5"/>
+   <property name="speedCost" type="int" value="6"/>
   </properties>
   <image width="32" height="48" source="ground/foresAndMeadow2.png"/>
  </tile>
  <tile id="11" probability="20">
   <properties>
-   <property name="speedCost" type="int" value="5"/>
+   <property name="speedCost" type="int" value="6"/>
   </properties>
   <image width="32" height="48" source="ground/Hill.png"/>
  </tile>
@@ -45,7 +45,7 @@
  </tile>
  <tile id="14" probability="4">
   <properties>
-   <property name="speedCost" type="int" value="4"/>
+   <property name="speedCost" type="int" value="7"/>
   </properties>
   <image width="32" height="48" source="ground/pond.png"/>
  </tile>
@@ -57,7 +57,7 @@
  </tile>
  <tile id="15" probability="3">
   <properties>
-   <property name="speedCost" type="int" value="7"/>
+   <property name="speedCost" type="int" value="8"/>
   </properties>
   <image width="32" height="48" source="ground/pond2.png"/>
  </tile>
@@ -75,13 +75,13 @@
  </tile>
  <tile id="46">
   <properties>
-   <property name="speedCost" type="int" value="9"/>
+   <property name="speedCost" type="int" value="10"/>
   </properties>
   <image width="32" height="48" source="ground/swampAndForest2.png"/>
  </tile>
  <tile id="45">
   <properties>
-   <property name="speedCost" type="int" value="9"/>
+   <property name="speedCost" type="int" value="10"/>
   </properties>
   <image width="32" height="48" source="ground/swampAndForest.png"/>
  </tile>
@@ -111,7 +111,7 @@
  </tile>
  <tile id="44">
   <properties>
-   <property name="speedCost" type="int" value="3"/>
+   <property name="speedCost" type="int" value="15"/>
   </properties>
   <image width="32" height="48" source="ground/swamp404.png"/>
  </tile>
