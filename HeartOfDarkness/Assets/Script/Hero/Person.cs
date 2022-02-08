@@ -40,6 +40,6 @@ public class Person
 
     public string Info()
     {
-        return nickname + "/" + race + "/" + specialization + "/" + level + "/" + exp + "/"+ Health.Info() + "/" + Characteristic.Info();
+        return nickname + "/" + race + "/" + specialization + "/" + level + "/" + exp + "/"+ Health.Info() + "/" + Characteristic.Info() + "/" + Abilities.Info() + "/" + Skills.Info();
     }
 }

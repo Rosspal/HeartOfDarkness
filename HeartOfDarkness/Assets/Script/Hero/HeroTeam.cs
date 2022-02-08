@@ -12,4 +12,10 @@ public class HeroTeam : Team
         team.Add(hero);
         count++;
     }
+
+    public string Info()
+    {
+        
+        return team[0].Info();
+    }
 }

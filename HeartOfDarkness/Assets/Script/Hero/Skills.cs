@@ -178,4 +178,17 @@ public class Skills
             }
         }
     }
+
+    public string Info()
+    {
+        string text = "";
+        for (int i = 0; i != skill.Length; i++)
+        {
+            if (skill[i].own)
+            {
+                text += skill[i].title + "/"; 
+            }
+        }
+        return text;
+    }
 }

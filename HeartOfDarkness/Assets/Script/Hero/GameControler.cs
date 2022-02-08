@@ -12,6 +12,6 @@ public class GameControler : MonoBehaviour
     private void Start()
     {
         Team.AddHero(Gen.Generate());
-
+        Debug.Log(Team.Info());
     }
 }

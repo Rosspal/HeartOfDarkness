@@ -34,4 +34,16 @@ public class Abilities
         ability.Remove(title);
     }
 
+
+    public string Info()
+    {
+        string info = "";
+
+        foreach (var text in ability)
+        {
+            info += text + "/";
+        }
+
+        return info;
+    }
 }

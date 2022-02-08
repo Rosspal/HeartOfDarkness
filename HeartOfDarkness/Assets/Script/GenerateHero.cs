@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GenerateHero : MonoBehaviour
+public class GenerateHero
 {
     private Hero hero = new Hero();
 
