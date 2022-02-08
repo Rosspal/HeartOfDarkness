@@ -139,9 +139,17 @@ public class GenerateHero : MonoBehaviour
                         break;
                     case 7:
                         specialization = "Ронин";
+                        hero.Health.SetBone(1, 8);
+                        hero.Health.HpForLevel = 5;
+                        hero.Skills.AddRandOwn("Акробатика", "Атлетика", "История", "Проницательность", "Религия", "Скрытность");
+                        hero.Skills.AddRandOwn("Акробатика", "Атлетика", "История", "Проницательность", "Религия", "Скрытность");
                         break;
                     case 8:
                         specialization = "Следопыт";
+                        hero.Health.SetBone(1, 10);
+                        hero.Health.HpForLevel = 6;
+                        hero.Skills.AddRandOwn("Атлетика", "Внимательность", "Выживание", "Природа", "Проницательность", "Расследование", "Скрытность", "Уход за животными");
+                        hero.Skills.AddRandOwn("Атлетика", "Внимательность", "Выживание", "Природа", "Проницательность", "Расследование", "Скрытность", "Уход за животными");
                         break;
                 }
                 break;
@@ -165,6 +173,10 @@ public class GenerateHero : MonoBehaviour
                         break;
                     case 3:
                         specialization = "Следопыт";
+                        hero.Health.SetBone(1, 10);
+                        hero.Health.HpForLevel = 6;
+                        hero.Skills.AddRandOwn("Атлетика", "Внимательность", "Выживание", "Природа", "Проницательность", "Расследование", "Скрытность", "Уход за животными");
+                        hero.Skills.AddRandOwn("Атлетика", "Внимательность", "Выживание", "Природа", "Проницательность", "Расследование", "Скрытность", "Уход за животными");
                         break;
                 }
                 break;
@@ -184,6 +196,10 @@ public class GenerateHero : MonoBehaviour
                         break;
                     case 2:
                         specialization = "Жрец";
+                        hero.Health.SetBone(1, 8);
+                        hero.Health.HpForLevel = 5;
+                        hero.Skills.AddRandOwn("История", "Медицина", "Проницательность", "Религия", "Убеждение");
+                        hero.Skills.AddRandOwn("История", "Медицина", "Проницательность", "Религия", "Убеждение");
                         //от расы
                         hero.Abilities.AddAbility("Сопротивление кислоте");
                         hero.Characteristic.AddWisdom(1);
@@ -223,6 +239,10 @@ public class GenerateHero : MonoBehaviour
                         break;
                     case 2:
                         specialization = "Следопыт";
+                        hero.Health.SetBone(1, 10);
+                        hero.Health.HpForLevel = 6;
+                        hero.Skills.AddRandOwn("Атлетика", "Внимательность", "Выживание", "Природа", "Проницательность", "Расследование", "Скрытность", "Уход за животными");
+                        hero.Skills.AddRandOwn("Атлетика", "Внимательность", "Выживание", "Природа", "Проницательность", "Расследование", "Скрытность", "Уход за животными");
                         break;
                 }
                 break;
@@ -239,6 +259,10 @@ public class GenerateHero : MonoBehaviour
                         break;
                     case 2:
                         specialization = "Волшебник";
+                        hero.Health.SetBone(1, 6);
+                        hero.Health.HpForLevel = 4;
+                        hero.Skills.AddRandOwn("История", "Магия", "Медицина", "Проницательность", "Расследование", "Религия");
+                        hero.Skills.AddRandOwn("История", "Магия", "Медицина", "Проницательность", "Расследование", "Религия");
                         break;
                     case 3:
                         specialization = "Монах";
@@ -256,6 +280,10 @@ public class GenerateHero : MonoBehaviour
                         break;
                     case 5:
                         specialization = "Следопыт";
+                        hero.Health.SetBone(1, 10);
+                        hero.Health.HpForLevel = 6;
+                        hero.Skills.AddRandOwn("Атлетика", "Внимательность", "Выживание", "Природа", "Проницательность", "Расследование", "Скрытность", "Уход за животными");
+                        hero.Skills.AddRandOwn("Атлетика", "Внимательность", "Выживание", "Природа", "Проницательность", "Расследование", "Скрытность", "Уход за животными");
                         break;
                 }
                 break;
