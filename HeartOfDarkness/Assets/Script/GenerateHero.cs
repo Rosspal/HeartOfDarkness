@@ -18,27 +18,25 @@ public class GenerateHero : MonoBehaviour
                 hero.Characteristic.AddAgility(1);
                 hero.Characteristic.AddPhysique(1);
                 hero.Characteristic.AddStrength(1);
-                //Темное зрение,Восстановление конечностей,Скелетная природа,Ложный внешний вид,Безмозглый.
+                hero.Abilities.AddAbility("Темное зрение", "Восстановление конечностей", "Скелетная природа", "Безмозглый","Нежить");
                 break;
             case 2:
                 race = "Тифлинг";
                 hero.Characteristic.AddCharisma(2);
                 hero.Characteristic.AddIntelect(1);
-                //скорость 30 футов
-                //Тёмное зрение. 
-                //Адское сопротивление. Вы получаете сопротивление урону огнём.
+                hero.Abilities.AddAbility("Тёмное зрение", "Адское сопротивление");
                 break;
             case 3:
                 race = "Человек";
                 hero.Characteristic.AddAll(1);
-                //скорость 30 футов
+                hero.Abilities.AddAbility("Память отцов");//навык случайный
+                hero.Skills.AddRandOwn();
                 break;
             case 4:
                 race = "Гоблин";
                 hero.Characteristic.AddAgility(2);
                 hero.Characteristic.AddPhysique(1);
-                //скорость 30 футов но думаю 25
-                //Тёмное зрение,Шустрый побег.
+                hero.Abilities.AddAbility("Тёмное зрение", "Шустрый побег");
                 break;
             case 5:
                 race = "Дженази";
@@ -48,28 +46,25 @@ public class GenerateHero : MonoBehaviour
                 race = "Калаштар";
                 hero.Characteristic.AddCharisma(1);
                 hero.Characteristic.AddWisdom(2);
-                //Двойственность разума,Ментальная дисциплина
+                hero.Abilities.AddAbility("Двойственность разума", "Ментальная дисциплина");
                 break;
             case 7:
                 race = "Эльф";
                 hero.Characteristic.AddAgility(2);
                 hero.Characteristic.AddWisdom(1);
-                //Наследие фей. Вы совершаете с преимуществом спасброски от очарования, и вас невозможно магически усыпить.
-                //скорость 35 футов
-                //Обострённые чувства. Вы владеете навыком Внимательность.
-                //Тёмное зрение.
+                hero.Abilities.AddAbility("Наследие фей", "Обострённые чувства", "Тёмное зрение");
                 break;
             case 8:
                 race = "Полуэльф";
                 hero.Characteristic.AddCharisma(2);
                 int randTemp = Random.Range(1, 7);
+                hero.Abilities.AddAbility("Наследие фей", "Универсальность навыков");
+                hero.Skills.AddRandOwn(); hero.Skills.AddRandOwn(); // 2 доп навыка
                 while (randTemp == 5)
                 {
                     randTemp = Random.Range(1, 7);
                 }
                 hero.Characteristic.AddByNumber((short)randTemp,1);
-                //Наследие фей. Вы совершаете с преимуществом спасброски от очарования, и вас невозможно магически усыпить.
-                //Универсальность навыков. Вы получаете владение двумя навыками на ваш выбор.
                 break;
         }
 
@@ -89,26 +84,47 @@ public class GenerateHero : MonoBehaviour
                 }
                 break;
             case 3:
-                randSpec = Random.Range(1, 3);
+                randSpec = Random.Range(1, 9);
                 switch (randSpec)
                 {
                     case 1:
-                        specialization = "Варвар";
+                        specialization = "Викинг";
                         break;
                     case 2:
                         specialization = "Воин";
+                        break;
+                    case 3:
+                        specialization = "Волшебник";
+                        break;
+                    case 4:
+                        specialization = "Монах";
+                        break;
+                    case 5:
+                        specialization = "Паладин";
+                        break;
+                    case 6:
+                        specialization = "Плут";
+                        break;
+                    case 7:
+                        specialization = "Ронин";
+                        break;
+                    case 8:
+                        specialization = "Следопыт";
                         break;
                 }
                 break;
             case 4:
-                randSpec = Random.Range(1, 3);
+                randSpec = Random.Range(1, 4);
                 switch (randSpec)
                 {
                     case 1:
-                        specialization = "Варвар";
+                        specialization = "Воин";
                         break;
                     case 2:
-                        specialization = "Воин";
+                        specialization = "Плут";
+                        break;
+                    case 3:
+                        specialization = "Следопыт";
                         break;
                 }
                 break;
@@ -120,58 +136,59 @@ public class GenerateHero : MonoBehaviour
                         specialization = "Воин";
 
                         //от расы
+                        hero.Abilities.AddAbility("Тёмное зрение", "Сопротивление огню");
                         hero.Characteristic.AddIntelect(1);
                         break;
                     case 2:
                         specialization = "Жрец";
                         //от расы
+                        hero.Abilities.AddAbility("Сопротивление кислоте");
                         hero.Characteristic.AddWisdom(1);
                         break;
                     case 3:
                         specialization = "Монах";
                         //от расы
+                        hero.Abilities.AddAbility("Иммунитет к окаменению");
                         hero.Characteristic.AddStrength(1);
                         break;
                     case 4:
                         specialization = "Плут";
                         //от расы
+                        hero.Abilities.AddAbility("Бесконечное дыхание");
                         hero.Characteristic.AddAgility(1);
                         break;
                 }
                 break;
             case 6:
-                randSpec = Random.Range(1, 2);
+                randSpec = Random.Range(1, 3);
                 switch (randSpec)
                 {
                     case 1:
-                        specialization = "Варвар";
+                        specialization = "Плут";
                         break;
                     case 2:
-                        specialization = "Воин";
+                        specialization = "Следопыт";
                         break;
                 }
                 break;
-            case 7:
-                randSpec = Random.Range(1, 2);
+            case 7 or 8:
+                randSpec = Random.Range(1, 3);
                 switch (randSpec)
                 {
                     case 1:
-                        specialization = "Варвар";
-                        break;
-                    case 2:
                         specialization = "Воин";
                         break;
-                }
-                break;
-            case 8:
-                randSpec = Random.Range(1, 2);
-                switch (randSpec)
-                {
-                    case 1:
-                        specialization = "Варвар";
-                        break;
                     case 2:
-                        specialization = "Воин";
+                        specialization = "Волшебник";
+                        break;
+                    case 3:
+                        specialization = "Монах";
+                        break;
+                    case 4:
+                        specialization = "Плут";
+                        break;
+                    case 5:
+                        specialization = "Следопыт";
                         break;
                 }
                 break;
