@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class GenerateHero : MonoBehaviour
 {
-    private Hero hero;
+    private Hero hero = new Hero();
 
     public Hero Generate()
     {
-        string specialization;
-        string race;
+        string specialization = "";
+        string race = "";
         int randRace = Random.Range(1, 9);
         switch (randRace)
         {
@@ -67,7 +67,7 @@ public class GenerateHero : MonoBehaviour
                 hero.Skills.AddRandOwn(); hero.Skills.AddRandOwn(); // 2 доп навыка
                 break;
         }
-
+        hero.Race = race;
         int randSpec;
         switch (randRace)
         {
@@ -288,7 +288,50 @@ public class GenerateHero : MonoBehaviour
                 }
                 break;
         }
+        hero.Specialization = specialization;
+
+        hero.Characteristic.AddStrength(RandBestOf(4,6,3));
+        hero.Characteristic.AddAgility(RandBestOf(4, 6, 3));
+        hero.Characteristic.AddIntelect(RandBestOf(4, 6, 3));
+        hero.Characteristic.AddWisdom(RandBestOf(4, 6, 3));
+        hero.Characteristic.AddCharisma(RandBestOf(4, 6, 3));
+        hero.Characteristic.AddPhysique(RandBestOf(4, 6, 3));
+
+        short modif = hero.Characteristic.Modifier("Physique");
+        hero.Health.SetHPOneLevel(modif);
+
+        hero.RefreshSkills();
 
         return hero;
+    }
+
+    private short RandBestOf(int count, int value,int bestCount)
+    {
+        int[] dice = new int[count];
+        int max = 0;
+        int maxId = 0;
+        int result = 0;
+
+        for (int i = 0; i != dice.Length; i++)
+        {
+            dice[i] = Random.Range(1,value + 1);
+        }
+
+        for (int j = 0; j != bestCount; j++)
+        {
+            for (int i = 0; i != dice.Length; i++)
+            {
+                if (dice[i] >= max)
+                {
+                    max = dice[i];
+                    maxId = i;
+                }
+            }
+            result += max;
+            dice[maxId] = 0;
+        }
+        
+
+        return (short)result;
     }
 }

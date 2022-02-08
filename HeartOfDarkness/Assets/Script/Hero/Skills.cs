@@ -137,13 +137,14 @@ public class Skills
 
     public void AddRandOwn()
     {
-        int rand = Random.Range(0,18);
-        while (true)
+        int rand = Random.Range(0, 18);
+        bool check = true;
+        while (check)
         {
             if (!skill[rand].own)
             {
                 skill[rand].own = true;
-                break;
+                check = false;
             }
             rand = Random.Range(0, 18);
         }
@@ -155,23 +156,9 @@ public class Skills
         int k = Random.Range(0, title.Length);
         int temp = 0;
 
-        for (int i = 0; i != skill.Length; i++)
+        bool check = true;
+        while (check)
         {
-            if (skill[i].title == title[k])
-            {
-                temp = i;
-                break;
-            }
-        }
-
-        while (true)
-        {
-            if (!skill[temp].own)
-            {
-                skill[temp].own = true;
-                break;
-            }
-
             for (int i = 0; i != skill.Length; i++)
             {
                 if (skill[i].title == title[k])
@@ -179,6 +166,15 @@ public class Skills
                     temp = i;
                     break;
                 }
+            }
+
+            title[k] = "";
+
+            if (!skill[temp].own)
+            {
+                skill[temp].own = true;
+                check = false;
+                break;
             }
         }
     }

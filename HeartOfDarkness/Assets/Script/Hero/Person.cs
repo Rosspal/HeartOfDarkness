@@ -28,6 +28,16 @@ public class Person
     public short SkillBonus { get => skillBonus; set => skillBonus = value; }
     public short Initiative { get => initiative; set => initiative = value; }
 
+    public void RefreshSkills()
+    {
+        short str = Characteristic.Modifier("Strength");
+        short agi = Characteristic.Modifier("Agility");
+        short intel = Characteristic.Modifier("Intelect");
+        short wis = Characteristic.Modifier("Wisdom");
+        short cha = Characteristic.Modifier("Charisma");
+        Skills.refreshValue(str, agi, intel, wis, cha, skillBonus);
+    }
+
     public string Info()
     {
         return nickname + "/" + race + "/" + specialization + "/" + level + "/" + exp + "/"+ Health.Info() + "/" + Characteristic.Info();

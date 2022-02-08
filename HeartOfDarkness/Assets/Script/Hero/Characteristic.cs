@@ -160,42 +160,42 @@ public class Characteristic
         short bm = 0; // бонус мастерства что прибавиться
         switch (name)
         {
-            case "strength":
+            case "Strength":
                 n = strength;
                 if (ownStrength)
                 {
                     bm = bonus;
                 }
                 break;
-            case "agility":
+            case "Agility":
                 if (ownAgility)
                 {
                     bm = bonus;
                 }
                 n = agility;
                 break;
-            case "intelect":
+            case "Intelect":
                 if (ownIntelect)
                 {
                     bm = bonus;
                 }
                 n = intelect;
                 break;
-            case "wisdom":
+            case "Wisdom":
                 if (ownWisdom)
                 {
                     bm = bonus;
                 }
                 n = wisdom;
                 break;
-            case "charisma":
+            case "Charisma":
                 if (ownCharisma)
                 {
                     bm = bonus;
                 }
                 n = charisma;
                 break;
-            case "physique":
+            case "Physique":
                 if (ownPhysique)
                 {
                     bm = bonus;
@@ -242,6 +242,75 @@ public class Characteristic
                 return (short)(9 + bm);
             case 30:
                 return (short)(10 + bm);
+            default:
+                Debug.LogError("превышенно значение характеристики в модификаторе");
+                return 0;
+        }
+    }
+
+    public short Modifier(string name)
+    {
+        short n = 0;
+        switch (name)
+        {
+            case "Strength":
+                n = strength;
+                break;
+            case "Agility":
+                n = agility;
+                break;
+            case "Intelect":
+                n = intelect;
+                break;
+            case "Wisdom":
+                n = wisdom;
+                break;
+            case "Charisma":
+                n = charisma;
+                break;
+            case "Physique":
+                n = physique;
+                break;
+            default:
+                Debug.LogError(" поиск модификатора неизвестной характеристики");
+                break;
+        }
+
+
+        switch (n)
+        {
+            case >= 0 and <= 1:
+                return 5;
+            case >= 2 and <= 3:
+                return -4;
+            case >= 4 and <= 5:
+                return -3;
+            case >= 6 and <= 7:
+                return -2;
+            case >= 8 and <= 9:
+                return -1;
+            case >= 10 and <= 11:
+                return 0;
+            case >= 12 and <= 13:
+                return 1;
+            case >= 14 and <= 15:
+                return 2;
+            case >= 16 and <= 17:
+                return 3;
+            case >= 18 and <= 19:
+                return 4;
+            case >= 20 and <= 21:
+                return 5;
+            case >= 22 and <= 23:
+                return 6;
+            case >= 24 and <= 25:
+                return 7;
+            case >= 26 and <= 27:
+                return 8;
+            case >= 28 and <= 29:
+                return 9;
+            case 30:
+                return 10;
             default:
                 Debug.LogError("превышенно значение характеристики в модификаторе");
                 return 0;
