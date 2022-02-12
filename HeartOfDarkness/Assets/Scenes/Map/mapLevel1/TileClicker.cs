@@ -14,9 +14,10 @@ public class TileClicker : MonoBehaviour
     public Tilemap mapSurface;
     public Tilemap mapDecorations;
     private Vector3Int heroPos = new Vector3Int(-14,2,0);
+    public Canvas Town;
+    public Canvas Camp;
 
-    public Camera battleCamera;
-    public Camera townCamera;
+
     private Camera mainCamera;
 
     public int speed = 55;
@@ -25,10 +26,9 @@ public class TileClicker : MonoBehaviour
 
     void Start()
     {
-        townCamera.enabled = false;
-        battleCamera.enabled = false;
         mainCamera = Camera.main;
-        
+        Town.enabled = false;
+        Camp.enabled = false;
     }
 
 
@@ -40,7 +40,6 @@ public class TileClicker : MonoBehaviour
             clickWorldPosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
             Vector3Int clickCellPosition = mapGround.WorldToCell(clickWorldPosition);
             Vector3Int cellGround = CellClickToCellGround(clickCellPosition);
-
 
             if (CheckMove(heroPos,clickCellPosition))
             {
@@ -54,15 +53,16 @@ public class TileClicker : MonoBehaviour
             }  
         }
 
-        if (Input.GetMouseButtonDown(1))
-        {
+        //для тестов
+        //if (Input.GetMouseButtonDown(1))
+        //{
 
-            clickWorldPosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
-            Vector3Int clickCellPosition = mapSurface.WorldToCell(clickWorldPosition);
-            Vector3Int cellGround = CellClickToCellGround(clickCellPosition);
-            Debug.Log(clickCellPosition);
-            Debug.Log(mapSurface.GetTile(cellGround));
-        }
+        //    clickWorldPosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
+        //    Vector3Int clickCellPosition = mapSurface.WorldToCell(clickWorldPosition);
+        //    Vector3Int cellGround = CellClickToCellGround(clickCellPosition);
+        //    Debug.Log(clickCellPosition);
+        //    Debug.Log(mapSurface.GetTile(cellGround));
+        //}
     }
 
     private Vector3Int CellClickToCellGround(Vector3Int pos)
@@ -312,8 +312,9 @@ public class TileClicker : MonoBehaviour
             switch (mapSurface.GetTile(pos).name)
             {
                 case "Tile_surface_27": //город 
-                    mainCamera.enabled = false;
-                    townCamera.enabled = true;
+                    //mainCamera.enabled = false;
+                    Town.enabled = true;
+                    this.GetComponent<MoveCamera>().useCameraMovement = false;
                     return false;
                 case "Tile_surface_2"://погост
                     break;
