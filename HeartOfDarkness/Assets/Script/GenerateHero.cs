@@ -1,16 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
+using System.IO;
 
 public class GenerateHero
 {
-    private Hero hero = new Hero();
+    private Hero hero;
 
     public Hero Generate()
     {
+        hero = new Hero();
         string specialization = "";
         string race = "";
-        int randRace = Random.Range(1, 9);
+        int randRace = UnityEngine.Random.Range(1, 9);
         switch (randRace)
         {
             case 1:
@@ -57,11 +60,11 @@ public class GenerateHero
             case 8:
                 race = "Полуэльф";
                 hero.Characteristic.AddCharisma(2);
-                int randTemp = Random.Range(1, 7);
+                int randTemp = UnityEngine.Random.Range(1, 7);
                 hero.Abilities.AddAbility("Наследие фей", "Универсальность навыков");
                 while (randTemp == 5)
                 {
-                    randTemp = Random.Range(1, 7);
+                    randTemp = UnityEngine.Random.Range(1, 7);
                 }
                 hero.Characteristic.AddByNumber((short)randTemp,1);
                 hero.Skills.AddRandOwn(); hero.Skills.AddRandOwn(); // 2 доп навыка
@@ -72,7 +75,7 @@ public class GenerateHero
         switch (randRace)
         {
             case 1 or 2:
-                randSpec = Random.Range(1, 3);
+                randSpec = UnityEngine.Random.Range(1, 3);
                 switch (randSpec)
                 {
                     case 1:
@@ -92,7 +95,7 @@ public class GenerateHero
                 }
                 break;
             case 3:
-                randSpec = Random.Range(1, 9);
+                randSpec = UnityEngine.Random.Range(1, 9);
                 switch (randSpec)
                 {
                     case 1:
@@ -154,7 +157,7 @@ public class GenerateHero
                 }
                 break;
             case 4:
-                randSpec = Random.Range(1, 4);
+                randSpec = UnityEngine.Random.Range(1, 4);
                 switch (randSpec)
                 {
                     case 1:
@@ -181,7 +184,7 @@ public class GenerateHero
                 }
                 break;
             case 5:
-                randSpec = Random.Range(1, 5);
+                randSpec = UnityEngine.Random.Range(1, 5);
                 switch (randSpec)
                 {
                     case 1:
@@ -227,7 +230,7 @@ public class GenerateHero
                 }
                 break;
             case 6:
-                randSpec = Random.Range(1, 3);
+                randSpec = UnityEngine.Random.Range(1, 3);
                 switch (randSpec)
                 {
                     case 1:
@@ -247,7 +250,7 @@ public class GenerateHero
                 }
                 break;
             case 7 or 8:
-                randSpec = Random.Range(1, 6);
+                randSpec = UnityEngine.Random.Range(1, 6);
                 switch (randSpec)
                 {
                     case 1:
@@ -302,8 +305,40 @@ public class GenerateHero
 
         hero.RefreshSkills();
 
+        hero.Nickname = NameGenerate(race);
+
         return hero;
     }
+
+    public string NameGenerate(string race)
+    {
+        string fileName = race + ".txt";
+        bool check = true;
+        string result = "";
+
+        if (!System.IO.File.Exists(fileName))
+        {
+            check = false;
+        }
+
+        if (check)
+        {
+            using (StreamReader sw = new StreamReader(fileName))
+            {
+                while (!sw.EndOfStream)
+                {
+                    string str = sw.ReadLine();
+                    String[] dataFromFile = str.Split(new String[] { "," },StringSplitOptions.RemoveEmptyEntries);
+                    int rand = UnityEngine.Random.Range(0,dataFromFile.Length);
+                    result = dataFromFile[rand];
+                }
+            }
+        }
+
+
+        return result;
+    }
+
 
     private short RandBestOf(int count, int value,int bestCount)
     {
@@ -314,7 +349,7 @@ public class GenerateHero
 
         for (int i = 0; i != dice.Length; i++)
         {
-            dice[i] = Random.Range(1,value + 1);
+            dice[i] = UnityEngine.Random.Range(1,value + 1);
         }
 
         for (int j = 0; j != bestCount; j++)

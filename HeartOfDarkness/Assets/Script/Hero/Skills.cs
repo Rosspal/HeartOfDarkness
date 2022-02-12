@@ -164,17 +164,20 @@ public class Skills
                 if (skill[i].title == title[k])
                 {
                     temp = i;
-                    break;
                 }
             }
 
-            title[k] = "";
+            title[k] = "void";
 
             if (!skill[temp].own)
             {
                 skill[temp].own = true;
                 check = false;
-                break;
+                //break;
+            }
+            else
+            {
+                k = Random.Range(0, title.Length);
             }
         }
     }

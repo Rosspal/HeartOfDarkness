@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class GameControler : MonoBehaviour
 {
@@ -11,7 +12,25 @@ public class GameControler : MonoBehaviour
 
     private void Start()
     {
-        Team.AddHero(Gen.Generate());
-        Debug.Log(Team.Info());
+    }
+
+    private void Update()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            Team.AddHero(Gen.Generate());
+            Team.AddHero(Gen.Generate());
+            Team.AddHero(Gen.Generate());
+            Team.AddHero(Gen.Generate());
+            Debug.Log(Team.Info(0));
+            Debug.Log(Team.Info(1));
+            Debug.Log(Team.Info(2));
+            Debug.Log(Team.Info(3));
+        }
+
+        if (Input.GetMouseButtonDown(1))
+        {
+            Team.DeleteHero();
+        }
     }
 }

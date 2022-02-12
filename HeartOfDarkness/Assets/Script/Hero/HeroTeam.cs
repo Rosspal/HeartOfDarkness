@@ -5,17 +5,22 @@ using UnityEngine;
 public class HeroTeam : Team
 {
     public new List<Hero> team = new();
-    public int count = 0;
 
     public void AddHero(Hero hero)
     {
-        team.Add(hero);
-        count++;
+        if (team.Count < 4)
+        {
+            team.Add(hero);
+        }
     }
 
-    public string Info()
+    public void DeleteHero()
     {
-        
-        return team[0].Info();
+        team.Clear(); 
+    }
+
+    public string Info(int i)
+    {
+        return team[i].Info();
     }
 }
