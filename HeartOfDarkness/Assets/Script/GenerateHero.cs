@@ -74,7 +74,34 @@ public class GenerateHero
         int randSpec;
         switch (randRace)
         {
-            case 1 or 2:
+            case 1:
+                randSpec = UnityEngine.Random.Range(1, 4);
+                switch (randSpec)
+                {
+                    case 1:
+                        specialization = "Варвар";
+                        hero.Health.SetBone(1, 12);
+                        hero.Health.HpForLevel = 7;
+                        hero.Skills.AddRandOwn("Атлетика", "Внимательность", "Выживание", "Запугивание", "Природа", "Уход за животными");
+                        hero.Skills.AddRandOwn("Атлетика", "Внимательность", "Выживание", "Запугивание", "Природа", "Уход за животными");
+                        break;
+                    case 2:
+                        specialization = "Воин";
+                        hero.Health.SetBone(1, 10);
+                        hero.Health.HpForLevel = 6;
+                        hero.Skills.AddRandOwn("Акробатика", "Атлетика", "Внимательность", "Выживание", "Запугивание", "История", "Проницательность", "Уход за животными");
+                        hero.Skills.AddRandOwn("Акробатика", "Атлетика", "Внимательность", "Выживание", "Запугивание", "История", "Проницательность", "Уход за животными");
+                        break;
+                    case 3:
+                        specialization = "Монах";
+                        hero.Health.SetBone(1, 8);
+                        hero.Health.HpForLevel = 5;
+                        hero.Skills.AddRandOwn("Акробатика", "Атлетика", "История", "Проницательность", "Религия", "Скрытность");
+                        hero.Skills.AddRandOwn("Акробатика", "Атлетика", "История", "Проницательность", "Религия", "Скрытность");
+                        break;
+                }
+                break;
+            case 2:
                 randSpec = UnityEngine.Random.Range(1, 3);
                 switch (randSpec)
                 {
@@ -95,7 +122,7 @@ public class GenerateHero
                 }
                 break;
             case 3:
-                randSpec = UnityEngine.Random.Range(1, 9);
+                randSpec = UnityEngine.Random.Range(1, 8);
                 switch (randSpec)
                 {
                     case 1:
@@ -134,20 +161,13 @@ public class GenerateHero
                         hero.Skills.AddRandOwn("Атлетика", "Запугивание", "Медицина", "Проницательность", "Религия", "Убеждение");
                         break;
                     case 6:
-                        specialization = "Плут";
-                        hero.Health.SetBone(1, 8);
-                        hero.Health.HpForLevel = 5;
-                        hero.Skills.AddRandOwn("Акробатика", "Атлетика", "Внимательность", "Выступление", "Запугивание", "Ловкость рук", "Обман", "Проницательность", "Расследование", "Скрытность", "Убеждение");
-                        hero.Skills.AddRandOwn("Акробатика", "Атлетика", "Внимательность", "Выступление", "Запугивание", "Ловкость рук", "Обман", "Проницательность", "Расследование", "Скрытность", "Убеждение");
-                        break;
-                    case 7:
                         specialization = "Ронин";
                         hero.Health.SetBone(1, 8);
                         hero.Health.HpForLevel = 5;
                         hero.Skills.AddRandOwn("Акробатика", "Атлетика", "История", "Проницательность", "Религия", "Скрытность");
                         hero.Skills.AddRandOwn("Акробатика", "Атлетика", "История", "Проницательность", "Религия", "Скрытность");
                         break;
-                    case 8:
+                    case 7:
                         specialization = "Следопыт";
                         hero.Health.SetBone(1, 10);
                         hero.Health.HpForLevel = 6;
@@ -249,7 +269,41 @@ public class GenerateHero
                         break;
                 }
                 break;
-            case 7 or 8:
+            case 7:
+                randSpec = UnityEngine.Random.Range(1, 5);
+                switch (randSpec)
+                {
+                    case 1:
+                        specialization = "Воин";
+                        hero.Health.SetBone(1, 10);
+                        hero.Health.HpForLevel = 6;
+                        hero.Skills.AddRandOwn("Акробатика", "Атлетика", "Внимательность", "Выживание", "Запугивание", "История", "Проницательность", "Уход за животными");
+                        hero.Skills.AddRandOwn("Акробатика", "Атлетика", "Внимательность", "Выживание", "Запугивание", "История", "Проницательность", "Уход за животными");
+                        break;
+                    case 2:
+                        specialization = "Волшебник";
+                        hero.Health.SetBone(1, 6);
+                        hero.Health.HpForLevel = 4;
+                        hero.Skills.AddRandOwn("История", "Магия", "Медицина", "Проницательность", "Расследование", "Религия");
+                        hero.Skills.AddRandOwn("История", "Магия", "Медицина", "Проницательность", "Расследование", "Религия");
+                        break;
+                    case 3:
+                        specialization = "Паладин";
+                        hero.Health.SetBone(1, 10);
+                        hero.Health.HpForLevel = 6;
+                        hero.Skills.AddRandOwn("Атлетика", "Запугивание", "Медицина", "Проницательность", "Религия", "Убеждение");
+                        hero.Skills.AddRandOwn("Атлетика", "Запугивание", "Медицина", "Проницательность", "Религия", "Убеждение");
+                        break;
+                    case 4:
+                        specialization = "Следопыт";
+                        hero.Health.SetBone(1, 10);
+                        hero.Health.HpForLevel = 6;
+                        hero.Skills.AddRandOwn("Атлетика", "Внимательность", "Выживание", "Природа", "Проницательность", "Расследование", "Скрытность", "Уход за животными");
+                        hero.Skills.AddRandOwn("Атлетика", "Внимательность", "Выживание", "Природа", "Проницательность", "Расследование", "Скрытность", "Уход за животными");
+                        break;
+                }
+                break;
+            case 8:
                 randSpec = UnityEngine.Random.Range(1, 6);
                 switch (randSpec)
                 {
@@ -268,11 +322,11 @@ public class GenerateHero
                         hero.Skills.AddRandOwn("История", "Магия", "Медицина", "Проницательность", "Расследование", "Религия");
                         break;
                     case 3:
-                        specialization = "Монах";
-                        hero.Health.SetBone(1, 8);
-                        hero.Health.HpForLevel = 5;
-                        hero.Skills.AddRandOwn("Акробатика", "Атлетика", "История", "Проницательность", "Религия", "Скрытность");
-                        hero.Skills.AddRandOwn("Акробатика", "Атлетика", "История", "Проницательность", "Религия", "Скрытность");
+                        specialization = "Паладин";
+                        hero.Health.SetBone(1, 10);
+                        hero.Health.HpForLevel = 6;
+                        hero.Skills.AddRandOwn("Атлетика", "Запугивание", "Медицина", "Проницательность", "Религия", "Убеждение");
+                        hero.Skills.AddRandOwn("Атлетика", "Запугивание", "Медицина", "Проницательность", "Религия", "Убеждение");
                         break;
                     case 4:
                         specialization = "Плут";
