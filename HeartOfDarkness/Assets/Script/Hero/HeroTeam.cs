@@ -23,4 +23,18 @@ public class HeroTeam : Team
     {
         return team[i].Info();
     }
+
+    public string[] ModelNameAll()
+    {
+        string[] result = new string[team.Count];
+        int count = 0;
+
+        foreach (var hero in team)
+        {
+            result[count] = hero.Race + hero.Specialization;
+            count++;
+        }
+
+        return result;
+    }
 }

@@ -361,6 +361,25 @@ public class GenerateHero
 
         hero.Nickname = NameGenerate(race);
 
+
+        hero.Race = "Elf";
+
+        int temp = UnityEngine.Random.Range(1, 4);
+        switch (temp)
+        {
+            case 1:
+                hero.Specialization = "Fighter";
+                break;
+            case 2:
+                hero.Specialization = "Paladin";
+                break;
+            case 3:
+                hero.Specialization = "Ranger";
+                break;
+        }
+
+
+
         return hero;
     }
 
