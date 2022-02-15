@@ -46,14 +46,10 @@ public class CharacterModel : MonoBehaviour
 
             if (name == title)
             {
-                Debug.Log("id на котором нашёл схождение" + i);
                 id.Add(i);
             }
         }
-        Debug.Log("Количество находок" + id.Count);
         int rand = Random.Range(0, id.Count);
-
-        Debug.Log("имя конечной модели = " + characterList[rand].name);
 
         return characterList[id[rand]];
     }

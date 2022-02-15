@@ -75,7 +75,7 @@ public class GenerateHero
         switch (randRace)
         {
             case 1:
-                randSpec = UnityEngine.Random.Range(1, 4);
+                randSpec = UnityEngine.Random.Range(1, 3);
                 switch (randSpec)
                 {
                     case 1:
@@ -86,13 +86,6 @@ public class GenerateHero
                         hero.Skills.AddRandOwn("Атлетика", "Внимательность", "Выживание", "Запугивание", "Природа", "Уход за животными");
                         break;
                     case 2:
-                        specialization = "Воин";
-                        hero.Health.SetBone(1, 10);
-                        hero.Health.HpForLevel = 6;
-                        hero.Skills.AddRandOwn("Акробатика", "Атлетика", "Внимательность", "Выживание", "Запугивание", "История", "Проницательность", "Уход за животными");
-                        hero.Skills.AddRandOwn("Акробатика", "Атлетика", "Внимательность", "Выживание", "Запугивание", "История", "Проницательность", "Уход за животными");
-                        break;
-                    case 3:
                         specialization = "Монах";
                         hero.Health.SetBone(1, 8);
                         hero.Health.HpForLevel = 5;
