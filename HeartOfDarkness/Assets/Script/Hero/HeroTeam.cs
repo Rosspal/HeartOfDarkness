@@ -31,7 +31,7 @@ public class HeroTeam : Team
 
         foreach (var hero in team)
         {
-            result[count] = hero.Race + hero.Specialization;
+            result[count] = hero.Modelname;
             count++;
         }
 

@@ -2,32 +2,21 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-struct character
-{
-    public GameObject model;
-    //public
-}
-
 
 
 public class CharacterModel : MonoBehaviour
 {
-    [SerializeField] GameObject character1;
-    [SerializeField] GameObject character2;
-    [SerializeField] GameObject character3;
-    [SerializeField] GameObject character4;
-    [SerializeField] GameObject character5;
 
     private List<GameObject> characterList = new List<GameObject>();
 
     // Start is called before the first frame update
     void Start()
     {
-        characterList.Add(character1);
-        characterList.Add(character2);
-        characterList.Add(character3);
-        characterList.Add(character4);
-        characterList.Add(character5);
+        int count = GetComponent<AllCharacter>().model.Length;
+        for (int i = 0; i != count; i++)
+        {
+            characterList.Add(GetComponent<AllCharacter>().model[i]);// запись всех спрайтов в список
+        }
     }
 
     public int Count()

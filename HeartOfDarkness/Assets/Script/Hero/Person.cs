@@ -17,6 +17,7 @@ public class Person
     private string race = "void";
     private short skillBonus = 2;
     private short initiative = 0;
+    private string modelName = "void";
 
 
 
@@ -27,6 +28,7 @@ public class Person
     public string Race { get => race; set => race = value; }
     public short SkillBonus { get => skillBonus; set => skillBonus = value; }
     public short Initiative { get => initiative; set => initiative = value; }
+    public string Modelname { get => modelName; set => modelName = value; }
 
     public void RefreshSkills()
     {

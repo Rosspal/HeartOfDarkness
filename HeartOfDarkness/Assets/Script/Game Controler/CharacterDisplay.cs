@@ -11,11 +11,6 @@ public class CharacterDisplay : MonoBehaviour
 
     private GameObject[] newHero = new GameObject[4];
 
-    private void Start()
-    {
-        
-    }
-
     public void Display(string[] name)
     {
         GameObject hero = GetComponent<CharacterModel>().GetCharacterRandom(name[0]);

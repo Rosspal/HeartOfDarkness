@@ -18,6 +18,7 @@ public class GenerateHero
         {
             case 1:
                 race = "Скелет";
+                hero.Modelname = "Skelet";
                 hero.Characteristic.AddAgility(1);
                 hero.Characteristic.AddPhysique(1);
                 hero.Characteristic.AddStrength(1);
@@ -25,40 +26,47 @@ public class GenerateHero
                 break;
             case 2:
                 race = "Тифлинг";
+                hero.Modelname = "Tiefling";
                 hero.Characteristic.AddCharisma(2);
                 hero.Characteristic.AddIntelect(1);
                 hero.Abilities.AddAbility("Тёмное зрение", "Адское сопротивление");
                 break;
             case 3:
                 race = "Человек";
+                hero.Modelname = "Human";
                 hero.Characteristic.AddAll(1);
                 hero.Abilities.AddAbility("Память отцов");//навык случайный
                 hero.Skills.AddRandOwn();
                 break;
             case 4:
                 race = "Гоблин";
+                hero.Modelname = "Goblin";
                 hero.Characteristic.AddAgility(2);
                 hero.Characteristic.AddPhysique(1);
                 hero.Abilities.AddAbility("Тёмное зрение", "Шустрый побег");
                 break;
             case 5:
                 race = "Дженази";
+                hero.Modelname = "Genasi";
                 hero.Characteristic.AddPhysique(2);
                 break;
             case 6:
                 race = "Калаштар";
+                hero.Modelname = "Kalashtar";
                 hero.Characteristic.AddCharisma(1);
                 hero.Characteristic.AddWisdom(2);
                 hero.Abilities.AddAbility("Двойственность разума", "Ментальная дисциплина");
                 break;
             case 7:
                 race = "Эльф";
+                hero.Modelname = "Elf";
                 hero.Characteristic.AddAgility(2);
                 hero.Characteristic.AddWisdom(1);
                 hero.Abilities.AddAbility("Наследие фей", "Обострённые чувства", "Тёмное зрение");
                 break;
             case 8:
                 race = "Полуэльф";
+                hero.Modelname = "Half-Elf";
                 hero.Characteristic.AddCharisma(2);
                 int randTemp = UnityEngine.Random.Range(1, 7);
                 hero.Abilities.AddAbility("Наследие фей", "Универсальность навыков");
@@ -80,6 +88,7 @@ public class GenerateHero
                 {
                     case 1:
                         specialization = "Варвар";
+                        hero.Modelname += "Barbarian";
                         hero.Health.SetBone(1, 12);
                         hero.Health.HpForLevel = 7;
                         hero.Skills.AddRandOwn("Атлетика", "Внимательность", "Выживание", "Запугивание", "Природа", "Уход за животными");
@@ -87,6 +96,7 @@ public class GenerateHero
                         break;
                     case 2:
                         specialization = "Монах";
+                        hero.Modelname += "Monk";
                         hero.Health.SetBone(1, 8);
                         hero.Health.HpForLevel = 5;
                         hero.Skills.AddRandOwn("Акробатика", "Атлетика", "История", "Проницательность", "Религия", "Скрытность");
@@ -100,6 +110,7 @@ public class GenerateHero
                 {
                     case 1:
                         specialization = "Варвар";
+                        hero.Modelname += "Barbarian";
                         hero.Health.SetBone(1, 12);
                         hero.Health.HpForLevel = 7;
                         hero.Skills.AddRandOwn("Атлетика", "Внимательность", "Выживание", "Запугивание", "Природа", "Уход за животными");
@@ -107,6 +118,7 @@ public class GenerateHero
                         break;
                     case 2:
                         specialization = "Воин";
+                        hero.Modelname += "Fighter";
                         hero.Health.SetBone(1, 10);
                         hero.Health.HpForLevel = 6;
                         hero.Skills.AddRandOwn("Акробатика", "Атлетика", "Внимательность", "Выживание", "Запугивание", "История", "Проницательность", "Уход за животными");
@@ -120,6 +132,7 @@ public class GenerateHero
                 {
                     case 1:
                         specialization = "Викинг";
+                        hero.Modelname += "Viking";
                         hero.Health.SetBone(1, 12);
                         hero.Health.HpForLevel = 7;
                         hero.Skills.AddRandOwn("Атлетика", "Внимательность", "Выживание", "Запугивание", "Религия");
@@ -127,6 +140,7 @@ public class GenerateHero
                         break;
                     case 2:
                         specialization = "Воин";
+                        hero.Modelname += "Fighter";
                         hero.Health.SetBone(1, 10);
                         hero.Health.HpForLevel = 6;
                         hero.Skills.AddRandOwn("Акробатика", "Атлетика", "Внимательность", "Выживание", "Запугивание", "История", "Проницательность", "Уход за животными");
@@ -134,6 +148,7 @@ public class GenerateHero
                         break;
                     case 3:
                         specialization = "Волшебник";
+                        hero.Modelname += "Wizard";
                         hero.Health.SetBone(1, 6);
                         hero.Health.HpForLevel = 4;
                         hero.Skills.AddRandOwn("История", "Магия", "Медицина", "Проницательность", "Расследование", "Религия");
@@ -141,6 +156,7 @@ public class GenerateHero
                         break;
                     case 4:
                         specialization = "Монах";
+                        hero.Modelname += "Monk";
                         hero.Health.SetBone(1, 8);
                         hero.Health.HpForLevel = 5;
                         hero.Skills.AddRandOwn("Акробатика", "Атлетика", "История", "Проницательность", "Религия", "Скрытность");
@@ -148,6 +164,7 @@ public class GenerateHero
                         break;
                     case 5:
                         specialization = "Паладин";
+                        hero.Modelname += "Paladin";
                         hero.Health.SetBone(1, 10);
                         hero.Health.HpForLevel = 6;
                         hero.Skills.AddRandOwn("Атлетика", "Запугивание", "Медицина", "Проницательность", "Религия", "Убеждение");
@@ -155,6 +172,7 @@ public class GenerateHero
                         break;
                     case 6:
                         specialization = "Ронин";
+                        hero.Modelname += "Ronin";
                         hero.Health.SetBone(1, 8);
                         hero.Health.HpForLevel = 5;
                         hero.Skills.AddRandOwn("Акробатика", "Атлетика", "История", "Проницательность", "Религия", "Скрытность");
@@ -162,6 +180,7 @@ public class GenerateHero
                         break;
                     case 7:
                         specialization = "Следопыт";
+                        hero.Modelname += "Ranger";
                         hero.Health.SetBone(1, 10);
                         hero.Health.HpForLevel = 6;
                         hero.Skills.AddRandOwn("Атлетика", "Внимательность", "Выживание", "Природа", "Проницательность", "Расследование", "Скрытность", "Уход за животными");
@@ -175,6 +194,7 @@ public class GenerateHero
                 {
                     case 1:
                         specialization = "Воин";
+                        hero.Modelname += "Fighter";
                         hero.Health.SetBone(1, 10);
                         hero.Health.HpForLevel = 6;
                         hero.Skills.AddRandOwn("Акробатика", "Атлетика", "Внимательность", "Выживание", "Запугивание", "История", "Проницательность", "Уход за животными");
@@ -182,6 +202,7 @@ public class GenerateHero
                         break;
                     case 2:
                         specialization = "Плут";
+                        hero.Modelname += "Rogue";
                         hero.Health.SetBone(1, 8);
                         hero.Health.HpForLevel = 5;
                         hero.Skills.AddRandOwn("Акробатика", "Атлетика", "Внимательность", "Выступление", "Запугивание", "Ловкость рук", "Обман", "Проницательность", "Расследование", "Скрытность", "Убеждение");
@@ -189,6 +210,7 @@ public class GenerateHero
                         break;
                     case 3:
                         specialization = "Следопыт";
+                        hero.Modelname += "Ranger";
                         hero.Health.SetBone(1, 10);
                         hero.Health.HpForLevel = 6;
                         hero.Skills.AddRandOwn("Атлетика", "Внимательность", "Выживание", "Природа", "Проницательность", "Расследование", "Скрытность", "Уход за животными");
@@ -202,6 +224,7 @@ public class GenerateHero
                 {
                     case 1:
                         specialization = "Воин";
+                        hero.Modelname += "Fighter";
                         hero.Health.SetBone(1, 10);
                         hero.Health.HpForLevel = 6;
                         hero.Skills.AddRandOwn("Акробатика", "Атлетика", "Внимательность", "Выживание", "Запугивание", "История", "Проницательность", "Уход за животными");
@@ -212,6 +235,7 @@ public class GenerateHero
                         break;
                     case 2:
                         specialization = "Жрец";
+                        hero.Modelname += "Cleric";
                         hero.Health.SetBone(1, 8);
                         hero.Health.HpForLevel = 5;
                         hero.Skills.AddRandOwn("История", "Медицина", "Проницательность", "Религия", "Убеждение");
@@ -222,6 +246,7 @@ public class GenerateHero
                         break;
                     case 3:
                         specialization = "Монах";
+                        hero.Modelname += "Monk";
                         hero.Health.SetBone(1, 8);
                         hero.Health.HpForLevel = 5;
                         hero.Skills.AddRandOwn("Акробатика", "Атлетика", "История", "Проницательность", "Религия", "Скрытность");
@@ -232,6 +257,7 @@ public class GenerateHero
                         break;
                     case 4:
                         specialization = "Плут";
+                        hero.Modelname += "Rogue";
                         hero.Health.SetBone(1, 8);
                         hero.Health.HpForLevel = 5;
                         hero.Skills.AddRandOwn("Акробатика", "Атлетика", "Внимательность", "Выступление", "Запугивание", "Ловкость рук", "Обман", "Проницательность", "Расследование", "Скрытность", "Убеждение");
@@ -248,6 +274,7 @@ public class GenerateHero
                 {
                     case 1:
                         specialization = "Плут";
+                        hero.Modelname += "Rogue";
                         hero.Health.SetBone(1, 8);
                         hero.Health.HpForLevel = 5;
                         hero.Skills.AddRandOwn("Акробатика", "Атлетика", "Внимательность", "Выступление", "Запугивание", "Ловкость рук", "Обман", "Проницательность", "Расследование", "Скрытность", "Убеждение");
@@ -255,6 +282,7 @@ public class GenerateHero
                         break;
                     case 2:
                         specialization = "Следопыт";
+                        hero.Modelname += "Ranger";
                         hero.Health.SetBone(1, 10);
                         hero.Health.HpForLevel = 6;
                         hero.Skills.AddRandOwn("Атлетика", "Внимательность", "Выживание", "Природа", "Проницательность", "Расследование", "Скрытность", "Уход за животными");
@@ -268,6 +296,7 @@ public class GenerateHero
                 {
                     case 1:
                         specialization = "Воин";
+                        hero.Modelname += "Fighter";
                         hero.Health.SetBone(1, 10);
                         hero.Health.HpForLevel = 6;
                         hero.Skills.AddRandOwn("Акробатика", "Атлетика", "Внимательность", "Выживание", "Запугивание", "История", "Проницательность", "Уход за животными");
@@ -275,6 +304,7 @@ public class GenerateHero
                         break;
                     case 2:
                         specialization = "Волшебник";
+                        hero.Modelname += "Wizard";
                         hero.Health.SetBone(1, 6);
                         hero.Health.HpForLevel = 4;
                         hero.Skills.AddRandOwn("История", "Магия", "Медицина", "Проницательность", "Расследование", "Религия");
@@ -282,6 +312,7 @@ public class GenerateHero
                         break;
                     case 3:
                         specialization = "Паладин";
+                        hero.Modelname += "Paladin";
                         hero.Health.SetBone(1, 10);
                         hero.Health.HpForLevel = 6;
                         hero.Skills.AddRandOwn("Атлетика", "Запугивание", "Медицина", "Проницательность", "Религия", "Убеждение");
@@ -289,6 +320,7 @@ public class GenerateHero
                         break;
                     case 4:
                         specialization = "Следопыт";
+                        hero.Modelname += "Ranger";
                         hero.Health.SetBone(1, 10);
                         hero.Health.HpForLevel = 6;
                         hero.Skills.AddRandOwn("Атлетика", "Внимательность", "Выживание", "Природа", "Проницательность", "Расследование", "Скрытность", "Уход за животными");
@@ -302,6 +334,7 @@ public class GenerateHero
                 {
                     case 1:
                         specialization = "Воин";
+                        hero.Modelname += "Fighter";
                         hero.Health.SetBone(1, 10);
                         hero.Health.HpForLevel = 6;
                         hero.Skills.AddRandOwn("Акробатика", "Атлетика", "Внимательность", "Выживание", "Запугивание", "История", "Проницательность", "Уход за животными");
@@ -309,6 +342,7 @@ public class GenerateHero
                         break;
                     case 2:
                         specialization = "Волшебник";
+                        hero.Modelname += "Wizard";
                         hero.Health.SetBone(1, 6);
                         hero.Health.HpForLevel = 4;
                         hero.Skills.AddRandOwn("История", "Магия", "Медицина", "Проницательность", "Расследование", "Религия");
@@ -316,6 +350,7 @@ public class GenerateHero
                         break;
                     case 3:
                         specialization = "Паладин";
+                        hero.Modelname += "Paladin";
                         hero.Health.SetBone(1, 10);
                         hero.Health.HpForLevel = 6;
                         hero.Skills.AddRandOwn("Атлетика", "Запугивание", "Медицина", "Проницательность", "Религия", "Убеждение");
@@ -323,6 +358,7 @@ public class GenerateHero
                         break;
                     case 4:
                         specialization = "Плут";
+                        hero.Modelname += "Rogue";
                         hero.Health.SetBone(1, 8);
                         hero.Health.HpForLevel = 5;
                         hero.Skills.AddRandOwn("Акробатика", "Атлетика", "Внимательность", "Выступление", "Запугивание", "Ловкость рук", "Обман", "Проницательность", "Расследование", "Скрытность", "Убеждение");
@@ -330,6 +366,7 @@ public class GenerateHero
                         break;
                     case 5:
                         specialization = "Следопыт";
+                        hero.Modelname += "Ranger";
                         hero.Health.SetBone(1, 10);
                         hero.Health.HpForLevel = 6;
                         hero.Skills.AddRandOwn("Атлетика", "Внимательность", "Выживание", "Природа", "Проницательность", "Расследование", "Скрытность", "Уход за животными");
@@ -353,24 +390,6 @@ public class GenerateHero
         hero.RefreshSkills();
 
         hero.Nickname = NameGenerate(race);
-
-
-        hero.Race = "Elf";
-
-        int temp = UnityEngine.Random.Range(1, 4);
-        switch (temp)
-        {
-            case 1:
-                hero.Specialization = "Fighter";
-                break;
-            case 2:
-                hero.Specialization = "Paladin";
-                break;
-            case 3:
-                hero.Specialization = "Ranger";
-                break;
-        }
-
 
 
         return hero;
