@@ -29,7 +29,6 @@ public class Rotation : MonoBehaviour
                     transform.eulerAngles = temp;
                     twist = false;
                     start = false;
-                    Debug.Log("vhod1");
                 } 
             }
             else
@@ -41,7 +40,6 @@ public class Rotation : MonoBehaviour
                     transform.eulerAngles = temp;
                     twist = true;
                     start = false;
-                    Debug.Log("vhod2");
                 }
                 
                 

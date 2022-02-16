@@ -15,15 +15,19 @@ public class CharacterDisplay : MonoBehaviour
     {
         GameObject hero = GetComponent<CharacterModel>().GetCharacterRandom(name[0]);
         newHero[0] = Instantiate(hero, PosOne.transform.position, Quaternion.identity);
+        //newHero[0].transform.SetParent(PosOne.transform);
 
         hero = GetComponent<CharacterModel>().GetCharacterRandom(name[1]);
         newHero[1] = Instantiate(hero, PosTwo.transform.position, Quaternion.identity);
+        //newHero[1].transform.SetParent(PosOne.transform);
 
         hero = GetComponent<CharacterModel>().GetCharacterRandom(name[2]);
         newHero[2] = Instantiate(hero, PosThree.transform.position, Quaternion.identity);
+        //newHero[2].transform.SetParent(PosOne.transform);
 
         hero = GetComponent<CharacterModel>().GetCharacterRandom(name[3]);
         newHero[3] = Instantiate(hero, PosFour.transform.position, Quaternion.identity);
+        //newHero[3].transform.SetParent(PosOne.transform);
 
     }
 

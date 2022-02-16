@@ -26,20 +26,20 @@ public class CharacterModel : MonoBehaviour
 
     public GameObject GetCharacterRandom(string title)
     {
-        List<int> id = new List<int>();
+        //List<int> id = new List<int>();
 
-        for (int i = 0; i != characterList.Count; i++ )
-        {
-            string name = characterList[i].name;
-            name = name.Remove(name.Length - 1);
+        //for (int i = 0; i != characterList.Count; i++ )
+        //{
+        //    string name = characterList[i].name;
+        //    name = name.Remove(name.Length - 1);
 
-            if (name == title)
-            {
-                id.Add(i);
-            }
-        }
-        int rand = Random.Range(0, id.Count);
+        //    if (name == title)
+        //    {
+        //        id.Add(i);
+        //    }
+        //}
+        //int rand = Random.Range(0, id.Count - 1);
 
-        return characterList[id[rand]];
+        return characterList[1];
     }
 }
