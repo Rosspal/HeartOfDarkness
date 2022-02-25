@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<objecttypes>
- <objecttype name="ground" color="#a0a0a4">
-  <property name="Type" type="string"/>
-  <property name="speedCost" type="int" default="0"/>
- </objecttype>
-</objecttypes>
