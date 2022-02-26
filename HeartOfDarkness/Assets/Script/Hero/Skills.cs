@@ -189,7 +189,7 @@ public class Skills
         {
             if (skill[i].own)
             {
-                text += skill[i].title + "/"; 
+                text += skill[i].title + ","; 
             }
         }
         return text;

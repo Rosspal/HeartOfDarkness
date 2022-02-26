@@ -8,12 +8,14 @@ public class ControlerMainMenu : MonoBehaviour
     [SerializeField] Canvas MainMenu;
     [SerializeField] Canvas Settings;
     [SerializeField] GameObject CloseTab;
+    [SerializeField] Canvas LoadScreen;
 
 
     private void Start()
     {
         Settings.enabled = false;
         CloseTab.SetActive(false);
+        LoadScreen.enabled = false;
     }
 
     public void OpenSettings()
@@ -30,6 +32,8 @@ public class ControlerMainMenu : MonoBehaviour
 
     public void OpenNewGame()
     {
+        MainMenu.enabled = false;
+        LoadScreen.enabled = true;
         SceneManager.LoadScene(1);
     }
 

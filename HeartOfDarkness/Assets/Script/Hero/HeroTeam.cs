@@ -40,4 +40,14 @@ public class HeroTeam : Team
 
         return result;
     }
+
+    public Hero GetHero(int n)
+    {
+        if (team.Count > n)
+        {
+            return team[n];
+        }
+        Hero hero = new Hero();
+        return hero; // улучшить защиту
+    }
 }

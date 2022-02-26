@@ -41,7 +41,7 @@ public class Abilities
 
         foreach (var text in ability)
         {
-            info += text + "/";
+            info += text + ",";
         }
 
         return info;

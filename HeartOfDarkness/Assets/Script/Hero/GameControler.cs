@@ -47,4 +47,8 @@ public class GameControler : MonoBehaviour
         checkTaverna = true;
     }
 
+    public Hero GetTavernHero(int n)
+    {
+        return TavernaTeam.GetHero(n);
+    }
 }
