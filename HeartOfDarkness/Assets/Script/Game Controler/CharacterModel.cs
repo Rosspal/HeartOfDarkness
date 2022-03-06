@@ -42,4 +42,19 @@ public class CharacterModel : MonoBehaviour
 
         return characterList[id[rand]];
     }
+
+    public GameObject GetCharacter(string title)
+    {
+        int n = 0;
+        for (int i = 0; i != characterList.Count; i++)
+        {
+            if (characterList[i].name == title)
+            {
+                n = i;
+                break;
+            }
+        }
+
+        return characterList[n];
+    }
 }

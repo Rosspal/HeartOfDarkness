@@ -10,8 +10,13 @@ public class HeroTeam : Team
     {
         if (team.Count < 4)
         {
-            team.Add(hero);
+            team.Add(hero);// подправить
         }
+    }
+
+    public int Count()
+    {
+        return team.Count;
     }
 
     public void DeleteHeroAll()

@@ -7,6 +7,7 @@ public class UiTavern : MonoBehaviour
 {
     [SerializeField] GameObject InfoTab;
     private Hero hero;
+    private int check;
 
     private void Start()
     {
@@ -15,6 +16,7 @@ public class UiTavern : MonoBehaviour
 
     public void OpenInfoTab(int number)
     {
+        check = number;
         InfoTab.SetActive(true);
         Hero hero = this.GetComponent<GameControler>().GetTavernHero(number);
         InfoTab.transform.Find("InfoTab").Find("NameText").GetComponent<TextMeshProUGUI>().text = hero.Nickname;
@@ -29,6 +31,20 @@ public class UiTavern : MonoBehaviour
                                                                                                    + "Телосложение " + hero.Characteristic.Physique + "\n";
 
         InfoTab.transform.Find("InfoTab").Find("InfoText2").GetComponent<TextMeshProUGUI>().text = "Навыки: " + hero.Abilities.Info() + "." + "\n\n" + "Способности: " + hero.Skills.Info() + ".";
+    }
+
+    public void BuyHero()
+    {
+        if (GetComponent<GameControler>().BuyHero(check))
+        {
+            GetComponent<CharacterDisplay>().ClearDisplay(check);
+        }
+        else
+        {
+            Debug.LogWarning("Ошибка покупки");
+        }
+        
+
     }
 
     public void CloseInfoTab()

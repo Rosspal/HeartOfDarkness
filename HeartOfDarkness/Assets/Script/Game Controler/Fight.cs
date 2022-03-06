@@ -4,15 +4,36 @@ using UnityEngine;
 
 public class Fight : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private int round;
+
+    private EnemyTeam EnemyTeam;
+    private HeroTeam Team = new HeroTeam();
+
+    private int[] Initiative;
+
+
+    public int Round { get => round; set => round = value; }
+
+    public void Battle()
     {
-        
+        BattleInit();
+
     }
 
-    // Update is called once per frame
-    void Update()
+    private void BattleInit()
     {
-        
+        round = 1;
+        Initiative = new int[Team.Count()];
+
+    }
+
+    private void InitiativeRoll()
+    {
+
+    }
+
+    public void NextMove()
+    {
+
     }
 }

@@ -2,8 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyTeam : Team
+public class Effect
 {
-    public new List<EnemyHero> team = new();
-
+   
 }
