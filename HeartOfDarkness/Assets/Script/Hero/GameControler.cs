@@ -5,11 +5,14 @@ using System;
 
 public class GameControler : MonoBehaviour
 {
-    private EnemyTeam EnemyTeam;
+    //private EnemyTeam EnemyTeam;
+    private HeroTeam EnemyTeam; // заменить
+    //
     private HeroTeam Team = new HeroTeam();
     private HeroTeam TavernaTeam = new HeroTeam();
     private HeroTeam StockTeam = new HeroTeam();
     private GenerateHero Gen = new GenerateHero();
+    private Fight fight = new Fight();
 
     private bool checkTaverna = false;
 
@@ -91,5 +94,10 @@ public class GameControler : MonoBehaviour
     public void SetHeroModelName(string name, int k)
     {
         TavernaTeam.GetHero(k).Modelname = name;
+    }
+
+    public void BattleStart()
+    {
+        fight.BattleInit(Team.Count(), EnemyTeam.Count());
     }
 }

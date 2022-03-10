@@ -9,6 +9,7 @@ public class Person
     public Characteristic Characteristic = new Characteristic();
     public Skills Skills = new Skills();
     public Abilities Abilities = new Abilities();
+    public Equipment Equipment = new Equipment();
 
     private string nickname = "void";
     private short level = 1;

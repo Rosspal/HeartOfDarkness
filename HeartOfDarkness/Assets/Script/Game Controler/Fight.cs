@@ -5,31 +5,28 @@ using UnityEngine;
 public class Fight : MonoBehaviour
 {
     private int round;
-
-    private EnemyTeam EnemyTeam;
-    private HeroTeam Team = new HeroTeam();
-
-    private int[] Initiative;
+    private int[] initiative;
 
 
     public int Round { get => round; set => round = value; }
 
     public void Battle()
     {
-        BattleInit();
-
     }
 
-    private void BattleInit()
+    public void BattleInit(int e, int t)
     {
         round = 1;
-        Initiative = new int[Team.Count()];
-
+        initiative = new int[e + t];
+        InitiativeRoll();
     }
 
-    private void InitiativeRoll()
+    public void InitiativeRoll()
     {
-
+        for (int i = 0; i < 8; i++)
+        {
+            initiative[i] = i;
+        }
     }
 
     public void NextMove()
