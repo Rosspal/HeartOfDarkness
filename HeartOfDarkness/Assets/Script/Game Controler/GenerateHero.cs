@@ -4,13 +4,22 @@ using UnityEngine;
 using System;
 using System.IO;
 
-public class GenerateHero
+public class GenerateHero : MonoBehaviour
 {
     private Hero hero;
+    private GenerateEquipment genEq;
+
+    private void Start()
+    {
+        genEq = GetComponent<GenerateEquipment>();
+    }
 
     public Hero Generate()
     {
+        
         hero = new Hero();
+
+
         string specialization = "";
         string race = "";
         int randRace = UnityEngine.Random.Range(1, 9);
@@ -384,6 +393,8 @@ public class GenerateHero
         hero.Characteristic.AddCharisma(RandBestOf(4, 6, 3));
         hero.Characteristic.AddPhysique(RandBestOf(4, 6, 3));
 
+        hero.Initiative = hero.Characteristic.Modifier("Agility");
+
         short modif = hero.Characteristic.Modifier("Physique");
         hero.Health.SetHPOneLevel(modif);
 
@@ -391,7 +402,10 @@ public class GenerateHero
 
         hero.Nickname = NameGenerate(race);
 
+        hero.Equipment = genEq.GenerateBase();
 
+        baseAttack b = new baseAttack();
+        hero.AddSpell(b);
         return hero;
     }
 

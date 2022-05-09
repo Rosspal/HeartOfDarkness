@@ -9,7 +9,8 @@ public class Person
     public Characteristic Characteristic = new Characteristic();
     public Skills Skills = new Skills();
     public Abilities Abilities = new Abilities();
-    public Equipment Equipment = new Equipment();
+    public Equipment Equipment;
+    public List<Spell> Spells = new List<Spell>();
 
     private string nickname = "void";
     private short level = 1;
@@ -30,6 +31,12 @@ public class Person
     public short SkillBonus { get => skillBonus; set => skillBonus = value; }
     public short Initiative { get => initiative; set => initiative = value; }
     public string Modelname { get => modelName; set => modelName = value; }
+
+    public void AddSpell(Spell spell)
+    {
+        Spells.Add(spell);
+    }
+
 
     public void RefreshSkills()
     {

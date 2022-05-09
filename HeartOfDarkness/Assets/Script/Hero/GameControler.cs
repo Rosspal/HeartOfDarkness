@@ -5,25 +5,37 @@ using System;
 
 public class GameControler : MonoBehaviour
 {
-    //private EnemyTeam EnemyTeam;
-    private HeroTeam EnemyTeam; // заменить
-    //
-    private HeroTeam Team = new HeroTeam();
+    private GenerateHero Gen;
+
+    /// <summary>
+    /// Объект содержащий в себе команды
+    /// </summary>
+    [SerializeField] TeamContainer TC;
     private HeroTeam TavernaTeam = new HeroTeam();
     private HeroTeam StockTeam = new HeroTeam();
-    private GenerateHero Gen = new GenerateHero();
-    private Fight fight = new Fight();
+    
+    [SerializeField] Fight fight;
 
     private bool checkTaverna = false;
 
-
     private void Start()
     {
+        Gen = GetComponent<GenerateHero>();
+        RefreshTaverna(); // первое обновление вызывает подвисание, заменить кастыль чем то получше upd: уже нет
     }
 
-    private void Update()
+    void Update()
     {
-
+        if (Input.GetKeyDown(KeyCode.F))
+        {
+            Debug.Log("Инициализация");
+            TC.Evil = TC.Friend;
+            fight.BattleInit();
+        }
+        if (Input.GetKeyDown(KeyCode.G))
+        {
+            Debug.Log("Количество" + TC.Evil.GetHero(1).Health.Hp);
+        }
     }
 
     public void RefreshTaverna()
@@ -40,12 +52,6 @@ public class GameControler : MonoBehaviour
         TavernaTeam.AddHero(Gen.Generate());
         TavernaTeam.AddHero(Gen.Generate());
         TavernaTeam.AddHero(Gen.Generate());
-        TavernaTeam.AddHero(Gen.Generate());
-
-        Debug.Log(TavernaTeam.Info(0));
-        Debug.Log(TavernaTeam.Info(1));
-        Debug.Log(TavernaTeam.Info(2));
-        Debug.Log(TavernaTeam.Info(3));
 
         GetComponent<CharacterDisplay>().Display(TavernaTeam.ModelNameAll());
         checkTaverna = true;
@@ -53,7 +59,7 @@ public class GameControler : MonoBehaviour
 
     public bool checkFreePlace()
     {
-        if ((Team.Count() < 4)||( StockTeam.Count() == 6))
+        if ((TC.Friend.Count() < 4)||( StockTeam.Count() == 6))
         {
             return true;
         }
@@ -64,16 +70,21 @@ public class GameControler : MonoBehaviour
     {
         if (checkFreePlace())
         {
-            Team.AddHero(TavernaTeam.GetHero(number));
+            TC.Friend.AddHero(TavernaTeam.GetHero(number));
             return true;
         }
         return false;
         
     }
 
-    public string[] TeamModelNameAll()
+    public string[] FriendModelNameAll()
     {
-        return Team.ModelNameAll();
+        return TC.Friend.ModelNameAll();
+    }
+
+    public string[] EvilModelNameAll()
+    {
+        return TC.Friend.ModelNameAll();
     }
 
     public Hero GetTavernHero(int n)
@@ -83,7 +94,7 @@ public class GameControler : MonoBehaviour
 
     public Hero GetHero(int n)
     {
-        return Team.GetHero(n);
+        return TC.Friend.GetHero(n);
     }
 
     public Hero GetStockHero(int n)
@@ -98,6 +109,8 @@ public class GameControler : MonoBehaviour
 
     public void BattleStart()
     {
-        fight.BattleInit(Team.Count(), EnemyTeam.Count());
+        TC.Evil = TC.Friend;
+        fight.BattleInit();
+        GetComponent<CharacterDisplayBattle>().Display();
     }
 }

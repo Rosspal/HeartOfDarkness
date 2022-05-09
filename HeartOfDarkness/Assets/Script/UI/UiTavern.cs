@@ -43,8 +43,6 @@ public class UiTavern : MonoBehaviour
         {
             Debug.LogWarning("Ошибка покупки");
         }
-        
-
     }
 
     public void CloseInfoTab()

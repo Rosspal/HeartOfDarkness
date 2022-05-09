@@ -14,7 +14,7 @@ public class TileClicker : MonoBehaviour
     public Tilemap mapSurface;
     public Tilemap mapDecorations;
     private Vector3Int heroPos = new Vector3Int(-14,2,0);
-    public Canvas Town;
+    [SerializeField] UiEventManager uiEventManager;
 
 
     private Camera mainCamera;
@@ -315,11 +315,12 @@ public class TileClicker : MonoBehaviour
             switch (mapSurface.GetTile(pos).name)
             {
                 case "Tile_surface_27": //город 
-                    Town.enabled = true;
+                    uiEventManager.OpenTown();
                     CameraMove(false);
                     return false;
                 case "Tile_surface_2"://погост
-                    break;
+                    uiEventManager.OpenBattleEvent();
+                    return false;
                 case "Tile_surface_17"://затеряный храм
                     break;
                 case "Tile_surface_28"://деревня 1 уровень
