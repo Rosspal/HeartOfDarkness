@@ -43,6 +43,26 @@ public class CharacterModel : MonoBehaviour
         return characterList[id[rand]];
     }
 
+    //вернёт индекс модели
+    public int GetCharacterRandomId(string title)
+    {
+        List<int> id = new List<int>();
+
+        for (int i = 0; i != characterList.Count; i++)
+        {
+            string name = characterList[i].name;
+            name = name.Remove(name.Length - 1);
+
+            if (name == title)
+            {
+                id.Add(i);
+            }
+        }
+        int rand = Random.Range(0, id.Count);
+
+        return rand;
+    }
+
     public GameObject GetCharacter(string title)
     {
         int n = 0;

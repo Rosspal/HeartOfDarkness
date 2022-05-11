@@ -14,7 +14,6 @@ public class GenerateEquipment : MonoBehaviour
     {
         Equipment equipment = new Equipment();
 
-        Debug.Log("Название = " + weapon.title);
         equipment.SetBase(weapon);
         equipment.SetBase(item);
         equipment.SetBase(armor);

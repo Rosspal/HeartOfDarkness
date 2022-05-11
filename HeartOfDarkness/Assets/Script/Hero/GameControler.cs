@@ -26,16 +26,23 @@ public class GameControler : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.F))
+        if (Input.GetKeyDown(KeyCode.Q))
         {
-            Debug.Log("Инициализация");
-            TC.Evil = TC.Friend;
-            fight.BattleInit();
+            Debug.Log("////////////////////////");
+            Debug.Log("Friend");
+            Debug.Log("Name = " + TC.Friend.GetHero(0).Nickname + " ModelName = " + TC.Friend.GetHero(0).Modelname);
+            Debug.Log("Name = " + TC.Friend.GetHero(1).Nickname + " ModelName = " + TC.Friend.GetHero(1).Modelname);
+            Debug.Log("Name = " + TC.Friend.GetHero(2).Nickname + " ModelName = " + TC.Friend.GetHero(2).Modelname);
+            Debug.Log("Name = " + TC.Friend.GetHero(3).Nickname + " ModelName = " + TC.Friend.GetHero(3).Modelname);
+            Debug.Log("////////////////////////");
+            Debug.Log("Evil");
+            Debug.Log("Name = " + TC.Evil.GetHero(0).Nickname + " ModelName = " + TC.Friend.GetHero(0).Modelname);
+            Debug.Log("Name = " + TC.Evil.GetHero(1).Nickname + " ModelName = " + TC.Friend.GetHero(1).Modelname);
+            Debug.Log("Name = " + TC.Evil.GetHero(2).Nickname + " ModelName = " + TC.Friend.GetHero(2).Modelname);
+            Debug.Log("Name = " + TC.Evil.GetHero(3).Nickname + " ModelName = " + TC.Friend.GetHero(3).Modelname);
+            Debug.Log("////////////////////////");
         }
-        if (Input.GetKeyDown(KeyCode.G))
-        {
-            Debug.Log("Количество" + TC.Evil.GetHero(1).Health.Hp);
-        }
+        
     }
 
     public void RefreshTaverna()
@@ -84,7 +91,7 @@ public class GameControler : MonoBehaviour
 
     public string[] EvilModelNameAll()
     {
-        return TC.Friend.ModelNameAll();
+        return TC.Evil.ModelNameAll();
     }
 
     public Hero GetTavernHero(int n)
@@ -109,7 +116,25 @@ public class GameControler : MonoBehaviour
 
     public void BattleStart()
     {
-        TC.Evil = TC.Friend;
+        TC.Friend.AddHero(Gen.Generate());
+        TC.Friend.GetHero(0).Modelname = TC.Friend.GetHero(0).Modelname + 1;
+        TC.Friend.AddHero(Gen.Generate());
+        TC.Friend.GetHero(1).Modelname = TC.Friend.GetHero(1).Modelname + 1;
+        TC.Friend.AddHero(Gen.Generate());
+        TC.Friend.GetHero(2).Modelname = TC.Friend.GetHero(2).Modelname + 1;
+        TC.Friend.AddHero(Gen.Generate());
+        TC.Friend.GetHero(3).Modelname = TC.Friend.GetHero(3).Modelname + 1;
+
+        TC.Evil.AddHero(Gen.Generate());
+        
+        TC.Evil.GetHero(0).Modelname = TC.Evil.GetHero(0).Modelname + 1;
+        TC.Evil.AddHero(Gen.Generate());
+        TC.Evil.GetHero(1).Modelname = TC.Evil.GetHero(1).Modelname + 1;
+        TC.Evil.AddHero(Gen.Generate());
+        TC.Evil.GetHero(2).Modelname = TC.Evil.GetHero(2).Modelname + 1;
+        TC.Evil.AddHero(Gen.Generate());
+        TC.Evil.GetHero(3).Modelname = TC.Evil.GetHero(3).Modelname + 1;
+
         fight.BattleInit();
         GetComponent<CharacterDisplayBattle>().Display();
     }

@@ -11,13 +11,14 @@ public class GenerateHero : MonoBehaviour
 
     private void Start()
     {
-        genEq = GetComponent<GenerateEquipment>();
+        
     }
 
     public Hero Generate()
     {
         
         hero = new Hero();
+        genEq = GetComponent<GenerateEquipment>();
 
 
         string specialization = "";
@@ -401,6 +402,7 @@ public class GenerateHero : MonoBehaviour
         hero.RefreshSkills();
 
         hero.Nickname = NameGenerate(race);
+        Debug.Log("Name " + hero.Nickname);
 
         hero.Equipment = genEq.GenerateBase();
 
@@ -424,16 +426,15 @@ public class GenerateHero : MonoBehaviour
         {
             using (StreamReader sw = new StreamReader(fileName))
             {
-                while (!sw.EndOfStream)
-                {
+               
                     string str = sw.ReadLine();
                     String[] dataFromFile = str.Split(new String[] { "," },StringSplitOptions.RemoveEmptyEntries);
                     int rand = UnityEngine.Random.Range(0,dataFromFile.Length);
                     result = dataFromFile[rand];
-                }
+                
             }
         }
-
+        Debug.Log("Name generate" + result);
 
         return result;
     }

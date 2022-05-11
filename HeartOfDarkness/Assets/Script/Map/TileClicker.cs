@@ -294,7 +294,6 @@ public class TileClicker : MonoBehaviour
             if (speed - cost >= 0)
             {
                 speed -= cost;
-                Debug.Log(speed);
                 return true;
             }
             return false;
