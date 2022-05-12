@@ -402,7 +402,6 @@ public class GenerateHero : MonoBehaviour
         hero.RefreshSkills();
 
         hero.Nickname = NameGenerate(race);
-        Debug.Log("Name " + hero.Nickname);
 
         hero.Equipment = genEq.GenerateBase();
 
@@ -434,8 +433,6 @@ public class GenerateHero : MonoBehaviour
                 
             }
         }
-        Debug.Log("Name generate" + result);
-
         return result;
     }
 

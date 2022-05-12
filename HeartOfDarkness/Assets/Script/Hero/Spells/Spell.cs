@@ -12,7 +12,7 @@ public class Spell
     public readonly string target; 
 
     public int CoolDownTemp { get => coolDownTemp; set => coolDownTemp = value; }
-    public virtual string Action(ref HeroTeam hero, ref HeroTeam enemy, int source, int destination)
+    public virtual string Action(ref TeamContainer TC, int source, int destination)
     {
         return "";
     }
@@ -37,13 +37,12 @@ public class baseAttack: Spell
     public new readonly int coolDown = 0;
     public new readonly string target = "Enemy";
 
-    public override string Action(ref HeroTeam hero, ref HeroTeam enemy, int source, int destination)
+    public override string Action(ref TeamContainer TC, int source, int destination)
     {
         string str = "";
-        Debug.Log("name " + enemy.GetHero(destination).Nickname);
-        short damage = DamageRoll(hero.GetHero(source).Equipment.Hand.diceCount, hero.GetHero(source).Equipment.Hand.diceValue);
-        str = hero.GetHero(source).Nickname + " наносит " + enemy.GetHero(destination).Nickname + " " + damage + " урона." ;
-        enemy.GetHero(destination).Health.DamageHP(damage);
+        short damage = DamageRoll(TC.GetHero(source).Equipment.Hand.diceCount, TC.GetHero(source).Equipment.Hand.diceValue);
+        str = TC.GetHero(source).Nickname + " наносит " + TC.GetHero(destination).Nickname + " " + damage + " урона.";
+        TC.GetHero(destination).Health.DamageHP(damage);
         return str;
     }
 }

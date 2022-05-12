@@ -95,16 +95,14 @@ public class Fight : MonoBehaviour
 
     public void SpellAction(int n)
     {
-        Debug.Log("FIGHT");
         if (activHero < 4)
         {
-            Ui.WriteLog(TC.Friend.GetHero(activHero).Spells[n].Action(ref TC.Friend, ref TC.Evil, activHero, selectHero));
+            Ui.WriteLog(TC.Friend.GetHero(activHero).Spells[n].Action(ref TC, activHero, selectHero));
         }
         else
         {
             int tempActivHero = activHero - 4;
-            Ui.WriteLog(TC.Evil.GetHero(activHero).Spells[n].Action(ref TC.Evil, ref TC.Friend, activHero, selectHero));
+            Ui.WriteLog(TC.Evil.GetHero(activHero).Spells[n].Action(ref TC, activHero, selectHero));
         }
-        Debug.Log("END FIGHT");
     }
 }

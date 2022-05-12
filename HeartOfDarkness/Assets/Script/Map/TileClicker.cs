@@ -319,6 +319,7 @@ public class TileClicker : MonoBehaviour
                     return false;
                 case "Tile_surface_2"://погост
                     uiEventManager.OpenBattleEvent();
+                    CameraMove(false);
                     return false;
                 case "Tile_surface_17"://затеряный храм
                     break;
