@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CharacterDisplayBattle : MonoBehaviour
 {
+    [SerializeField] GameObject posPanel;
     [Header("Дружественные позиции")]
     public GameObject PosOne;
     public GameObject PosTwo;
@@ -36,28 +37,64 @@ public class CharacterDisplayBattle : MonoBehaviour
         string[] name = GetComponent<GameControler>().FriendModelNameAll();
         GameObject hero = GetComponent<CharacterModel>().GetCharacter(name[0]);
         newHero[0] = Instantiate(hero, PosOne.transform.position, Quaternion.identity);
+        Debug.Log("name.len Fri = " + name.Length);
 
-        hero = GetComponent<CharacterModel>().GetCharacter(name[1]);
-        newHero[1] = Instantiate(hero, PosTwo.transform.position, Quaternion.identity);
+        switch (name.Length)
+        {
+            case 2:
+                hero = GetComponent<CharacterModel>().GetCharacter(name[1]);
+                newHero[1] = Instantiate(hero, PosTwo.transform.position, Quaternion.identity);
+                break;
+            case 3:
 
-        hero = GetComponent<CharacterModel>().GetCharacter(name[2]);
-        newHero[2] = Instantiate(hero, PosThree.transform.position, Quaternion.identity);
+                hero = GetComponent<CharacterModel>().GetCharacter(name[1]);
+                newHero[1] = Instantiate(hero, PosTwo.transform.position, Quaternion.identity);
 
-        hero = GetComponent<CharacterModel>().GetCharacter(name[3]);
-        newHero[3] = Instantiate(hero, PosFour.transform.position, Quaternion.identity);
+                hero = GetComponent<CharacterModel>().GetCharacter(name[2]);
+                newHero[2] = Instantiate(hero, PosThree.transform.position, Quaternion.identity);
+                break;
+            case 4:
+
+                hero = GetComponent<CharacterModel>().GetCharacter(name[1]);
+                newHero[1] = Instantiate(hero, PosTwo.transform.position, Quaternion.identity);
+
+                hero = GetComponent<CharacterModel>().GetCharacter(name[2]);
+                newHero[2] = Instantiate(hero, PosThree.transform.position, Quaternion.identity);
+
+                hero = GetComponent<CharacterModel>().GetCharacter(name[3]);
+                newHero[3] = Instantiate(hero, PosFour.transform.position, Quaternion.identity);
+                break;
+        }
+
 
         name = GetComponent<GameControler>().EvilModelNameAll();
+        Debug.Log("name.len Evil = " + name.Length);
         hero = GetComponent<CharacterModel>().GetCharacter(name[0]);
         newHero[4] = Instantiate(hero, EPosOne.transform.position, EPosOne.transform.rotation);
+        switch (name.Length)
+        {
+            case 2:
+                hero = GetComponent<CharacterModel>().GetCharacter(name[1]);
+                newHero[5] = Instantiate(hero, EPosTwo.transform.position, EPosTwo.transform.rotation);
+                break;
+            case 3:
+                hero = GetComponent<CharacterModel>().GetCharacter(name[1]);
+                newHero[5] = Instantiate(hero, EPosTwo.transform.position, EPosTwo.transform.rotation);
 
-        hero = GetComponent<CharacterModel>().GetCharacter(name[1]);
-        newHero[5] = Instantiate(hero, EPosTwo.transform.position, EPosTwo.transform.rotation);
+                hero = GetComponent<CharacterModel>().GetCharacter(name[2]);
+                newHero[6] = Instantiate(hero, EPosThree.transform.position, EPosThree.transform.rotation);
+                break;
+            case 4:
+                hero = GetComponent<CharacterModel>().GetCharacter(name[1]);
+                newHero[5] = Instantiate(hero, EPosTwo.transform.position, EPosTwo.transform.rotation);
 
-        hero = GetComponent<CharacterModel>().GetCharacter(name[2]);
-        newHero[6] = Instantiate(hero, EPosThree.transform.position, EPosThree.transform.rotation);
+                hero = GetComponent<CharacterModel>().GetCharacter(name[2]);
+                newHero[6] = Instantiate(hero, EPosThree.transform.position, EPosThree.transform.rotation);
 
-        hero = GetComponent<CharacterModel>().GetCharacter(name[3]);
-        newHero[7] = Instantiate(hero, EPosFour.transform.position, EPosFour.transform.rotation);
+                hero = GetComponent<CharacterModel>().GetCharacter(name[3]);
+                newHero[7] = Instantiate(hero, EPosFour.transform.position, EPosFour.transform.rotation);
+                break;
+        }
 
     }
 

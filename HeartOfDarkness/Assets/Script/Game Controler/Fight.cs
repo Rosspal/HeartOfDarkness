@@ -44,8 +44,9 @@ public class Fight : MonoBehaviour
         round = 1;
         initiative = new int[TC.Friend.Count() + TC.Evil.Count()];
         order = new int[TC.Friend.Count() + TC.Evil.Count()];
+        Ui.RefreshHealtSystem();
 
-        InitiativeRoll();
+        //InitiativeRoll();
 
     }
 
@@ -104,5 +105,7 @@ public class Fight : MonoBehaviour
             int tempActivHero = activHero - 4;
             Ui.WriteLog(TC.Evil.GetHero(activHero).Spells[n].Action(ref TC, activHero, selectHero));
         }
+
+        Ui.RefreshHealt();
     }
 }

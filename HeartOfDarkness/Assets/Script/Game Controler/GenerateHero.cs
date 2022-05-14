@@ -109,6 +109,8 @@ public class GenerateHero : MonoBehaviour
                         hero.Modelname += "Monk";
                         hero.Health.SetBone(1, 8);
                         hero.Health.HpForLevel = 5;
+                        hero.Health.MaxMP = 10;
+                        hero.Health.Mp = 10;
                         hero.Skills.AddRandOwn("Акробатика", "Атлетика", "История", "Проницательность", "Религия", "Скрытность");
                         hero.Skills.AddRandOwn("Акробатика", "Атлетика", "История", "Проницательность", "Религия", "Скрытность");
                         break;
@@ -163,6 +165,8 @@ public class GenerateHero : MonoBehaviour
                         hero.Health.HpForLevel = 4;
                         hero.Skills.AddRandOwn("История", "Магия", "Медицина", "Проницательность", "Расследование", "Религия");
                         hero.Skills.AddRandOwn("История", "Магия", "Медицина", "Проницательность", "Расследование", "Религия");
+                        hero.Health.MaxMP = 12;
+                        hero.Health.Mp = 12;
                         break;
                     case 4:
                         specialization = "Монах";
@@ -171,6 +175,8 @@ public class GenerateHero : MonoBehaviour
                         hero.Health.HpForLevel = 5;
                         hero.Skills.AddRandOwn("Акробатика", "Атлетика", "История", "Проницательность", "Религия", "Скрытность");
                         hero.Skills.AddRandOwn("Акробатика", "Атлетика", "История", "Проницательность", "Религия", "Скрытность");
+                        hero.Health.MaxMP = 10;
+                        hero.Health.Mp = 10;
                         break;
                     case 5:
                         specialization = "Паладин";
@@ -179,6 +185,8 @@ public class GenerateHero : MonoBehaviour
                         hero.Health.HpForLevel = 6;
                         hero.Skills.AddRandOwn("Атлетика", "Запугивание", "Медицина", "Проницательность", "Религия", "Убеждение");
                         hero.Skills.AddRandOwn("Атлетика", "Запугивание", "Медицина", "Проницательность", "Религия", "Убеждение");
+                        hero.Health.MaxMP = 10;
+                        hero.Health.Mp = 10;
                         break;
                     case 6:
                         specialization = "Ронин";
@@ -250,6 +258,8 @@ public class GenerateHero : MonoBehaviour
                         hero.Health.HpForLevel = 5;
                         hero.Skills.AddRandOwn("История", "Медицина", "Проницательность", "Религия", "Убеждение");
                         hero.Skills.AddRandOwn("История", "Медицина", "Проницательность", "Религия", "Убеждение");
+                        hero.Health.MaxMP = 12;
+                        hero.Health.Mp = 12;
                         //от расы
                         hero.Abilities.AddAbility("Сопротивление кислоте");
                         hero.Characteristic.AddWisdom(1);
@@ -261,6 +271,8 @@ public class GenerateHero : MonoBehaviour
                         hero.Health.HpForLevel = 5;
                         hero.Skills.AddRandOwn("Акробатика", "Атлетика", "История", "Проницательность", "Религия", "Скрытность");
                         hero.Skills.AddRandOwn("Акробатика", "Атлетика", "История", "Проницательность", "Религия", "Скрытность");
+                        hero.Health.MaxMP = 10;
+                        hero.Health.Mp = 10;
                         //от расы
                         hero.Abilities.AddAbility("Иммунитет к окаменению");
                         hero.Characteristic.AddStrength(1);
@@ -319,6 +331,8 @@ public class GenerateHero : MonoBehaviour
                         hero.Health.HpForLevel = 4;
                         hero.Skills.AddRandOwn("История", "Магия", "Медицина", "Проницательность", "Расследование", "Религия");
                         hero.Skills.AddRandOwn("История", "Магия", "Медицина", "Проницательность", "Расследование", "Религия");
+                        hero.Health.MaxMP = 10;
+                        hero.Health.Mp = 10;
                         break;
                     case 3:
                         specialization = "Паладин";
@@ -327,6 +341,8 @@ public class GenerateHero : MonoBehaviour
                         hero.Health.HpForLevel = 6;
                         hero.Skills.AddRandOwn("Атлетика", "Запугивание", "Медицина", "Проницательность", "Религия", "Убеждение");
                         hero.Skills.AddRandOwn("Атлетика", "Запугивание", "Медицина", "Проницательность", "Религия", "Убеждение");
+                        hero.Health.MaxMP = 10;
+                        hero.Health.Mp = 10;
                         break;
                     case 4:
                         specialization = "Следопыт";
@@ -357,6 +373,8 @@ public class GenerateHero : MonoBehaviour
                         hero.Health.HpForLevel = 4;
                         hero.Skills.AddRandOwn("История", "Магия", "Медицина", "Проницательность", "Расследование", "Религия");
                         hero.Skills.AddRandOwn("История", "Магия", "Медицина", "Проницательность", "Расследование", "Религия");
+                        hero.Health.MaxMP = 12;
+                        hero.Health.Mp = 12;
                         break;
                     case 3:
                         specialization = "Паладин";

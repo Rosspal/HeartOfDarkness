@@ -7,6 +7,8 @@ public class Health
 {
     private short maxHP = 0;
     private short hp = 0;
+    private short maxMP = 0;
+    private short mp = 0;
     private short maxTempHP = 0; //подумать над её необходимотью
     private short tempHp = 0;
     private Point boneHits = new Point(0,0); // X - количество, Y - значение (1d8,2d12 ...)
@@ -40,6 +42,8 @@ public class Health
     public Point BoneHits { get => boneHits; set => boneHits = value; }
     public short Hp { get => hp; set => hp = value; }
     public short HpForLevel { get => hpForLevel; set => hpForLevel = value; }
+    public short MaxMP { get => maxMP; set => maxMP = value; }
+    public short Mp { get => mp; set => mp = value; }
 
     /// <summary>
     /// проверка умер ли герой
@@ -123,5 +127,27 @@ public class Health
     public string Info()
     {
         return maxHP + "/" + hp + "/" + tempHp + "/" + boneHits.X + "d" + boneHits.Y;
+    }
+
+    //public void DamageMP(short n)
+    //{
+    //        tempHp -= n;
+    //        if (tempHp < 0)
+    //        {
+    //            hp += tempHp; //прибавляем оставшийся урон к основному здоровью
+    //            tempHp = 0;
+    //        }
+    //}
+
+    public void addMp(short n)
+    {
+        if (mp + n > maxMP)
+        {
+            mp = maxMP;
+        }
+        else
+        {
+            mp += n;
+        }
     }
 }

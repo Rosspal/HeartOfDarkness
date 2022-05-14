@@ -122,18 +122,17 @@ public class GameControler : MonoBehaviour
         TC.Friend.GetHero(1).Modelname = TC.Friend.GetHero(1).Modelname + 1;
         TC.Friend.AddHero(Gen.Generate());
         TC.Friend.GetHero(2).Modelname = TC.Friend.GetHero(2).Modelname + 1;
-        TC.Friend.AddHero(Gen.Generate());
-        TC.Friend.GetHero(3).Modelname = TC.Friend.GetHero(3).Modelname + 1;
+        //TC.Friend.AddHero(Gen.Generate());
+        //TC.Friend.GetHero(3).Modelname = TC.Friend.GetHero(3).Modelname + 1;
 
         TC.Evil.AddHero(Gen.Generate());
-        
         TC.Evil.GetHero(0).Modelname = TC.Evil.GetHero(0).Modelname + 1;
         TC.Evil.AddHero(Gen.Generate());
         TC.Evil.GetHero(1).Modelname = TC.Evil.GetHero(1).Modelname + 1;
-        TC.Evil.AddHero(Gen.Generate());
-        TC.Evil.GetHero(2).Modelname = TC.Evil.GetHero(2).Modelname + 1;
-        TC.Evil.AddHero(Gen.Generate());
-        TC.Evil.GetHero(3).Modelname = TC.Evil.GetHero(3).Modelname + 1;
+        //TC.Evil.AddHero(Gen.Generate());
+        //TC.Evil.GetHero(2).Modelname = TC.Evil.GetHero(2).Modelname + 1;
+        //TC.Evil.AddHero(Gen.Generate());
+        //TC.Evil.GetHero(3).Modelname = TC.Evil.GetHero(3).Modelname + 1;
 
         fight.BattleInit();
         GetComponent<CharacterDisplayBattle>().Display();

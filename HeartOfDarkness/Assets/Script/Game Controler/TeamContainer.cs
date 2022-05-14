@@ -14,9 +14,9 @@ public class TeamContainer : MonoBehaviour
     /// <returns></returns>
     public Hero GetHero(int n)
     {
-        if (n > 3)
+        if (n >= Friend.Count())
         {
-            return Evil.GetHero(n - 4);
+            return Evil.GetHero(n - Friend.Count());
         }
         else
         {
