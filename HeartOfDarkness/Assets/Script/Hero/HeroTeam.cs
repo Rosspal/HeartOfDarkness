@@ -53,6 +53,7 @@ public class HeroTeam : Team
             return team[n];
         }
         Hero hero = new Hero();
+        hero.Nickname = "Void";
         return hero; // улучшить защиту
     }
 }

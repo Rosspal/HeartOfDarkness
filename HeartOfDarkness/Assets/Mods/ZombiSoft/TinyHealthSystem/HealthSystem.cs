@@ -89,6 +89,15 @@ public class HealthSystem : MonoBehaviour
 		}
 	}
 
+	public void SetActiv(bool check)
+    {
+		currentHealthBar.enabled = check;
+		currentManaBar.enabled = check;
+		healthText.enabled = check; 
+		manaText.enabled = check;
+
+	}
+
 	//==============================================================
 	// Health Logic
 	//==============================================================

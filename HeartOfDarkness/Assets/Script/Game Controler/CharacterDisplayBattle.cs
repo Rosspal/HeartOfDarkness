@@ -37,7 +37,6 @@ public class CharacterDisplayBattle : MonoBehaviour
         string[] name = GetComponent<GameControler>().FriendModelNameAll();
         GameObject hero = GetComponent<CharacterModel>().GetCharacter(name[0]);
         newHero[0] = Instantiate(hero, PosOne.transform.position, Quaternion.identity);
-        Debug.Log("name.len Fri = " + name.Length);
 
         switch (name.Length)
         {
@@ -68,7 +67,6 @@ public class CharacterDisplayBattle : MonoBehaviour
 
 
         name = GetComponent<GameControler>().EvilModelNameAll();
-        Debug.Log("name.len Evil = " + name.Length);
         hero = GetComponent<CharacterModel>().GetCharacter(name[0]);
         newHero[4] = Instantiate(hero, EPosOne.transform.position, EPosOne.transform.rotation);
         switch (name.Length)

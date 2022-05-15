@@ -35,14 +35,14 @@ public class baseAttack: Spell
     public new readonly string description = "base attackkkkk";
     public new readonly int manaCost = 0;
     public new readonly int coolDown = 0;
-    public new readonly string target = "Enemy";
+    public new readonly string target = "Character";
 
     public override string Action(ref TeamContainer TC, int source, int destination)
     {
         string str = "";
         short damage = DamageRoll(TC.GetHero(source).Equipment.Hand.diceCount, TC.GetHero(source).Equipment.Hand.diceValue);
-        str = TC.GetHero(source).Nickname + " наносит " + TC.GetHero(destination).Nickname + " " + damage + " урона.";
-        TC.GetHero(destination).Health.DamageHP(damage);
+        str = TC.GetHero(source).Nickname + " наносит " + TC.GetHeroSelected(destination).Nickname + " " + damage + " урона.";
+        TC.GetHeroSelected(destination).Health.DamageHP(damage);
         return str;
     }
 }

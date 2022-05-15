@@ -23,7 +23,28 @@ public class TeamContainer : MonoBehaviour
             return Friend.GetHero(n);
         }
     }
-    
+
+    /// <summary>
+    /// hero count teams
+    /// </summary>
+    /// <returns></returns>
+    public int Count()
+    {
+        return Evil.Count() + Friend.Count();
+    }
+
+    public Hero GetHeroSelected(int n)
+    {
+        if (n >= Friend.Count())
+        {
+            return Evil.GetHero(n - 4);
+        }
+        else
+        {
+            return Friend.GetHero(n);
+        }
+    }
+
     /// <summary>
     /// Возвращает команду в которой находится выбранный герой
     /// </summary>
@@ -31,13 +52,25 @@ public class TeamContainer : MonoBehaviour
     /// <returns></returns>
     public HeroTeam GetActivTeam(int n)
     {
-        if (n > 3)
+        if (n > Friend.Count())
         {
             return Evil;
         }
         else
         {
             return Friend;
+        }
+    }
+
+    public string GetActivTeamName(int n)
+    {
+        if (n >= Friend.Count())
+        {
+            return "Evil";
+        }
+        else
+        {
+            return "Friend";
         }
     }
 }

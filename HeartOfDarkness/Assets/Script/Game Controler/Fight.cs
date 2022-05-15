@@ -9,6 +9,7 @@ public class Fight : MonoBehaviour
     private int[] order;
     private int activHero = 0;
     private int selectHero = 0;
+    private int activHeroId = 0;
     [SerializeField] TeamContainer TC;
     [SerializeField] UiFigh Ui;
 
@@ -46,25 +47,34 @@ public class Fight : MonoBehaviour
         order = new int[TC.Friend.Count() + TC.Evil.Count()];
         Ui.RefreshHealtSystem();
 
-        //InitiativeRoll();
+        InitiativeRoll();
+        activHero = order[0];
+        activHeroId = 0;
+        Ui.InitState();
+        Ui.ActivHero(activHero, NextHero());
+        Ui.InitInfoPanel(activHero);
+    }
 
+    public int NextHero()
+    {
+        if (activHeroId == (order.Length - 1))
+        {
+            return order[0];
+        }
+        else
+        {
+            return order[activHeroId + 1];
+        } 
     }
 
     public void InitiativeRoll()
     {
-        for (int i = 0; i < TC.Friend.Count(); i++)
+        for (int i = 0; i < TC.Count(); i++)
         {
-            int temp = Random.Range(1, 21);
-            initiative[i] = TC.Friend.GetHero(i).Initiative + temp;
+            int rand = Random.Range(1, 21);
+            initiative[i] = TC.GetHero(i).Initiative + rand;
         }
-
-        for (int i = TC.Evil.Count(); i < initiative.Length; i++)
-        {
-            int temp = Random.Range(1, 21);
-            initiative[i] = TC.Evil.GetHero(i - 4).Initiative + temp;
-        }
-
-
+        string str = "order = ";
         for (int i = 0; i < order.Length; i++)
         {
             int max = 0;
@@ -81,12 +91,31 @@ public class Fight : MonoBehaviour
 
             initiative[index] = 0;
             order[i] = index;
+            str += order[i];
         }
+        Debug.Log(str);
     }
 
     public void NextMove()
     {
+        if (activHeroId == (order.Length - 1))
+        {
+            activHero = order[0];
+            activHeroId = 0;
+        }
+        else
+        {
+            activHeroId++;
+            activHero = order[activHeroId];
+        }
+        if (TC.GetHero(activHero).Health.Hp <= 0)
+        {
+            Debug.Log("Hp = " + TC.GetHero(activHero).Health.Hp);
+            NextMove();
+        }
 
+        Ui.ActivHero(activHero,NextHero());
+        Ui.InitInfoPanel(activHero);
     }
 
     public void SetSelected(int n)
@@ -96,16 +125,10 @@ public class Fight : MonoBehaviour
 
     public void SpellAction(int n)
     {
-        if (activHero < 4)
-        {
-            Ui.WriteLog(TC.Friend.GetHero(activHero).Spells[n].Action(ref TC, activHero, selectHero));
-        }
-        else
-        {
-            int tempActivHero = activHero - 4;
-            Ui.WriteLog(TC.Evil.GetHero(activHero).Spells[n].Action(ref TC, activHero, selectHero));
-        }
+        Debug.Log("activ = " + activHero + "; select = " + selectHero);
+        Ui.WriteLog(TC.GetHero(activHero).Spells[n].Action(ref TC, activHero, selectHero));
 
         Ui.RefreshHealt();
+        NextMove();
     }
 }
