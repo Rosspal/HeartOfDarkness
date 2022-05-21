@@ -116,12 +116,12 @@ public class GameControler : MonoBehaviour
 
     public void BattleStart()
     {
-        TC.Friend.AddHero(Gen.Generate());
-        TC.Friend.GetHero(0).Modelname = TC.Friend.GetHero(0).Modelname + 1;
-        TC.Friend.AddHero(Gen.Generate());
-        TC.Friend.GetHero(1).Modelname = TC.Friend.GetHero(1).Modelname + 1;
-        TC.Friend.AddHero(Gen.Generate());
-        TC.Friend.GetHero(2).Modelname = TC.Friend.GetHero(2).Modelname + 1;
+        //TC.Friend.AddHero(Gen.Generate());
+        //TC.Friend.GetHero(0).Modelname = TC.Friend.GetHero(0).Modelname + 1;
+        //TC.Friend.AddHero(Gen.Generate());
+        //TC.Friend.GetHero(1).Modelname = TC.Friend.GetHero(1).Modelname + 1;
+        //TC.Friend.AddHero(Gen.Generate());
+        //TC.Friend.GetHero(2).Modelname = TC.Friend.GetHero(2).Modelname + 1;
         //TC.Friend.AddHero(Gen.Generate());
         //TC.Friend.GetHero(3).Modelname = TC.Friend.GetHero(3).Modelname + 1;
 

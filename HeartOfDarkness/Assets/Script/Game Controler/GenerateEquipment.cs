@@ -15,6 +15,8 @@ public class GenerateEquipment : MonoBehaviour
         Equipment equipment = new Equipment();
 
         equipment.SetBase(weapon);
+        weapon.diceValue = 2;
+        weapon.diceCount = 2;
         equipment.SetBase(item);
         equipment.SetBase(armor);
         equipment.SetBase(belt);

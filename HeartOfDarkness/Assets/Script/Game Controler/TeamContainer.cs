@@ -7,6 +7,10 @@ public class TeamContainer : MonoBehaviour
     public HeroTeam Evil = new HeroTeam(); // заменить
     public HeroTeam Friend = new HeroTeam();
 
+    private int money = 100;
+
+    public int Money { get => money; set => money = value; }
+
     /// <summary>
     /// ¬озвращает геро€ по его индексу
     /// </summary>
@@ -31,6 +35,30 @@ public class TeamContainer : MonoBehaviour
     public int Count()
     {
         return Evil.Count() + Friend.Count();
+    }
+
+    public bool CheckDeathFriend()
+    {
+        for (int i = 0; i < Friend.Count(); i++)
+        {
+            if (Friend.GetHero(i).Health.Hp > 0)
+            {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    public bool CheckDeathEvil()
+    {
+        for (int i = 0; i < Evil.Count(); i++)
+        {
+            if (Evil.GetHero(i).Health.Hp > 0)
+            {
+                return false;
+            }
+        }
+        return true;
     }
 
     public Hero GetHeroSelected(int n)

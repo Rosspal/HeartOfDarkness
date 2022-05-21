@@ -90,6 +90,8 @@ public class GenerateHero : MonoBehaviour
         }
         hero.Race = race;
         int randSpec;
+        baseAttack b = new baseAttack();
+        hero.AddSpell(b);
         switch (randRace)
         {
             case 1:
@@ -423,8 +425,50 @@ public class GenerateHero : MonoBehaviour
 
         hero.Equipment = genEq.GenerateBase();
 
-        baseAttack b = new baseAttack();
-        hero.AddSpell(b);
+        switch (hero.Specialization)
+        {
+            case "Варвар":
+                Rage rage= new Rage();
+                hero.AddSpell(rage);
+                break;
+            case "Монах":
+                Heal heal = new Heal();
+                hero.AddSpell(heal);
+                break;
+            case "Жрец":
+                Heal Heal = new Heal();
+                hero.AddSpell(Heal);
+                break;
+            case "Воин":
+                CleavingStrike Strike = new CleavingStrike();
+                hero.AddSpell(Strike);
+                break;
+            case "Плут":
+                Backstab stab = new Backstab();
+                hero.AddSpell(stab);
+                break;
+            case "Викинг":
+                AStrongBeat Beat = new AStrongBeat();
+                hero.AddSpell(Beat);
+                break;
+            case "Волшебник":
+                SplashAttack splash = new SplashAttack();
+                hero.AddSpell(splash);
+                break;
+            case "Следопыт":
+                AccurateShot shot = new AccurateShot();
+                hero.AddSpell(shot);
+                break;
+            case "Ронин":
+                AccurateHit hit = new AccurateHit();
+                hero.AddSpell(hit);
+                break;
+            case "Паладин":
+                ShieldBash shield = new ShieldBash();
+                hero.AddSpell(shield);
+                break;
+        }
+        
         return hero;
     }
 

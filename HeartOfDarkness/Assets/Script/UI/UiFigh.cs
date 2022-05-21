@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class UiFigh : MonoBehaviour
 {
@@ -11,6 +12,9 @@ public class UiFigh : MonoBehaviour
     [SerializeField] GameObject[] ready = new GameObject[8];
     [SerializeField] GameObject[] Preparation = new GameObject[8];
     [SerializeField] GameObject[] Waiting = new GameObject[8];
+    [SerializeField] Image Portret;
+
+
 
 
     public void ActivHero(int n, int n2)
@@ -58,6 +62,28 @@ public class UiFigh : MonoBehaviour
                                                                                                              + "Мудрость " + TC.GetHero(n).Characteristic.Wisdom + "\n"
                                                                                                              + "Выносливость " + TC.GetHero(n).Characteristic.Physique + "\n"
                                                                                                              + "Харизма " + TC.GetHero(n).Characteristic.Charisma;
+        
+        Portret.sprite = Resources.Load<Sprite>("SpriteHero/Portret/" + TC.GetHero(n).Modelname);
+
+        for (int i = 0; i <= 5; i++)
+        {
+            if (i < TC.GetHero(n).Spells.Count)
+            {
+                Debug.Log("spell icon = " + TC.GetHero(n).Spells[i].target);
+                Canvas.transform.Find("Panel").Find("SpellPanel").Find("SpellButton" + i).GetComponent<Image>().sprite = Resources.Load<Sprite>("Image/IconSpell/"
+                                                                                                                     + TC.GetHero(n).Spells[i].target);
+            }
+            else
+            {
+                Canvas.transform.Find("Panel").Find("SpellPanel").Find("SpellButton" + i).GetComponent<Image>().sprite = Resources.Load<Sprite>("Image/IconSpell/Close");
+            }
+        }
+
+    }
+
+    public void Defeat()
+    {
+        Canvas.transform.Find("DeathPanel").gameObject.SetActive(true);
     }
 
     public void InitState()
@@ -116,17 +142,55 @@ public class UiFigh : MonoBehaviour
     {
         for (int i = 0; i < TC.Friend.Count(); i++)
         {
-            Canvas.transform.Find("SelectPanel").Find("Select" + i).Find("HealthSystem" + i).GetComponent<HealthSystem>().SetHpMp(TC.Friend.GetHero(i).Health.Hp,
-                                                                                                                                  TC.Friend.GetHero(i).Health.MaxMP
-                                                                                                                                  );
+            Canvas.transform.Find("SelectPanel").Find("Select" + i).Find("HealthSystem" + i).GetComponent<HealthSystem>().SetSystem(TC.Friend.GetHero(i).Health.Hp,
+                                                                                                                                    TC.Friend.GetHero(i).Health.MaxHP,
+                                                                                                                                    TC.Friend.GetHero(i).Health.Mp,
+                                                                                                                                    TC.Friend.GetHero(i).Health.MaxMP
+                                                                                                                                    );
         }
 
         for (int i = 0; i < TC.Evil.Count(); i++)
         {
-            Canvas.transform.Find("SelectPanel").Find("SelectE" + i).Find("HealthSystemE" + i).GetComponent<HealthSystem>().SetHpMp(TC.Evil.GetHero(i).Health.Hp,
+            Canvas.transform.Find("SelectPanel").Find("SelectE" + i).Find("HealthSystemE" + i).GetComponent<HealthSystem>().SetSystem(TC.Evil.GetHero(i).Health.Hp,
+                                                                                                                                    TC.Evil.GetHero(i).Health.MaxHP,
+                                                                                                                                    TC.Evil.GetHero(i).Health.Mp,
                                                                                                                                     TC.Evil.GetHero(i).Health.MaxMP
-                                                                                                                                  );
+                                                                                                                                    );
         }
+    }
+
+    public void NoButtom()
+    {
+        //for (int i = 0; i < TC.Friend.Count(); i++)
+        //{
+        //    Canvas.transform.Find("SelectPanel").Find("Select" + i).Find("HealthSystem" + i).GetComponent<Button>().interactable = false;
+        //}
+
+        //for (int i = 0; i < TC.Evil.Count(); i++)
+        //{
+        //    Canvas.transform.Find("SelectPanel").Find("SelectE" + i).Find("HealthSystemE" + i).GetComponent<Button>().interactable = false;
+        //}
+
+
+        Canvas.transform.Find("Panel").Find("Block").gameObject.SetActive(true);
+
+    }
+
+    public void YesButtom()
+    {
+        //for (int i = 0; i < TC.Friend.Count(); i++)
+        //{
+        //    Canvas.transform.Find("SelectPanel").Find("Select" + i).Find("HealthSystem" + i).GetComponent<Button>().interactable = true;
+        //}
+
+        //for (int i = 0; i < TC.Evil.Count(); i++)
+        //{
+        //    Canvas.transform.Find("SelectPanel").Find("SelectE" + i).Find("HealthSystemE" + i).GetComponent<Button>().interactable = true;
+        //}
+
+        
+        Canvas.transform.Find("Panel").Find("Block").gameObject.SetActive(false);
+        
     }
 
     public void InitHealthSystem()

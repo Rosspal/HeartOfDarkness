@@ -14,6 +14,7 @@ public class TileClicker : MonoBehaviour
     public Tilemap mapSurface;
     public Tilemap mapDecorations;
     private Vector3Int heroPos = new Vector3Int(-14,2,0);
+    private bool activ = true;
     [SerializeField] UiEventManager uiEventManager;
 
 
@@ -22,6 +23,8 @@ public class TileClicker : MonoBehaviour
     public int speed = 55;
 
     private Vector3 clickWorldPosition;
+
+    public bool Activ { get => activ; set => activ = value; }
 
     void Start()
     {
@@ -37,24 +40,28 @@ public class TileClicker : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (activ)
         {
-            
-            clickWorldPosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
-            Vector3Int clickCellPosition = mapGround.WorldToCell(clickWorldPosition);
-            Vector3Int cellGround = CellClickToCellGround(clickCellPosition);
-
-            if (CheckMove(heroPos,clickCellPosition))
+            if (Input.GetMouseButtonDown(0))
             {
-                if (CheckTileCost(cellGround))
+
+                clickWorldPosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
+                Vector3Int clickCellPosition = mapGround.WorldToCell(clickWorldPosition);
+                Vector3Int cellGround = CellClickToCellGround(clickCellPosition);
+
+                if (CheckMove(heroPos, clickCellPosition))
                 {
-                    Vector3Int cellPos = mapHero.WorldToCell(clickWorldPosition);
-                    mapHero.SetTile(heroPos, nullTile);
-                    heroPos = cellPos;
-                    mapHero.SetTile(cellPos, tile);
-                } 
-            }  
+                    if (CheckTileCost(cellGround))
+                    {
+                        Vector3Int cellPos = mapHero.WorldToCell(clickWorldPosition);
+                        mapHero.SetTile(heroPos, nullTile);
+                        heroPos = cellPos;
+                        mapHero.SetTile(cellPos, tile);
+                    }
+                }
+            }
         }
+        
 
         //для тестов
         //if (Input.GetMouseButtonDown(1))

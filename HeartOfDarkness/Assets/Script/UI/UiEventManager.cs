@@ -20,18 +20,20 @@ public class UiEventManager : MonoBehaviour
     public void OpenTown()
     {
         Town.enabled = true;
+        //MainCam.GetComponent<TileClicker>().Activ = false;
     }
 
     public void CloseTown()
     {
         Town.enabled = false;
+        //MainCam.GetComponent<TileClicker>().Activ = true;
     }
 
     public void OpenBattleEvent()
     {
         
         BattleEvent.enabled = true;
-        //MainCam.enabled = false;
+        MainCam.GetComponent<TileClicker>().Activ = false;
         BattleCam.enabled = true;
         GetComponent<GameControler>().BattleStart();
 
@@ -40,7 +42,7 @@ public class UiEventManager : MonoBehaviour
     public void CloseBattleEvent()
     {
         BattleEvent.enabled = false;
-        //MainCam.enabled = true;
+        MainCam.GetComponent<TileClicker>().Activ = true;
         BattleCam.enabled = false;
 
     }

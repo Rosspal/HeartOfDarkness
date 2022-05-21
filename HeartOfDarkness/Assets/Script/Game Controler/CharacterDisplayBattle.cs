@@ -32,6 +32,24 @@ public class CharacterDisplayBattle : MonoBehaviour
         newHero[7] = EPosFour;
     }
 
+    public void DeadHero(int n)
+    {
+        if (newHero[n].GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("DeathEnd"))
+        {
+
+        }
+        else
+        {
+            newHero[n].GetComponent<Animator>().Play("Death");
+        } 
+    }
+
+    public void AttackHero(int n)
+    {
+        Debug.Log("n ==== " + n);
+        newHero[n].GetComponent<Animator>().Play("Attack1");
+    }
+
     public void Display()
     {
         string[] name = GetComponent<GameControler>().FriendModelNameAll();
