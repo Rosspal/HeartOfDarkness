@@ -47,12 +47,7 @@ public class CharacterDisplayBattle : MonoBehaviour
     public void AttackHero(int n)
     {
         Debug.Log("n ==== " + n);
-        //newHero[n].GetComponent<Animator>().Play("Attack1");
-
-        if (newHero[n].TryGetComponent(typeof(Animator), out Component component))
-        {
-            component.GetComponent<Animator>().Play("Attack1");
-        }
+        newHero[n].GetComponent<Animator>().Play("Attack1");
     }
 
     public void Display()
