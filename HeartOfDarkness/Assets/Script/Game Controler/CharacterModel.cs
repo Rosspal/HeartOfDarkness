@@ -9,7 +9,6 @@ public class CharacterModel : MonoBehaviour
 
     private List<GameObject> characterList = new List<GameObject>();
 
-    // Start is called before the first frame update
     void Start()
     {
         int count = GetComponent<AllCharacter>().model.Length;

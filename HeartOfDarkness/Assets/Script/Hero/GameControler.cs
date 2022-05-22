@@ -36,10 +36,10 @@ public class GameControler : MonoBehaviour
             Debug.Log("Name = " + TC.Friend.GetHero(3).Nickname + " ModelName = " + TC.Friend.GetHero(3).Modelname);
             Debug.Log("////////////////////////");
             Debug.Log("Evil");
-            Debug.Log("Name = " + TC.Evil.GetHero(0).Nickname + " ModelName = " + TC.Friend.GetHero(0).Modelname);
-            Debug.Log("Name = " + TC.Evil.GetHero(1).Nickname + " ModelName = " + TC.Friend.GetHero(1).Modelname);
-            Debug.Log("Name = " + TC.Evil.GetHero(2).Nickname + " ModelName = " + TC.Friend.GetHero(2).Modelname);
-            Debug.Log("Name = " + TC.Evil.GetHero(3).Nickname + " ModelName = " + TC.Friend.GetHero(3).Modelname);
+            Debug.Log("Name = " + TC.Evil.GetHero(0).Nickname + " ModelName = " + TC.Evil.GetHero(0).Modelname);
+            Debug.Log("Name = " + TC.Evil.GetHero(1).Nickname + " ModelName = " + TC.Evil.GetHero(1).Modelname);
+            Debug.Log("Name = " + TC.Evil.GetHero(2).Nickname + " ModelName = " + TC.Evil.GetHero(2).Modelname);
+            Debug.Log("Name = " + TC.Evil.GetHero(3).Nickname + " ModelName = " + TC.Evil.GetHero(3).Modelname);
             Debug.Log("////////////////////////");
         }
         
@@ -116,8 +116,8 @@ public class GameControler : MonoBehaviour
 
     public void BattleStart()
     {
-        //TC.Friend.AddHero(Gen.Generate());
-        //TC.Friend.GetHero(0).Modelname = TC.Friend.GetHero(0).Modelname + 1;
+        TC.Friend.AddHero(Gen.Generate());
+        TC.Friend.GetHero(0).Modelname = "GoblinRanger1";
         //TC.Friend.AddHero(Gen.Generate());
         //TC.Friend.GetHero(1).Modelname = TC.Friend.GetHero(1).Modelname + 1;
         //TC.Friend.AddHero(Gen.Generate());
@@ -126,9 +126,9 @@ public class GameControler : MonoBehaviour
         //TC.Friend.GetHero(3).Modelname = TC.Friend.GetHero(3).Modelname + 1;
 
         TC.Evil.AddHero(Gen.Generate());
-        TC.Evil.GetHero(0).Modelname = TC.Evil.GetHero(0).Modelname + 1;
+        TC.Evil.GetHero(0).Modelname = "GoblinRanger1";
         TC.Evil.AddHero(Gen.Generate());
-        TC.Evil.GetHero(1).Modelname = TC.Evil.GetHero(1).Modelname + 1;
+        TC.Evil.GetHero(1).Modelname = "GoblinRanger1";
         //TC.Evil.AddHero(Gen.Generate());
         //TC.Evil.GetHero(2).Modelname = TC.Evil.GetHero(2).Modelname + 1;
         //TC.Evil.AddHero(Gen.Generate());
