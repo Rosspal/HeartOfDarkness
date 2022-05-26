@@ -14,6 +14,14 @@ public class HeroTeam : Team
         }
     }
 
+    public void HealTeam()
+    {
+        for (int i = 0; i < team.Count; i++)
+        {
+            team[i].Health.Hp = team[i].Health.MaxHP;
+        }
+    }
+
     public int Count()
     {
         return team.Count;
@@ -25,6 +33,15 @@ public class HeroTeam : Team
         {
             team.Clear();
         }
+    }
+
+    public void DeleteHero(int n)
+    {
+        if (team.Count > n)
+        {
+            team.RemoveAt(n);
+        }
+        
     }
 
     public string Info(int i)

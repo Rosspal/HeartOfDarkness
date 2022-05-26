@@ -16,14 +16,12 @@ public class UiFigh : MonoBehaviour
 
 
 
-
     public void ActivHero(int n, int n2)
     {
         InitState();
         //ready
         if (TC.GetActivTeamName(n) == "Friend")
         {
-            Debug.Log("friend n = " + n);
             ready[n].SetActive(true);
             Preparation[n].SetActive(false);
             Waiting[n].SetActive(false);
@@ -69,7 +67,6 @@ public class UiFigh : MonoBehaviour
         {
             if (i < TC.GetHero(n).Spells.Count)
             {
-                Debug.Log("spell icon = " + TC.GetHero(n).Spells[i].target);
                 Canvas.transform.Find("Panel").Find("SpellPanel").Find("SpellButton" + i).GetComponent<Image>().sprite = Resources.Load<Sprite>("Image/IconSpell/"
                                                                                                                      + TC.GetHero(n).Spells[i].target);
             }
@@ -84,6 +81,7 @@ public class UiFigh : MonoBehaviour
     public void Defeat()
     {
         Canvas.transform.Find("DeathPanel").gameObject.SetActive(true);
+        Canvas.transform.Find("DeathPanel").Find("Image").Find("ScoreImage").Find("Text (TMP)").GetComponent<TextMeshProUGUI>().text = "Ñ÷¸ò = " + TC.Score;
     }
 
     public void InitState()
@@ -103,13 +101,36 @@ public class UiFigh : MonoBehaviour
         }
     }
 
+    public void ResetState()
+    {
+        for (int i = 0; i < 7; i++)
+        {
+            Waiting[i].SetActive(false);
+            ready[i].SetActive(false);
+            Preparation[i].SetActive(false);
+        }
+    }
+
+    public void ResetHealtSystem()
+    {
+        for (int i = 0; i < 4; i++)
+        {
+            Canvas.transform.Find("SelectPanel").Find("Select" + i).gameObject.SetActive(true);
+        }
+
+        for (int i = 0; i < 4; i++)
+        {
+            Canvas.transform.Find("SelectPanel").Find("SelectE" + i).gameObject.SetActive(true);
+        }
+    }
+
     public void RefreshHealtSystem()
     {
         for (int i = 0; i < 4; i++)
         {
             if (TC.Friend.GetHero(i).Nickname == "Void")
             {
-                Canvas.transform.Find("SelectPanel").Find("Select" + i).Find("HealthSystem" + i).Find("Bar").gameObject.SetActive(false);
+                Canvas.transform.Find("SelectPanel").Find("Select" + i).gameObject.SetActive(false);
             }
             else
             {
@@ -125,7 +146,7 @@ public class UiFigh : MonoBehaviour
         {
             if (TC.Evil.GetHero(i).Nickname == "Void")
             {
-                Canvas.transform.Find("SelectPanel").Find("SelectE" + i).Find("HealthSystemE" + i).Find("Bar").gameObject.SetActive(false);
+                Canvas.transform.Find("SelectPanel").Find("SelectE" + i).gameObject.SetActive(false);
             }
             else
             {
@@ -211,5 +232,10 @@ public class UiFigh : MonoBehaviour
     public void WriteLineLog(string str)
     {
         Log.text +="\n" + str;
+    }
+
+    public void ResetLog()
+    {
+        Log.text = "";
     }
 }

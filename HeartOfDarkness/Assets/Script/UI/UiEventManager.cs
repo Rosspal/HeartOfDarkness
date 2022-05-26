@@ -20,6 +20,7 @@ public class UiEventManager : MonoBehaviour
     public void OpenTown()
     {
         Town.enabled = true;
+        GetComponent<ManagerUiTown>().RefreshHealingCost();
         //MainCam.GetComponent<TileClicker>().Activ = false;
     }
 

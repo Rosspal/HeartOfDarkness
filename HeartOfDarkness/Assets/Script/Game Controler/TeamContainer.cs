@@ -7,9 +7,71 @@ public class TeamContainer : MonoBehaviour
     public HeroTeam Evil = new HeroTeam(); // заменить
     public HeroTeam Friend = new HeroTeam();
 
-    private int money = 100;
+    [SerializeField] int money = 11110;
+    private int score = 0;
+    [SerializeField] bool cheat = false;
 
     public int Money { get => money; set => money = value; }
+    public int Score { get => score; set => score = value; }
+
+    private void Update()
+    {
+        if (cheat)
+        {
+            for (int i = 0; i < Evil.Count(); i++)
+            {
+                Evil.GetHero(i).Health.Hp = 1;
+            }
+            cheat = false;
+        }
+    }
+
+    /// <summary>
+    /// Удалить всех мёртвых в обеих командах
+    /// </summary>
+    public void TheFuneral()
+    {
+        int i = 0;
+        while (Friend.Count() > i)
+        {
+            if (Friend.GetHero(i).Health.Hp <= 0)
+            {
+                Friend.DeleteHero(i);
+                i--;
+            }
+            i++;
+        }
+
+        Evil.DeleteHeroAll();
+    }
+
+    public int MissingHealth()
+    {
+        int result = 0;
+        for (int i = 0; i < Friend.Count(); i++)
+        {
+            result += Friend.GetHero(i).Health.MaxHP - Friend.GetHero(i).Health.Hp;
+        }
+        return result;
+    }
+
+    public void ResetCoolDown(int n)
+    {
+        if (n < Friend.Count())
+        {
+            for (int i = 0; i < Friend.GetHero(n).Spells.Count; i++)
+            {
+                Friend.GetHero(n).Spells[i].CoolDownTemp = 0;
+            } 
+        }
+        else
+        {
+            for (int i = 0; i < Evil.GetHero(n).Spells.Count; i++)
+            {
+                Evil.GetHero(n).Spells[i].CoolDownTemp = 0;
+            }
+        }
+    }
 
     /// <summary>
     /// Возвращает героя по его индексу

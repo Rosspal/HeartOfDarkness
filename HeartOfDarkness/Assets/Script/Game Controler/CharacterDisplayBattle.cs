@@ -46,7 +46,6 @@ public class CharacterDisplayBattle : MonoBehaviour
 
     public void AttackHero(int n)
     {
-        Debug.Log("n ==== " + n);
         newHero[n].GetComponent<Animator>().Play("Attack1");
     }
 
@@ -55,7 +54,6 @@ public class CharacterDisplayBattle : MonoBehaviour
         string[] name = GetComponent<GameControler>().FriendModelNameAll();
         GameObject hero = GetComponent<CharacterModel>().GetCharacter(name[0]);
         newHero[0] = Instantiate(hero, PosOne.transform.position, Quaternion.identity);
-
         switch (name.Length)
         {
             case 2:
@@ -63,7 +61,6 @@ public class CharacterDisplayBattle : MonoBehaviour
                 newHero[1] = Instantiate(hero, PosTwo.transform.position, Quaternion.identity);
                 break;
             case 3:
-
                 hero = GetComponent<CharacterModel>().GetCharacter(name[1]);
                 newHero[1] = Instantiate(hero, PosTwo.transform.position, Quaternion.identity);
 
@@ -71,7 +68,6 @@ public class CharacterDisplayBattle : MonoBehaviour
                 newHero[2] = Instantiate(hero, PosThree.transform.position, Quaternion.identity);
                 break;
             case 4:
-
                 hero = GetComponent<CharacterModel>().GetCharacter(name[1]);
                 newHero[1] = Instantiate(hero, PosTwo.transform.position, Quaternion.identity);
 
@@ -116,9 +112,20 @@ public class CharacterDisplayBattle : MonoBehaviour
 
     public void ClearDisplay()
     {
-        for (int i = 0; i != newHero.Length; i++)
+        //for (int i = 0; i != newHero.Length; i++)
+        //{
+        //    Destroy(newHero[i]);
+        //}
+
+        
+        for (int i = 0; i < GetComponent<TeamContainer>().Friend.Count(); i++)
         {
             Destroy(newHero[i]);
+        }
+
+        for (int i = 0; i < GetComponent<TeamContainer>().Evil.Count(); i++)
+        {
+            Destroy(newHero[i + 4]);
         }
     }
 

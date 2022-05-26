@@ -63,20 +63,27 @@ public class Health
 
     public void DamageHP(short n)
     {
-        if (tempHp > 0)
+        if (n > 0)
         {
-            tempHp -= n;
-            if (tempHp < 0)
+            if ((hp - n) < 0)
             {
-                hp += tempHp; //прибавляем оставшийся урон к основному здоровью
-                tempHp = 0;
-                CheckDead();
+                hp = 0;
+            }
+            else
+            {
+                hp -= n;
             }
         }
         else
         {
-            hp -= n;
-            CheckDead();
+            if ((hp - n) > maxHP)
+            {
+                hp = maxHP;
+            }
+            else
+            {
+                hp -= n;
+            }
         }
     }
 

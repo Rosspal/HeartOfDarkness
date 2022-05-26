@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class ManagerUiTown : MonoBehaviour
 {
@@ -9,15 +10,17 @@ public class ManagerUiTown : MonoBehaviour
     [SerializeField] Canvas Town;
     [SerializeField] GameObject Main;
 
-
+    private bool oneRefresh = true;
     //[SerializeField] GameObject Store;
     //[SerializeField] GameObject Taverna;
 
     void Start()
     {
+        RefreshHealingCost();
         Town.enabled = false;
         Taverna.enabled = false;
         TavernaUi.enabled = false;
+        
     }
 
     public void OpenTaverna()
@@ -26,6 +29,20 @@ public class ManagerUiTown : MonoBehaviour
         Main.GetComponent<Camera>().enabled = false;
         Taverna.enabled = true;
         TavernaUi.enabled = true;
+
+        
+
+        if (oneRefresh)
+        {
+            GetComponent<GameControler>().FreeRefreshTaverna();
+            oneRefresh = false;
+        }
+        
+    }
+
+    public void RefreshHealingCost()
+    {
+        Town.transform.Find("Panel").Find("Coin").Find("Text").GetComponent<TextMeshProUGUI>().text = "" + GetComponent<GameControler>().HealingCost();
     }
 
     public void CloseTaverna()

@@ -78,6 +78,10 @@ public class Fight : MonoBehaviour
             int rand = Random.Range(1, 21);
             initiative[i] = TC.GetHero(i).Initiative + rand;
         }
+
+        int randId = Random.Range(0, TC.Friend.Count());
+        initiative[randId] += 40;
+
         string str = "order = ";
         for (int i = 0; i < order.Length; i++)
         {
@@ -97,7 +101,6 @@ public class Fight : MonoBehaviour
             order[i] = index;
             str += order[i];
         }
-        Debug.Log(str);
     }
 
     /// <summary>
@@ -138,9 +141,25 @@ public class Fight : MonoBehaviour
         }
     }
 
+    public void ScopeBattle()
+    {
+        for (int i = 0; i < TC.Evil.Count(); i++)
+        {
+            if (TC.Evil.GetHero(i).Health.Hp <= 0)
+            {
+                TC.Score += 25;
+            }
+        }
+    }
+
     public void Win()
     {
-        TC.Money += Random.Range(10, 35);
+        int tempRand = Random.Range(10, 25);
+        TC.Money += tempRand * TC.Evil.Count();
+        ScopeBattle();
+        TC.Score += TC.Evil.Count() * 45;
+        GetComponent<InfoUi>().Refresh();
+        ResetBattle();
         GetComponent<UiEventManager>().CloseBattleEvent();
     }
 
@@ -148,6 +167,8 @@ public class Fight : MonoBehaviour
     {
         if (TC.CheckDeathFriend())
         {
+            ScopeBattle();
+            GetComponent<InfoUi>().Refresh();
             Ui.Defeat();
         }
         else
@@ -169,16 +190,21 @@ public class Fight : MonoBehaviour
                     activHeroId++;
                     activHero = order[activHeroId];
                 }
+
                 if (TC.GetHero(activHero).Health.Hp <= 0)
                 {
                     NextMove();
                 }
-                Ui.ActivHero(activHero, NextHero());
-                Ui.InitInfoPanel(activHero);
-                if (activHero >= TC.Friend.Count())
+                else
                 {
-                    EnemyTurn();
+                    Ui.ActivHero(activHero, NextHero());
+                    Ui.InitInfoPanel(activHero);
+                    if (activHero >= TC.Friend.Count())
+                    {
+                        EnemyTurn();
+                    }
                 }
+                
                 
             }
         }  
@@ -227,6 +253,20 @@ public class Fight : MonoBehaviour
         selectHero = n;
     }
 
+    public void ResetBattle()
+    {
+        for (int i = 0; i < TC.Friend.Count(); i++)
+        {
+            TC.ResetCoolDown(i);
+        }
+        GetComponent<CharacterDisplayBattle>().ClearDisplay();
+        Ui.ResetLog();
+        Ui.ResetState();
+        Ui.ResetHealtSystem();
+        TC.TheFuneral();
+        
+    }
+
     public void CheckDeath()
     {
         for (int i = 0; i < TC.Friend.Count(); i++)
@@ -248,33 +288,40 @@ public class Fight : MonoBehaviour
 
     public void SpellAction(int n)
     {
-        if (n < TC.GetHero(activHero).Spells.Count)
+        if (TC.GetHeroSelected(selectHero).Health.Hp > 0)
         {
-            if (TC.GetHero(activHero).Spells[n].coolDownTemp == 0)
+            if (n < TC.GetHero(activHero).Spells.Count)
             {
-                int temp = 0;
-                if (activHero >= TC.Friend.Count())
+                if (TC.GetHero(activHero).Spells[n].coolDownTemp == 0)
                 {
-                    temp = 4 - TC.Friend.Count();
+                    int temp = 0;
+                    if (activHero >= TC.Friend.Count())
+                    {
+                        temp = 4 - TC.Friend.Count();
+                    }
+                    GetComponent<CharacterDisplayBattle>().AttackHero(activHero + temp);
+
+                    Ui.WriteLog(TC.GetHero(activHero).Spells[n].Action(ref TC, activHero, selectHero));
+                    Ui.RefreshHealt();
+                    CheckDeath();
+                    StartCoroutine(ExampleCoroutine());
                 }
-                Debug.Log("activ = " + activHero);
-                Debug.Log("temp = " + temp);
-                GetComponent<CharacterDisplayBattle>().AttackHero(activHero + temp);
-                
-                Ui.WriteLog(TC.GetHero(activHero).Spells[n].Action(ref TC, activHero, selectHero));
-                Ui.RefreshHealt();
-                CheckDeath();
-                StartCoroutine(ExampleCoroutine());
+                else
+                {
+                    Ui.WriteLog("Способность на перезарядке ещё " + TC.GetHero(activHero).Spells[n].coolDownTemp + " ход(а)");
+                }
             }
             else
             {
-                Ui.WriteLog("Способность на перезарядке ещё " + TC.GetHero(activHero).Spells[n].coolDownTemp + " ход(а)");
+                Ui.WriteLog("Способность закрыта");
             }
         }
         else
         {
-            Ui.WriteLog("Способность закрыта");
+            Ui.WriteLog("Цель уже мертва");
+            Debug.Log("hp = " + TC.GetHero(selectHero).Health.Hp + "; modelname = " + TC.GetHero(selectHero).Modelname + "; selectHero = " + selectHero);
         }
+        
         
         
     }
