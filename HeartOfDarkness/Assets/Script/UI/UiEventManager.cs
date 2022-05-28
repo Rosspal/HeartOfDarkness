@@ -30,13 +30,21 @@ public class UiEventManager : MonoBehaviour
         //MainCam.GetComponent<TileClicker>().Activ = true;
     }
 
-    public void OpenBattleEvent()
+    public void OpenCemetery()
+    {
+        BattleEvent.enabled = true;
+        MainCam.GetComponent<TileClicker>().Activ = false;
+        BattleCam.enabled = true;
+        GetComponent<GameControler>().BattleCemeteryStart();
+    }
+
+    public void OpenBattleEvent(string str)
     {
         
         BattleEvent.enabled = true;
         MainCam.GetComponent<TileClicker>().Activ = false;
         BattleCam.enabled = true;
-        GetComponent<GameControler>().BattleStart();
+        GetComponent<GameControler>().BattleStart(str);
 
     }
 

@@ -11,8 +11,20 @@ public class TeamContainer : MonoBehaviour
     private int score = 0;
     [SerializeField] bool cheat = false;
 
-    public int Money { get => money; set => money = value; }
-    public int Score { get => score; set => score = value; }
+    public int Money { get => money; }
+    public int Score { get => score; }
+
+    public void AddMoney(int n)
+    {
+        money += n;
+        GetComponent<InfoUi>().Refresh();
+    }
+    public void AddScore(int n)
+    {
+        score += n;
+        GetComponent<InfoUi>().Refresh();
+    }
+
 
     private void Update()
     {
@@ -24,6 +36,17 @@ public class TeamContainer : MonoBehaviour
             }
             cheat = false;
         }
+    }
+
+    public int AverageLevel()
+    {
+        int result = 1;
+        for (int i = 0; i < Friend.Count(); i++)
+        {
+            result += Friend.GetHero(i).Level;
+        }
+        result /= Friend.Count();
+        return result;
     }
 
     /// <summary>

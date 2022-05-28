@@ -56,9 +56,10 @@ public class Health
         }
     }
 
-    public void SetHPOneLevel(short phy)
+    public void HpUp(short modif,int level)
     {
-        hp = maxHP = (short)(boneHits.Y + phy);
+        hp = MaxHP =(short)(boneHits.Y + (level - 1) * (hpForLevel + modif));
+
     }
 
     public void DamageHP(short n)

@@ -248,6 +248,11 @@ public class Characteristic
         }
     }
 
+    /// <summary>
+    /// Strength, Agility, Intelect, Wisdom, Charisma, Physique.
+    /// </summary>
+    /// <param name="name"></param>
+    /// <returns></returns>
     public short Modifier(string name)
     {
         short n = 0;
@@ -279,8 +284,8 @@ public class Characteristic
 
         switch (n)
         {
-            case >= 0 and <= 1:
-                return 5;
+            case <= 1:
+                return -5;
             case >= 2 and <= 3:
                 return -4;
             case >= 4 and <= 5:
@@ -309,11 +314,8 @@ public class Characteristic
                 return 8;
             case >= 28 and <= 29:
                 return 9;
-            case 30:
+            case >=30:
                 return 10;
-            default:
-                Debug.LogError("превышенно значение характеристики в модификаторе");
-                return 0;
         }
     }
 

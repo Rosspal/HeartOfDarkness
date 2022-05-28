@@ -17,15 +17,32 @@ public class Spell
     {
         return "";
     }
-
+    /// <summary>
+    /// поменял местами value и dice
+    /// </summary>
+    /// <param name="dice"></param>
+    /// <param name="value"></param>
+    /// <returns></returns>
     protected short DamageRoll(int dice, int value)
     {
         short result = 0;
-        for (int i = 0; i < dice; i++)
+        for (int i = 0; i < value; i++)
         {
-            result += (short)Random.Range(1,value + 1);
+            result += (short)Random.Range(1,dice + 1);
         }
         return result;
+    }
+
+    protected bool AttackSuccess(int armor)
+    {
+        if (Random.Range(1,101) >= armor * 4)
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
     }
 }
 
@@ -46,9 +63,17 @@ public class baseAttack: Spell
     public override string Action(ref TeamContainer TC, int source, int destination)
     {
         string str = "";
-        short damage = DamageRoll(TC.GetHero(source).Equipment.Hand.diceCount, TC.GetHero(source).Equipment.Hand.diceValue);
-        str = TC.GetHero(source).Nickname + " наносит " + TC.GetHeroSelected(destination).Nickname + " " + damage + " урона.";
-        TC.GetHeroSelected(destination).Health.DamageHP(damage);
+        if (AttackSuccess(TC.GetHeroSelected(destination).Armor))
+        {
+            short damage = DamageRoll(TC.GetHero(source).Equipment.Hand.diceCount, TC.GetHero(source).Attack);
+            str = TC.GetHero(source).Nickname + " наносит " + TC.GetHeroSelected(destination).Nickname + " " + damage + " урона.";
+            TC.GetHeroSelected(destination).Health.DamageHP(damage);
+        }
+        else
+        {
+            str = TC.GetHero(source).Nickname + " промахивается по " + TC.GetHeroSelected(destination).Nickname;
+        }
+        
         return str;
     }
 }
@@ -84,8 +109,8 @@ public class SplashAttack : Spell
         {
             TC.GetHero(source).Health.Mp -= (short)manaCost;
             int temp = TC.GetHero(source).Characteristic.Modifier("Intelect") / 2;
-            Debug.Log("Intelect " + temp);
-            short damage = (short)temp;
+
+            short damage = (short)(temp + DamageRoll(1, TC.GetHero(source).Attack));
             str = TC.GetHero(source).Nickname + " наносит всем противникам " + damage + " урона.";
             TC.GetHeroSelected(destination).Health.DamageHP(damage);
             for (int i = 0; i < TC.Evil.Count(); i++)
@@ -114,9 +139,8 @@ public class Backstab : Spell
     public override string Action(ref TeamContainer TC, int source, int destination)
     {
         string str = "";
-        short damage = DamageRoll(TC.GetHero(source).Equipment.Hand.diceCount, TC.GetHero(source).Equipment.Hand.diceValue);
+        short damage = DamageRoll(TC.GetHero(source).Equipment.Hand.diceCount, TC.GetHero(source).Attack);
         int temp = TC.GetHero(source).Characteristic.Modifier("Agility") / 2;
-        Debug.Log("agil " + temp);
         damage += (short)temp;
         str = TC.GetHero(source).Nickname + " наносит " + TC.GetHeroSelected(destination).Nickname + " " + damage + " урона.";
         TC.GetHeroSelected(destination).Health.DamageHP(damage);
@@ -141,9 +165,8 @@ public class CleavingStrike: Spell
     public override string Action(ref TeamContainer TC, int source, int destination)
     {
         string str = "";
-        short damage = DamageRoll(TC.GetHero(source).Equipment.Hand.diceCount, TC.GetHero(source).Equipment.Hand.diceValue);
+        short damage = DamageRoll(TC.GetHero(source).Equipment.Hand.diceCount, TC.GetHero(source).Attack);
         int temp = TC.GetHero(source).Characteristic.Modifier("Strength") / 2;
-        Debug.Log("stren " + temp);
         damage += (short)temp;
         str = TC.GetHero(source).Nickname + " наносит " + TC.GetHeroSelected(destination).Nickname + " " + damage + " урона.";
         TC.GetHeroSelected(destination).Health.DamageHP(damage);
@@ -181,8 +204,7 @@ public class Heal : Spell
         else
         {
             TC.GetHero(source).Health.Mp -= (short)manaCost;
-            short damage = TC.GetHero(source).Characteristic.Modifier("Intelect");
-            Debug.Log("Intelect " + damage);
+            short damage = (short)(TC.GetHero(source).Characteristic.Modifier("Intelect") * TC.GetHero(source).Level);
             str = TC.GetHero(source).Nickname + " лечит " + TC.GetHeroSelected(destination).Nickname + " " + damage + " здоровья.";
             damage *= (short)-1;
             TC.GetHeroSelected(destination).Health.DamageHP(damage);
@@ -208,7 +230,7 @@ public class AccurateShot: Spell
     public override string Action(ref TeamContainer TC, int source, int destination)
     {
         string str = "";
-        short damage = DamageRoll(TC.GetHero(source).Equipment.Hand.diceCount, TC.GetHero(source).Equipment.Hand.diceValue);
+        short damage = DamageRoll(TC.GetHero(source).Equipment.Hand.diceCount, TC.GetHero(source).Attack);
         damage *= (short)2;
         str = TC.GetHero(source).Nickname + " наносит " + TC.GetHeroSelected(destination).Nickname + " " + damage + " урона.";
         TC.GetHeroSelected(destination).Health.DamageHP(damage);
@@ -232,7 +254,7 @@ public class AStrongBeat : Spell
     public override string Action(ref TeamContainer TC, int source, int destination)
     {
         string str = "";
-        short damage = DamageRoll(TC.GetHero(source).Equipment.Hand.diceCount, TC.GetHero(source).Equipment.Hand.diceValue);
+        short damage = DamageRoll(TC.GetHero(source).Equipment.Hand.diceCount, TC.GetHero(source).Attack);
         int temp = TC.GetHero(source).Characteristic.Modifier("Physique") / 2;
         Debug.Log("Phys " + temp);
         damage += (short)temp;
@@ -258,7 +280,7 @@ public class Rage : Spell
     public override string Action(ref TeamContainer TC, int source, int destination)
     {
         string str = "";
-        short damage = DamageRoll(TC.GetHero(source).Equipment.Hand.diceCount, TC.GetHero(source).Equipment.Hand.diceValue);
+        short damage = DamageRoll(TC.GetHero(source).Equipment.Hand.diceCount, TC.GetHero(source).Attack);
         str = TC.GetHero(source).Nickname + " наносит " + damage + " урона ";
         for (int i = 0; i < TC.Evil.Count(); i++)
         {
@@ -301,7 +323,7 @@ public class ShieldBash: Spell
     {
 
         string str = "";
-        short damage = DamageRoll(TC.GetHero(source).Equipment.Hand.diceCount, TC.GetHero(source).Equipment.Hand.diceValue);
+        short damage = DamageRoll(TC.GetHero(source).Equipment.Hand.diceCount, TC.GetHero(source).Attack);
         damage *= (short)2;
         str = TC.GetHero(source).Nickname + " наносит " + TC.GetHeroSelected(destination).Nickname + " " + damage + " урона.";
         TC.GetHeroSelected(destination).Health.DamageHP(damage);
@@ -325,7 +347,7 @@ public class AccurateHit : Spell
     public override string Action(ref TeamContainer TC, int source, int destination)
     {
         string str = "";
-        short damage = DamageRoll(TC.GetHero(source).Equipment.Hand.diceCount, TC.GetHero(source).Equipment.Hand.diceValue);
+        short damage = DamageRoll(TC.GetHero(source).Equipment.Hand.diceCount, TC.GetHero(source).Attack);
         damage *= (short)2;
         str = TC.GetHero(source).Nickname + " наносит " + TC.GetHeroSelected(destination).Nickname + " " + damage + " урона.";
         TC.GetHeroSelected(destination).Health.DamageHP(damage);

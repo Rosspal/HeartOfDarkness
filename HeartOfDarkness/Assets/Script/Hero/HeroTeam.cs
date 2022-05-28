@@ -6,6 +6,14 @@ public class HeroTeam : Team
 {
     public new List<Hero> team = new();
 
+    public void AddExp(int n)
+    {
+        for (int i = 0; i < team.Count; i++)
+        {
+            team[i].AddExp(n);
+        }
+    }
+
     public void AddHero(Hero hero)
     {
         if (team.Count < 4)

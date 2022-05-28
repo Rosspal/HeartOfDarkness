@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System;
+//using System;
 
 public class GameControler : MonoBehaviour
 {
@@ -17,8 +17,11 @@ public class GameControler : MonoBehaviour
     [SerializeField] Fight fight;
     [SerializeField] bool cheat;
     [SerializeField] double healingCost = 2;
+    private string eventName = "";
 
     private bool checkTaverna = false;
+
+    public string EventName { get => eventName; set => eventName = value; }
 
     private void Start()
     {
@@ -65,7 +68,7 @@ public class GameControler : MonoBehaviour
     {
         if (TC.Money >= HealingCost())
         {
-            TC.Money -= HealingCost();
+            TC.AddMoney(HealingCost());
             GetComponent<InfoUi>().Refresh();
             GetComponent<ManagerUiTown>().RefreshHealingCost();
             TC.Friend.HealTeam();
@@ -77,7 +80,7 @@ public class GameControler : MonoBehaviour
     {
         if (TC.Money >= 10)
         {
-            TC.Money -= 10;
+            TC.AddMoney(-10);
             GetComponent<InfoUi>().Refresh();
             if (checkTaverna)
             {
@@ -136,7 +139,7 @@ public class GameControler : MonoBehaviour
         {
             if (TC.Money >= 50)
             {
-                TC.Money -= 50;
+                TC.AddMoney(-50);
                 GetComponent<InfoUi>().Refresh();
                 TC.Friend.AddHero(TavernaTeam.GetHero(number));
                 return true;
@@ -181,32 +184,60 @@ public class GameControler : MonoBehaviour
         TavernaTeam.GetHero(k).Modelname = name;
     }
 
-    public void BattleStart()
+    public void BattleCemeteryStart()
     {
-        //TC.Friend.AddHero(Gen.Generate("Человек","Волшебник"));
-        //TC.Friend.GetHero(0).Modelname = TC.Friend.GetHero(0).Modelname + 1;
-        //TC.Friend.GetHero(0).Health.MaxHP = 100;
-        //TC.Friend.GetHero(0).Health.Hp = 100;
-        //TC.Friend.GetHero(0).Equipment.Hand.diceCount = 20;
-        //TC.Friend.GetHero(0).Equipment.Hand.diceValue = 20;
-        //Debug.Log("dice count = " + TC.Friend.GetHero(0).Equipment.Hand.diceCount + "value = TC.Friend.GetHero(0).Equipment.Hand.diceValue");
-        //TC.Friend.AddHero(Gen.Generate());
-        //TC.Friend.GetHero(1).Modelname = TC.Friend.GetHero(1).Modelname + 1;
-        //TC.Friend.AddHero(Gen.Generate());
-        //TC.Friend.GetHero(2).Modelname = TC.Friend.GetHero(2).Modelname + 1;
-        //TC.Friend.AddHero(Gen.Generate());
-        //TC.Friend.GetHero(3).Modelname = TC.Friend.GetHero(3).Modelname + 1;
-
-        TC.Evil.AddHero(Gen.Generate());
+        eventName = "Кладбище";
+        TC.Evil.AddHero(Gen.Generate("Скелет", "Варвар", 4));
         TC.Evil.GetHero(0).Modelname = TC.Evil.GetHero(0).Modelname + 1;
-        TC.Evil.AddHero(Gen.Generate());
+        TC.Evil.AddHero(Gen.Generate("Скелет", "Монах", 4));
         TC.Evil.GetHero(1).Modelname = TC.Evil.GetHero(1).Modelname + 1;
-        TC.Evil.GetHero(0).Health.Hp = 1;
-        TC.Evil.GetHero(1).Health.Hp = 1;
-        //TC.Evil.AddHero(Gen.Generate());
-        //TC.Evil.GetHero(2).Modelname = TC.Evil.GetHero(2).Modelname + 1;
-        //TC.Evil.AddHero(Gen.Generate());
-        //TC.Evil.GetHero(3).Modelname = TC.Evil.GetHero(3).Modelname + 1;
+        TC.Evil.AddHero(Gen.Generate("Скелет", "Монах", 5));
+        TC.Evil.GetHero(2).Modelname = TC.Evil.GetHero(2).Modelname + 1;
+        TC.Evil.AddHero(Gen.Generate("Скелет", "Варвар", 5));
+        TC.Evil.GetHero(3).Modelname = TC.Evil.GetHero(3).Modelname + 1;
+
+        fight.BattleInit();
+        GetComponent<CharacterDisplayBattle>().Display();
+    }
+
+    public void BattleStart(string str)
+    {
+        eventName = str;
+
+        switch (str)
+        {
+            case "Деревня":
+                TC.Evil.AddHero(Gen.Generate("Гоблин", "Воин", 3));
+                TC.Evil.GetHero(0).Modelname = TC.Evil.GetHero(0).Modelname + 1;
+                TC.Evil.AddHero(Gen.Generate("Гоблин", "Плут", 2));
+                TC.Evil.GetHero(1).Modelname = TC.Evil.GetHero(1).Modelname + 1;
+                TC.Evil.AddHero(Gen.Generate("Гоблин", "Следопыт", 2));
+                TC.Evil.GetHero(2).Modelname = TC.Evil.GetHero(2).Modelname + 1;
+                TC.Evil.AddHero(Gen.Generate("Гоблин", "Следопыт", 3));
+                TC.Evil.GetHero(3).Modelname = TC.Evil.GetHero(3).Modelname + 1;
+                break;
+            case "Храм":
+                break;
+            default:
+                if (TC.Friend.Count() != 1)
+                {
+                    int rand = 0;
+                    rand = Random.Range(1, TC.Friend.Count() + 1);
+                    for (int i = 0; i < rand; i++)
+                    {
+                        TC.Evil.AddHero(Gen.Generate(TC.AverageLevel()));
+                        TC.Evil.GetHero(i).Modelname = TC.Evil.GetHero(i).Modelname + 1;
+                    }
+                }
+                else
+                {
+                    TC.Evil.AddHero(Gen.Generate(TC.AverageLevel()));
+                    TC.Evil.GetHero(0).Modelname = TC.Evil.GetHero(0).Modelname + 1;
+                }
+                
+                break;
+        }
+
 
         fight.BattleInit();
         GetComponent<CharacterDisplayBattle>().Display();

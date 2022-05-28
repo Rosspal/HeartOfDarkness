@@ -147,19 +147,45 @@ public class Fight : MonoBehaviour
         {
             if (TC.Evil.GetHero(i).Health.Hp <= 0)
             {
-                TC.Score += 25;
+                TC.AddScore(25);
             }
         }
     }
 
+
+
     public void Win()
     {
         int tempRand = Random.Range(10, 25);
-        TC.Money += tempRand * TC.Evil.Count();
+        TC.AddMoney(tempRand * TC.Evil.Count());
         ScopeBattle();
-        TC.Score += TC.Evil.Count() * 45;
+        TC.AddScore(TC.Evil.Count() * 45);
         GetComponent<InfoUi>().Refresh();
         ResetBattle();
+        int rand = Random.Range(13, 28);
+        Debug.Log("rand = " + rand);
+        TC.Friend.AddExp(rand);
+
+        switch (GetComponent<GameControler>().EventName)
+        {
+            case "Кладбище":
+                TC.AddScore(600);
+                TC.AddMoney(350);
+                break;
+            case "Дорога":
+                break;
+            case "Деревня":
+                TC.AddScore(300);
+                TC.AddMoney(150);
+                break;
+            case "Лес":
+                break;
+            case "Поле":
+                break;
+            case "Корабли":
+                break;
+        }
+
         GetComponent<UiEventManager>().CloseBattleEvent();
     }
 

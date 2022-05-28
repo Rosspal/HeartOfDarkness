@@ -10,6 +10,10 @@ public class ManagerUiTown : MonoBehaviour
     [SerializeField] Canvas Town;
     [SerializeField] GameObject Main;
 
+    [SerializeField] Camera Training;
+    [SerializeField] Canvas TrainingUi;
+
+
     private bool oneRefresh = true;
     //[SerializeField] GameObject Store;
     //[SerializeField] GameObject Taverna;
@@ -21,6 +25,26 @@ public class ManagerUiTown : MonoBehaviour
         Taverna.enabled = false;
         TavernaUi.enabled = false;
         
+    }
+
+    public void OpenTraining()
+    {
+        Town.enabled = false;
+        Main.GetComponent<Camera>().enabled = false;
+        Training.enabled = true;
+        TrainingUi.enabled = true;
+        GetComponent<UiTraining>().Init();
+        GetComponent<CharacterDisplayTraining>().Display();
+    }
+
+    public void CloseTraining()
+    {
+        Town.enabled = true;
+        Main.GetComponent<Camera>().enabled = true;
+        GetComponent<CharacterDisplayTraining>().ClearDisplay();
+        GetComponent<UiTraining>().Clear();
+        Training.enabled = false;
+        TrainingUi.enabled = false;
     }
 
     public void OpenTaverna()
