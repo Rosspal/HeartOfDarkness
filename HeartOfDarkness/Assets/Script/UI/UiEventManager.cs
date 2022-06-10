@@ -7,6 +7,8 @@ public class UiEventManager : MonoBehaviour
     [SerializeField] Camera BattleCam;
     [SerializeField] Camera MainCam;
 
+    [SerializeField] Canvas Menu;
+
 
     void Start()
     {
@@ -14,8 +16,25 @@ public class UiEventManager : MonoBehaviour
         BattleEvent.enabled = false;
         BattleCam.enabled = false;
         MainCam.enabled = true;
+        Menu.enabled = false;
     }
 
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Menu.enabled = true;
+            MainCam.GetComponent<MoveCamera>().useCameraMovement = false;
+            MainCam.GetComponent<TileClicker>().Activ = false;
+        }
+    }
+
+    public void CloseMenu()
+    {
+        Menu.enabled = false;
+        MainCam.GetComponent<MoveCamera>().useCameraMovement = true;
+        MainCam.GetComponent<TileClicker>().Activ = true;
+    }
 
     public void OpenTown()
     {

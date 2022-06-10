@@ -9,4 +9,8 @@ public class SceneControler : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
+    public void ExitMainMenu()
+    {
+        SceneManager.LoadScene(0);
+    }
 }
