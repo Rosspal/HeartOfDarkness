@@ -29,6 +29,7 @@ public class ManagerUiTown : MonoBehaviour
 
     public void OpenTraining()
     {
+        GetComponent<SoundBox>().PlayClick();
         Town.enabled = false;
         Main.GetComponent<Camera>().enabled = false;
         Training.enabled = true;
@@ -39,6 +40,7 @@ public class ManagerUiTown : MonoBehaviour
 
     public void CloseTraining()
     {
+        GetComponent<SoundBox>().PlayClick();
         Town.enabled = true;
         Main.GetComponent<Camera>().enabled = true;
         GetComponent<CharacterDisplayTraining>().ClearDisplay();
@@ -49,6 +51,7 @@ public class ManagerUiTown : MonoBehaviour
 
     public void OpenTaverna()
     {
+        GetComponent<SoundBox>().PlayClick();
         Town.enabled = false;
         Main.GetComponent<Camera>().enabled = false;
         Taverna.enabled = true;
@@ -71,6 +74,7 @@ public class ManagerUiTown : MonoBehaviour
 
     public void CloseTaverna()
     {
+        GetComponent<SoundBox>().PlayClick();
         Town.enabled = true;
         Main.GetComponent<Camera>().enabled = true;
         Taverna.enabled = false;
@@ -79,7 +83,11 @@ public class ManagerUiTown : MonoBehaviour
 
     public void CloseTown()
     {
+        GetComponent<SoundBox>().PlayClick();
+        GetComponent<SoundBox>().PlayMapMusic();
+        GetComponent<UiEventManager>().Map = true;
         Main.GetComponent<TileClicker>().CameraMove(true);
+        Main.GetComponent<TileClicker>().Activ = true;
         Town.enabled = false;
     }
 

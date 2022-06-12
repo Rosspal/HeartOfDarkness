@@ -34,22 +34,6 @@ public class GameControler : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            Debug.Log("////////////////////////");
-            Debug.Log("Friend");
-            Debug.Log("Name = " + TC.Friend.GetHero(0).Nickname + " ModelName = " + TC.Friend.GetHero(0).Modelname);
-            Debug.Log("Name = " + TC.Friend.GetHero(1).Nickname + " ModelName = " + TC.Friend.GetHero(1).Modelname);
-            Debug.Log("Name = " + TC.Friend.GetHero(2).Nickname + " ModelName = " + TC.Friend.GetHero(2).Modelname);
-            Debug.Log("Name = " + TC.Friend.GetHero(3).Nickname + " ModelName = " + TC.Friend.GetHero(3).Modelname);
-            Debug.Log("////////////////////////");
-            Debug.Log("Evil");
-            Debug.Log("Name = " + TC.Evil.GetHero(0).Nickname + " ModelName = " + TC.Evil.GetHero(0).Modelname);
-            Debug.Log("Name = " + TC.Evil.GetHero(1).Nickname + " ModelName = " + TC.Evil.GetHero(1).Modelname);
-            Debug.Log("Name = " + TC.Evil.GetHero(2).Nickname + " ModelName = " + TC.Evil.GetHero(2).Modelname);
-            Debug.Log("Name = " + TC.Evil.GetHero(3).Nickname + " ModelName = " + TC.Evil.GetHero(3).Modelname);
-            Debug.Log("////////////////////////");
-        }
 
         if (cheat)
         {

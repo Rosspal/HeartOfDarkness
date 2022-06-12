@@ -47,6 +47,7 @@ public class UiTavern : MonoBehaviour
 
     public void BuyHero()
     {
+        GetComponent<SoundBox>().PlaySound("ItemBuy");
         if (GetComponent<GameControler>().BuyHero(check))
         {
             GetComponent<CharacterDisplay>().ClearDisplay(check);
@@ -59,6 +60,7 @@ public class UiTavern : MonoBehaviour
 
     public void RefreshTaverna()
     {
+        GetComponent<SoundBox>().PlaySound("ItemBuy");
         //GetComponent<GameControler>().FreeRefreshTaverna();
         if (!GetComponent<GameControler>().RefreshTaverna())
         {
@@ -74,6 +76,7 @@ public class UiTavern : MonoBehaviour
 
     public void CloseInfoTab()
     {
+        GetComponent<UiEventManager>().Click();
         InfoTab.SetActive(false);
     }
 }

@@ -13,26 +13,6 @@ public class Fight : MonoBehaviour
     [SerializeField] TeamContainer TC;
     [SerializeField] UiFigh Ui;
 
-    void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            Debug.Log("////////////////////////");
-            Debug.Log("Friend");
-            Debug.Log("Name = " + TC.Friend.GetHero(0).Nickname + " ModelName = " + TC.Friend.GetHero(0).Modelname);
-            Debug.Log("Name = " + TC.Friend.GetHero(1).Nickname + " ModelName = " + TC.Friend.GetHero(1).Modelname);
-            Debug.Log("Name = " + TC.Friend.GetHero(2).Nickname + " ModelName = " + TC.Friend.GetHero(2).Modelname);
-            Debug.Log("Name = " + TC.Friend.GetHero(3).Nickname + " ModelName = " + TC.Friend.GetHero(3).Modelname);
-            Debug.Log("////////////////////////");
-            Debug.Log("Evil");
-            Debug.Log("Name = " + TC.Evil.GetHero(0).Nickname + " ModelName = " + TC.Friend.GetHero(0).Modelname);
-            Debug.Log("Name = " + TC.Evil.GetHero(1).Nickname + " ModelName = " + TC.Friend.GetHero(1).Modelname);
-            Debug.Log("Name = " + TC.Evil.GetHero(2).Nickname + " ModelName = " + TC.Friend.GetHero(2).Modelname);
-            Debug.Log("Name = " + TC.Evil.GetHero(3).Nickname + " ModelName = " + TC.Friend.GetHero(3).Modelname);
-            Debug.Log("////////////////////////");
-        }
-    }
-
 
     public int Round { get => round; set => round = value; }
 
@@ -156,6 +136,7 @@ public class Fight : MonoBehaviour
 
     public void Win()
     {
+        GetComponent<SoundBox>().PlaySound("BattleWin");
         int tempRand = Random.Range(10, 25);
         TC.AddMoney(tempRand * TC.Evil.Count());
         ScopeBattle();
@@ -195,6 +176,7 @@ public class Fight : MonoBehaviour
         {
             ScopeBattle();
             GetComponent<InfoUi>().Refresh();
+            GetComponent<SoundBox>().PlaySound("Lose");
             Ui.Defeat();
         }
         else
@@ -276,6 +258,7 @@ public class Fight : MonoBehaviour
 
     public void SetSelected(int n)
     {
+        GetComponent<SoundBox>().PlaySound("Click2");
         selectHero = n;
     }
 
@@ -314,6 +297,7 @@ public class Fight : MonoBehaviour
 
     public void SpellAction(int n)
     {
+        GetComponent<SoundBox>().PlaySound("Click2");
         if (TC.GetHeroSelected(selectHero).Health.Hp > 0)
         {
             if (n < TC.GetHero(activHero).Spells.Count)
@@ -325,6 +309,7 @@ public class Fight : MonoBehaviour
                     {
                         temp = 4 - TC.Friend.Count();
                     }
+                    GetComponent<SoundBox>().PlaySound("Shot");
                     GetComponent<CharacterDisplayBattle>().AttackHero(activHero + temp);
 
                     Ui.WriteLog(TC.GetHero(activHero).Spells[n].Action(ref TC, activHero, selectHero));

@@ -1,0 +1,3127 @@
+fileFormatVersion: 2
+guid: 6bfa5d55a40b1ba44945f909c1567594
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 0
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 8192
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: DemonSlime_0
+      rect:
+        serializedVersion: 2
+        x: 4733
+        y: 712
+        width: 10
+        height: 31
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 328224128b04dbe4f9c26c5ebf3351ff
+      internalID: -2142628601
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_1
+      rect:
+        serializedVersion: 2
+        x: 4777
+        y: 711
+        width: 11
+        height: 30
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9180bef9586f8b34186c66f88384ac4d
+      internalID: -947188619
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_2
+      rect:
+        serializedVersion: 2
+        x: 4992
+        y: 641
+        width: 91
+        height: 97
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ccd0d580ea193b747a812339939e1a8d
+      internalID: -1870905424
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_3
+      rect:
+        serializedVersion: 2
+        x: 5021
+        y: 713
+        width: 11
+        height: 35
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 566785c942181bd4cb56106fd13ff11c
+      internalID: 220939076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_4
+      rect:
+        serializedVersion: 2
+        x: 5065
+        y: 712
+        width: 10
+        height: 34
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f0666785da070e449dd77dac7020b60
+      internalID: 862620118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_5
+      rect:
+        serializedVersion: 2
+        x: 5309
+        y: 714
+        width: 11
+        height: 31
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f89304e2503b8c4ba792119e8485414
+      internalID: -1634283534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_6
+      rect:
+        serializedVersion: 2
+        x: 5353
+        y: 732
+        width: 5
+        height: 6
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59d07d816f8ba6b49ada28e4a4e392af
+      internalID: -98502880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_7
+      rect:
+        serializedVersion: 2
+        x: 5353
+        y: 736
+        width: 9
+        height: 11
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7927403a79fdb9e4d815e82dd41e63be
+      internalID: -608695872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_8
+      rect:
+        serializedVersion: 2
+        x: 5597
+        y: 713
+        width: 10
+        height: 31
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 487ee56b8cfa7e8449300812b5415f77
+      internalID: -1931114077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_9
+      rect:
+        serializedVersion: 2
+        x: 5641
+        y: 712
+        width: 12
+        height: 36
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0797e0fc94f7c4f4093b09b6d694bc44
+      internalID: -1642989092
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_10
+      rect:
+        serializedVersion: 2
+        x: 5885
+        y: 712
+        width: 10
+        height: 33
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e32de430a8ac0864db62d6aa47a296a1
+      internalID: -597305351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_11
+      rect:
+        serializedVersion: 2
+        x: 5929
+        y: 711
+        width: 11
+        height: 32
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c37e607d1af0c194fab221b8f8aa2cbd
+      internalID: -1285850591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonIdle
+      rect:
+        serializedVersion: 2
+        x: 6150
+        y: 641
+        width: 80
+        height: 105
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09b16e26f0b7b58419dda08150a40a9c
+      internalID: 38775775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_15
+      rect:
+        serializedVersion: 2
+        x: 4706
+        y: 641
+        width: 87
+        height: 91
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d95a4c84127d99b478c6e3457af752b9
+      internalID: 905711060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_16
+      rect:
+        serializedVersion: 2
+        x: 5281
+        y: 641
+        width: 91
+        height: 94
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd7a332a6bf857742a86880ecf9c377a
+      internalID: -236642121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_17
+      rect:
+        serializedVersion: 2
+        x: 5568
+        y: 641
+        width: 91
+        height: 94
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3a9e3958c1570e47a793bfff76723da
+      internalID: 1506427650
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_18
+      rect:
+        serializedVersion: 2
+        x: 5858
+        y: 641
+        width: 87
+        height: 91
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8292aac64c1726e49a4c56d60cc61aa3
+      internalID: 1594026289
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_19
+      rect:
+        serializedVersion: 2
+        x: 2991
+        y: 571
+        width: 9
+        height: 9
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6eedccc09833ee4c95e9b088c39ad57
+      internalID: 1733044834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_20
+      rect:
+        serializedVersion: 2
+        x: 3032
+        y: 569
+        width: 8
+        height: 10
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b8e9b4d4d975fb8498ae43609fba14f1
+      internalID: -236122242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_21
+      rect:
+        serializedVersion: 2
+        x: 3042
+        y: 574
+        width: 4
+        height: 5
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0258ca3dcc5d50646acbad64d02e319a
+      internalID: -964150753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_22
+      rect:
+        serializedVersion: 2
+        x: 3324
+        y: 577
+        width: 4
+        height: 4
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d7e9cbd1e325a64abba8ffc364c477b
+      internalID: -1491687786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_23
+      rect:
+        serializedVersion: 2
+        x: 3612
+        y: 568
+        width: 8
+        height: 12
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f77d5a070e12c7448b0506bfe13d02e2
+      internalID: 598260509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_24
+      rect:
+        serializedVersion: 2
+        x: 3856
+        y: 572
+        width: 5
+        height: 7
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6f6aea72ddedbe48b8258a48941301e
+      internalID: 1932654169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_25
+      rect:
+        serializedVersion: 2
+        x: 3902
+        y: 573
+        width: 10
+        height: 8
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9aad39580b6ed7b4f916752a5f496f0f
+      internalID: -745413741
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_26
+      rect:
+        serializedVersion: 2
+        x: 4143
+        y: 571
+        width: 9
+        height: 9
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6d45dad5002b5634f940d792876e9c64
+      internalID: -1363433475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_27
+      rect:
+        serializedVersion: 2
+        x: 4184
+        y: 569
+        width: 8
+        height: 10
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d6fca3dec38e6304c87e49b8354e6717
+      internalID: -525552054
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_28
+      rect:
+        serializedVersion: 2
+        x: 4194
+        y: 574
+        width: 4
+        height: 5
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37a1e1e1a5065f44597f3642d29c4ae1
+      internalID: 754204577
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_29
+      rect:
+        serializedVersion: 2
+        x: 4476
+        y: 568
+        width: 8
+        height: 12
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b00ae608936939047b3bb4c74bf982f9
+      internalID: 1652291905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_30
+      rect:
+        serializedVersion: 2
+        x: 4764
+        y: 577
+        width: 4
+        height: 4
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92dbb246cf6b5784c8c969ec14ca0f62
+      internalID: -1244597692
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_31
+      rect:
+        serializedVersion: 2
+        x: 5008
+        y: 572
+        width: 5
+        height: 7
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fa450448691a5c4890dc07bb87c2b4f
+      internalID: 1488849599
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_32
+      rect:
+        serializedVersion: 2
+        x: 5054
+        y: 573
+        width: 10
+        height: 8
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb73367f346ac3349a966d856fb828da
+      internalID: 123066931
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_33
+      rect:
+        serializedVersion: 2
+        x: 5295
+        y: 571
+        width: 9
+        height: 9
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edcd52352b4c0e6459f55c89654d37c9
+      internalID: -2062204181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_34
+      rect:
+        serializedVersion: 2
+        x: 5336
+        y: 569
+        width: 8
+        height: 10
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0685146f01ba95f43b5ce6ee1bc59e0e
+      internalID: -764137066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_35
+      rect:
+        serializedVersion: 2
+        x: 5346
+        y: 574
+        width: 4
+        height: 5
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce2e699cdcdf1254bafdd22a3bed9a42
+      internalID: 1050804717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_36
+      rect:
+        serializedVersion: 2
+        x: 5584
+        y: 572
+        width: 5
+        height: 7
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3c01aa6760e74a44840f15ed590d736
+      internalID: -1185793460
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_37
+      rect:
+        serializedVersion: 2
+        x: 5630
+        y: 573
+        width: 10
+        height: 8
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3494376c0da07140835756c01aad3dc
+      internalID: -889576560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_38
+      rect:
+        serializedVersion: 2
+        x: 5916
+        y: 568
+        width: 8
+        height: 12
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5f06828a6e33acd4e8255662b98a8bb6
+      internalID: 2053125882
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_39
+      rect:
+        serializedVersion: 2
+        x: 6204
+        y: 577
+        width: 4
+        height: 4
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb26054482273fe40b2e55def93530d3
+      internalID: 1550850236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_40
+      rect:
+        serializedVersion: 2
+        x: 3283
+        y: 572
+        width: 4
+        height: 5
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 53869eee8a1ce144c80aac44b66ab042
+      internalID: -1644407330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_41
+      rect:
+        serializedVersion: 2
+        x: 3286
+        y: 551
+        width: 18
+        height: 24
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 439e81d06d82b2b438f08f150180840d
+      internalID: -2001811675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_42
+      rect:
+        serializedVersion: 2
+        x: 3325
+        y: 550
+        width: 22
+        height: 25
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c6b177c4f20910c4c8d968a1a61a4f36
+      internalID: -651058411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_43
+      rect:
+        serializedVersion: 2
+        x: 3567
+        y: 551
+        width: 25
+        height: 26
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 768c93a1e1deed64badb5ea64b5a3f4e
+      internalID: -325846154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_44
+      rect:
+        serializedVersion: 2
+        x: 3622
+        y: 568
+        width: 6
+        height: 5
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77f5efa0d208dac448c5d85d8f659a6c
+      internalID: -1726312422
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_45
+      rect:
+        serializedVersion: 2
+        x: 3861
+        y: 552
+        width: 18
+        height: 22
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c5806c0e825b3c47a9db4cf13e3029f
+      internalID: -837444407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_46
+      rect:
+        serializedVersion: 2
+        x: 3869
+        y: 571
+        width: 4
+        height: 4
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe1320707d09eac4eb0ff4c761dbd4a4
+      internalID: -1605380988
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_47
+      rect:
+        serializedVersion: 2
+        x: 3899
+        y: 571
+        width: 4
+        height: 5
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 06f14da1e4bce9b4caf847f35423fe96
+      internalID: 1973369207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_48
+      rect:
+        serializedVersion: 2
+        x: 4431
+        y: 551
+        width: 25
+        height: 26
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67ab5f22fd99ba14cb06ad3ab3ed5d9a
+      internalID: 1155116774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_49
+      rect:
+        serializedVersion: 2
+        x: 4486
+        y: 568
+        width: 6
+        height: 5
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a74674e1db17264fa31ec6594d201a0
+      internalID: -112493077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_50
+      rect:
+        serializedVersion: 2
+        x: 4709
+        y: 481
+        width: 78
+        height: 94
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 19301017d1114754e9e53dcad4c9a4ac
+      internalID: -1741993333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_51
+      rect:
+        serializedVersion: 2
+        x: 4723
+        y: 572
+        width: 4
+        height: 5
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8fd1c596196e95c4cb7e64ba333ff9b0
+      internalID: -904757498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_52
+      rect:
+        serializedVersion: 2
+        x: 4726
+        y: 551
+        width: 18
+        height: 24
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb9a401b194675d4992154e301a92c38
+      internalID: 1857322199
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_53
+      rect:
+        serializedVersion: 2
+        x: 5013
+        y: 552
+        width: 18
+        height: 22
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f73b7314bce641c4d9fbaf3ce7f1d84f
+      internalID: -1020175233
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_54
+      rect:
+        serializedVersion: 2
+        x: 5021
+        y: 571
+        width: 4
+        height: 4
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bab034096e072284a9e0319535553f39
+      internalID: 371904688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_55
+      rect:
+        serializedVersion: 2
+        x: 5051
+        y: 571
+        width: 4
+        height: 5
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8eaf375576847f14eb67c52efb91cc6c
+      internalID: 1482453254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_56
+      rect:
+        serializedVersion: 2
+        x: 5589
+        y: 552
+        width: 18
+        height: 22
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f7fd400104298a44b9082fc3bb35fcfc
+      internalID: -529128665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_57
+      rect:
+        serializedVersion: 2
+        x: 5597
+        y: 571
+        width: 4
+        height: 4
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a0c08696d72ff604ea6a217cf4e8233e
+      internalID: -1709597962
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_58
+      rect:
+        serializedVersion: 2
+        x: 5627
+        y: 571
+        width: 4
+        height: 5
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f53161a77cc5df842bf7c46d8342bbd4
+      internalID: -1907655802
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_59
+      rect:
+        serializedVersion: 2
+        x: 5871
+        y: 551
+        width: 25
+        height: 26
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 94340e85a0713624f9643addb99dd694
+      internalID: -971987033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_60
+      rect:
+        serializedVersion: 2
+        x: 5926
+        y: 568
+        width: 6
+        height: 5
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 171ef1034896e8b4d92792043d393daa
+      internalID: -1772683061
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_61
+      rect:
+        serializedVersion: 2
+        x: 6163
+        y: 572
+        width: 4
+        height: 5
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c25c68f53b10b884490377257b39feb9
+      internalID: -2096373668
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_62
+      rect:
+        serializedVersion: 2
+        x: 6165
+        y: 481
+        width: 62
+        height: 94
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e59fc5850b50fb41bd046bc3d5888d7
+      internalID: -51216637
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_63
+      rect:
+        serializedVersion: 2
+        x: 6166
+        y: 551
+        width: 18
+        height: 24
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65a3a4627d568a148980e40787fdc574
+      internalID: -158502159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_64
+      rect:
+        serializedVersion: 2
+        x: 2993
+        y: 481
+        width: 66
+        height: 89
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b24e3c00c6d175489cde84067ad7cae
+      internalID: 1587284119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_65
+      rect:
+        serializedVersion: 2
+        x: 2998
+        y: 552
+        width: 18
+        height: 20
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f41d00d7ac2e43844818d5367231cfdc
+      internalID: -611415462
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_66
+      rect:
+        serializedVersion: 2
+        x: 3277
+        y: 481
+        width: 68
+        height: 84
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5ec11e7c77aa69144916b2ba577eb0cf
+      internalID: 1085649719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_67
+      rect:
+        serializedVersion: 2
+        x: 3563
+        y: 481
+        width: 73
+        height: 87
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 27276b476971c39409a790538b710169
+      internalID: 1943335348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_68
+      rect:
+        serializedVersion: 2
+        x: 3846
+        y: 481
+        width: 80
+        height: 91
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d03b7b5d3ccbd424ea9c1a9741f18567
+      internalID: -1778336056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_69
+      rect:
+        serializedVersion: 2
+        x: 4134
+        y: 481
+        width: 80
+        height: 89
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61d1621e28e8c5942b7a0f88b7b9db05
+      internalID: -311760451
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_70
+      rect:
+        serializedVersion: 2
+        x: 4150
+        y: 552
+        width: 18
+        height: 20
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f549f4253c0b7f944bfec995550960c2
+      internalID: 979501761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_71
+      rect:
+        serializedVersion: 2
+        x: 4417
+        y: 481
+        width: 85
+        height: 87
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2b1c4469156df847aa8b43fafe13034
+      internalID: 1860667569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_72
+      rect:
+        serializedVersion: 2
+        x: 5001
+        y: 481
+        width: 74
+        height: 91
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34cbbf6b528e6e84db09a2678b935583
+      internalID: -1162557693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_73
+      rect:
+        serializedVersion: 2
+        x: 5293
+        y: 481
+        width: 70
+        height: 89
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f65d24539ebd550468c6e55ea089d957
+      internalID: -1628576002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_74
+      rect:
+        serializedVersion: 2
+        x: 5302
+        y: 552
+        width: 18
+        height: 20
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2009fbc87dc1344da4ba7a2aa575171
+      internalID: -682495324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_75
+      rect:
+        serializedVersion: 2
+        x: 5586
+        y: 481
+        width: 65
+        height: 91
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28965e8f8df0eed4e8ee967ce8e90aab
+      internalID: 2060390218
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_76
+      rect:
+        serializedVersion: 2
+        x: 5874
+        y: 481
+        width: 65
+        height: 87
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28d90914b7f491a4e96610ef5a3fb804
+      internalID: -328709390
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 9
+      rect:
+        serializedVersion: 2
+        x: 3829
+        y: 321
+        width: 86
+        height: 111
+      alignment: 9
+      pivot: {x: 0.24, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9e94d004ef14444ea971e4071ec6bfc
+      internalID: -1117319542
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 8
+      rect:
+        serializedVersion: 2
+        x: 4117
+        y: 321
+        width: 86
+        height: 114
+      alignment: 9
+      pivot: {x: 0.24, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0257f511816c5f44ab379e0897239b60
+      internalID: 376080899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 7
+      rect:
+        serializedVersion: 2
+        x: 4405
+        y: 321
+        width: 86
+        height: 109
+      alignment: 9
+      pivot: {x: 0.25, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 527ad37104f4eaa44a415dcb38424df5
+      internalID: 554346230
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 5
+      rect:
+        serializedVersion: 2
+        x: 4979
+        y: 321
+        width: 90
+        height: 109
+      alignment: 9
+      pivot: {x: 0.2, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef68976173499e544a430445c4bf5c9d
+      internalID: -917222743
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 2
+      rect:
+        serializedVersion: 2
+        x: 5864
+        y: 321
+        width: 76
+        height: 104
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c98eeafb8513b7b49bc3263eb8b98944
+      internalID: 116769266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 15
+      rect:
+        serializedVersion: 2
+        x: 2118
+        y: 321
+        width: 80
+        height: 105
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f1b7d137b7311b543b33727e94a5f2fb
+      internalID: -655224458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 14
+      rect:
+        serializedVersion: 2
+        x: 2413
+        y: 321
+        width: 78
+        height: 102
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07db22c1a61cb79448e43ecc87d95517
+      internalID: 1016394470
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 6
+      rect:
+        serializedVersion: 2
+        x: 4691
+        y: 321
+        width: 89
+        height: 105
+      alignment: 9
+      pivot: {x: 0.25, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca7ecf6a12d64e6409dbd83ed198dcf7
+      internalID: 25984584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4
+      rect:
+        serializedVersion: 2
+        x: 5270
+        y: 321
+        width: 86
+        height: 107
+      alignment: 9
+      pivot: {x: 0.2, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04e8c47d0d876aa4aaba0fc33e2a79e5
+      internalID: 1183816785
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 3
+      rect:
+        serializedVersion: 2
+        x: 5555
+        y: 321
+        width: 93
+        height: 109
+      alignment: 9
+      pivot: {x: 0.2, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 59da0ab0de1db2c4f91a1d7c0d0401cc
+      internalID: 1678731879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 1
+      rect:
+        serializedVersion: 2
+        x: 6150
+        y: 321
+        width: 80
+        height: 105
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c69778509d2d1404d81c18b17eab40af
+      internalID: 1132798363
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 13
+      rect:
+        serializedVersion: 2
+        x: 2701
+        y: 321
+        width: 99
+        height: 102
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e344253d3c480b346809756542be01c8
+      internalID: -1370955041
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 12
+      rect:
+        serializedVersion: 2
+        x: 2988
+        y: 321
+        width: 160
+        height: 97
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f47046945ab19649a03bf5ee959b063
+      internalID: -886500473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 11
+      rect:
+        serializedVersion: 2
+        x: 3277
+        y: 322
+        width: 148
+        height: 101
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70fd2b8ede2f2be4684af93f9a4a4462
+      internalID: -1924963215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_120
+      rect:
+        serializedVersion: 2
+        x: 3428
+        y: 323
+        width: 6
+        height: 11
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efaa8e2b03ac0274d986fc3a0da5ae40
+      internalID: 1554656567
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 10
+      rect:
+        serializedVersion: 2
+        x: 3565
+        y: 321
+        width: 154
+        height: 101
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6115092b572d2a4e85d2ff63bd81cff
+      internalID: -475599140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_122
+      rect:
+        serializedVersion: 2
+        x: 4998
+        y: 161
+        width: 80
+        height: 94
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e49373bd10fe4f743a8cc05ac4db6a63
+      internalID: 1699540164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_123
+      rect:
+        serializedVersion: 2
+        x: 5021
+        y: 231
+        width: 10
+        height: 31
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13468c787c97ecb4e9ebae22fe246332
+      internalID: 848203411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_124
+      rect:
+        serializedVersion: 2
+        x: 5065
+        y: 230
+        width: 10
+        height: 34
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b173b5902cdef14d9b22669895d08c2
+      internalID: -1036313384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_125
+      rect:
+        serializedVersion: 2
+        x: 5291
+        y: 230
+        width: 11
+        height: 31
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b071be5e37ec127429b645a4542a0c02
+      internalID: 906684163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_126
+      rect:
+        serializedVersion: 2
+        x: 5335
+        y: 248
+        width: 5
+        height: 6
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31f9ec49a136d38479c07e08cacde4c3
+      internalID: 1683697066
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_127
+      rect:
+        serializedVersion: 2
+        x: 5335
+        y: 252
+        width: 9
+        height: 11
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0471b2121f2714946903e492a8e7ad60
+      internalID: 865565925
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_128
+      rect:
+        serializedVersion: 2
+        x: 5545
+        y: 161
+        width: 102
+        height: 92
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 364282a408f0d9643acf0259e9cbc129
+      internalID: -224203130
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_129
+      rect:
+        serializedVersion: 2
+        x: 5564
+        y: 231
+        width: 10
+        height: 31
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7411ba2dd02a67644aa702ab67288ac2
+      internalID: 669272836
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_130
+      rect:
+        serializedVersion: 2
+        x: 5608
+        y: 230
+        width: 12
+        height: 36
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e8106c5fed8b6ac489870c2b9fa1bbd0
+      internalID: -1948953879
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_131
+      rect:
+        serializedVersion: 2
+        x: 5872
+        y: 231
+        width: 10
+        height: 33
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c4fdef05924c93448c13505c5575c56
+      internalID: 1894053157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_132
+      rect:
+        serializedVersion: 2
+        x: 5916
+        y: 230
+        width: 11
+        height: 32
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41ba51afa1e318b4c97abd236765a7c2
+      internalID: 1004313380
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_133
+      rect:
+        serializedVersion: 2
+        x: 6150
+        y: 161
+        width: 80
+        height: 96
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66a59f8784d1b914f9c5817a2beee08c
+      internalID: 16941007
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_134
+      rect:
+        serializedVersion: 2
+        x: 6173
+        y: 231
+        width: 11
+        height: 35
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3efe55fa1d54a1f4ebb673787de2a1f1
+      internalID: 1778757687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_135
+      rect:
+        serializedVersion: 2
+        x: 6217
+        y: 230
+        width: 10
+        height: 29
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89d588311ab39c6488e5db42937d0591
+      internalID: 1883891024
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_136
+      rect:
+        serializedVersion: 2
+        x: 5271
+        y: 161
+        width: 90
+        height: 90
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36ed8f5be595529468bc7743dcef8dfc
+      internalID: 1690545002
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_137
+      rect:
+        serializedVersion: 2
+        x: 5353
+        y: 195
+        width: 7
+        height: 8
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d4a1459fdb36be94499e7c3938471887
+      internalID: -975677549
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_138
+      rect:
+        serializedVersion: 2
+        x: 5847
+        y: 161
+        width: 85
+        height: 90
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91596e59b8507aa4e82e9bf96629b63f
+      internalID: 1453492350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: d19
+      rect:
+        serializedVersion: 2
+        x: 928
+        y: 1
+        width: 115
+        height: 121
+      alignment: 9
+      pivot: {x: 0.37, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc6640146c2e0fe4593537ae36bcdb58
+      internalID: -1325135971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: d10
+      rect:
+        serializedVersion: 2
+        x: 3516
+        y: 1
+        width: 128
+        height: 121
+      alignment: 9
+      pivot: {x: 0.38, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eee20da387fa4c34884cfdf0ff81b706
+      internalID: -41487239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: d6
+      rect:
+        serializedVersion: 2
+        x: 4683
+        y: 1
+        width: 95
+        height: 113
+      alignment: 9
+      pivot: {x: 0.37, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9ea17c63f75e1c54fbf48f3059b5c87d
+      internalID: 1309917420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: d9
+      rect:
+        serializedVersion: 2
+        x: 3804
+        y: 0
+        width: 128
+        height: 123
+      alignment: 9
+      pivot: {x: 0.38, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 35ba8b044e70023469d30a9f44b6f819
+      internalID: 1033047913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: d5
+      rect:
+        serializedVersion: 2
+        x: 4988
+        y: 1
+        width: 88
+        height: 105
+      alignment: 9
+      pivot: {x: 0.2, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40cc0674ca968274e9ecee56db574cef
+      internalID: 1118546771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: d4
+      rect:
+        serializedVersion: 2
+        x: 5293
+        y: 1
+        width: 72
+        height: 99
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f5c4f6aabd103e3429380aed8cc72fda
+      internalID: 917786874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: d11
+      rect:
+        serializedVersion: 2
+        x: 3228
+        y: 1
+        width: 128
+        height: 124
+      alignment: 9
+      pivot: {x: 0.38, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dfdbae440550e8f4388eeee15e88e416
+      internalID: -1614699749
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: d8
+      rect:
+        serializedVersion: 2
+        x: 4090
+        y: 1
+        width: 131
+        height: 121
+      alignment: 9
+      pivot: {x: 0.39, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc2d530ba23322545885fbd41d41492d
+      internalID: -729934677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: d3
+      rect:
+        serializedVersion: 2
+        x: 5581
+        y: 1
+        width: 68
+        height: 96
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 17319ce7fc42311438cb3af04e01b294
+      internalID: 2066288721
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: d7
+      rect:
+        serializedVersion: 2
+        x: 4388
+        y: 1
+        width: 117
+        height: 118
+      alignment: 9
+      pivot: {x: 0.34, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 05cb98a1b5a71434d89ccd71d54dbc09
+      internalID: 171631495
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: d1
+      rect:
+        serializedVersion: 2
+        x: 6150
+        y: 1
+        width: 80
+        height: 89
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 04f453e3d2204cb4d9216b9691961115
+      internalID: -915299939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: d18
+      rect:
+        serializedVersion: 2
+        x: 1216
+        y: 1
+        width: 114
+        height: 123
+      alignment: 9
+      pivot: {x: 0.37, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc917964c48f7d642a3e4d3cc1a0b6bb
+      internalID: 231100465
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: d2
+      rect:
+        serializedVersion: 2
+        x: 5869
+        y: 1
+        width: 70
+        height: 97
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d115f27d4bb6ab74e90b685c73a6de6a
+      internalID: -595630532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: d14
+      rect:
+        serializedVersion: 2
+        x: 2364
+        y: 1
+        width: 125
+        height: 115
+      alignment: 9
+      pivot: {x: 0.4, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae653ec62bb45a044bf48b8468e83a8f
+      internalID: 1509848274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: d13
+      rect:
+        serializedVersion: 2
+        x: 2652
+        y: 1
+        width: 125
+        height: 113
+      alignment: 9
+      pivot: {x: 0.41, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81f5488f55cb9dc4cb3f88fc148a6cc4
+      internalID: -677968144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: d12
+      rect:
+        serializedVersion: 2
+        x: 2940
+        y: 1
+        width: 128
+        height: 109
+      alignment: 9
+      pivot: {x: 0.38, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b41af1fcf1ac25048bee4315fec75744
+      internalID: 685947239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: d16
+      rect:
+        serializedVersion: 2
+        x: 1792
+        y: 1
+        width: 113
+        height: 121
+      alignment: 9
+      pivot: {x: 0.37, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75bd3713435267540b7ea573be682c92
+      internalID: 625326444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: d15
+      rect:
+        serializedVersion: 2
+        x: 2076
+        y: 1
+        width: 119
+        height: 116
+      alignment: 9
+      pivot: {x: 0.4, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 66fd2cbf7fe274d479838b1cbcdad307
+      internalID: 144365345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: DemonSlime_232
+      rect:
+        serializedVersion: 2
+        x: 2159
+        y: 18
+        width: 4
+        height: 13
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f760746a70ba3cc42be15e751178b05f
+      internalID: 1209966543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: d17
+      rect:
+        serializedVersion: 2
+        x: 1504
+        y: 1
+        width: 114
+        height: 123
+      alignment: 9
+      pivot: {x: 0.37, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d89d472dfd881e418c423bda771c7ae
+      internalID: 1508290367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: d20
+      rect:
+        serializedVersion: 2
+        x: 640
+        y: 1
+        width: 114
+        height: 85
+      alignment: 9
+      pivot: {x: 0.37, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90a07954348724e4fb490247894f584d
+      internalID: 854503829
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: d21
+      rect:
+        serializedVersion: 2
+        x: 353
+        y: 1
+        width: 114
+        height: 11
+      alignment: 9
+      pivot: {x: 0.37, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e4bb6776ca05e64c84d29569f068deb
+      internalID: 1424272515
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: d22
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 0
+        width: 114
+        height: 9
+      alignment: 9
+      pivot: {x: 0.37, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 899837c8c3afe8b46b0632b3d1b8db5b
+      internalID: 364274183
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      DemonSlime_232: 1209966543
+      DemonSlime_236: 1350023726
+      DemonSlime_1: -947188619
+      DemonSlime_39: 1550850236
+      DemonSlime_240: 1779136630
+      d4: 917786874
+      d17: 231100465
+      DemonSlime_170: -461303761
+      DemonSlime_46: -1605380988
+      DemonSlime_27: -525552054
+      DemonSlime_8: -1931114077
+      DemonSlime_61: -2096373668
+      DemonSlime_238: -1328965937
+      d1: -915299939
+      DemonSlime_42: -651058411
+      DemonSlime_78: -1002885938
+      DemonSlime_182: -121534255
+      d10: -41487239
+      6: 25984584
+      DemonSlime_72: -1162557693
+      DemonSlime_183: -2002440563
+      d14: 144365345
+      DemonSlime_141: 1365310500
+      DemonSlime_90: 601766769
+      DemonSlime_68: -1778336056
+      DemonSlime_189: -796933630
+      DemonSlime_166: 1920125593
+      DemonSlime_164: -384212707
+      DemonSlime_146: 1928808658
+      DemonSlime_30: -1244597692
+      DemonSlime_10: -597305351
+      DemonSlime_11: -1285850591
+      DemonSlime_219: 2128121963
+      DemonSlime_235: 1474786527
+      DemonSlime_4: 862620118
+      DemonSlime_136: 1690545002
+      DemonSlime_105: 1627667092
+      DemonSlime_98: -939121717
+      DemonSlime_110: 219834072
+      9: -1117319542
+      4: 1183816785
+      DemonSlime_47: 1973369207
+      14: 1016394470
+      DemonSlime_122: 1699540164
+      DemonSlime_157: -16990769
+      DemonSlime_49: -112493077
+      DemonSlime_57: -1709597962
+      DemonSlime_202: -1336455774
+      DemonSlime_29: 1652291905
+      DemonSlime_48: 1155116774
+      DemonSlime_32: 123066931
+      DemonSlime_206: -393351262
+      DemonSlime_195: 179465982
+      DemonSlime_199: -1867304870
+      d9: 1033047913
+      d20: 1424272515
+      DemonSlime_97: -1870570817
+      DemonSlime_207: -952199004
+      DemonSlime_124: -1036313384
+      15: -655224458
+      DemonSlime_152: -451147238
+      DemonSlime_172: -1586921172
+      DemonSlime_165: 2009526994
+      DemonSlime_82: -1253981765
+      DemonSlime_71: 1860667569
+      DemonSlime_45: -837444407
+      DemonSlime_233: -827440913
+      DemonSlime_231: 1254910508
+      DemonSlime_129: 669272836
+      DemonSlime_111: 2038543311
+      DemonSlime_18: 1594026289
+      DemonSlime_44: -1726312422
+      DemonSlime_196: 625269905
+      DemonSlime_209: 694585605
+      DemonIdle: 38775775
+      DemonSlime_154: 156527827
+      DemonSlime_25: -745413741
+      DemonSlime_37: -889576560
+      DemonSlime_55: 1482453254
+      DemonSlime_190: -1312286467
+      DemonSlime_7: -608695872
+      DemonSlime_229: 1381305357
+      DemonSlime_161: -346464040
+      DemonSlime_220: 1329247330
+      DemonSlime_50: -1741993333
+      DemonSlime_140: 599738230
+      DemonSlime_128: -224203130
+      8: 376080899
+      DemonSlime_91: 748373566
+      DemonSlime_211: -1265179036
+      d3: 2066288721
+      2: 116769266
+      DemonSlime_84: 121054676
+      DemonSlime_86: -1784829109
+      DemonSlime_99: 1004978199
+      DemonSlime_163: -2128857605
+      DemonSlime_34: -764137066
+      DemonSlime_31: 1488849599
+      DemonSlime_96: 1782207515
+      DemonSlime_200: 460346114
+      DemonSlime_16: -236642121
+      DemonSlime_66: 1085649719
+      DemonSlime_3: 220939076
+      DemonSlime_17: 1506427650
+      DemonSlime_35: 1050804717
+      DemonSlime_75: 2060390218
+      DemonSlime_173: -128372331
+      DemonSlime_198: -1411979222
+      DemonSlime_9: -1642989092
+      DemonSlime_26: -1363433475
+      DemonSlime_64: 1587284119
+      DemonSlime_21: -964150753
+      1: 1132798363
+      DemonSlime_188: -365781338
+      DemonSlime_169: 1019258916
+      DemonSlime_167: 1496261466
+      DemonSlime_216: -1771031931
+      10: -475599140
+      DemonSlime_36: -1185793460
+      DemonSlime_100: 668339811
+      DemonSlime_179: 96745555
+      DemonSlime_144: -1639850146
+      d7: 171631495
+      DemonSlime_43: -325846154
+      DemonSlime_95: -36856435
+      DemonSlime_208: -1639024237
+      12: -886500473
+      DemonSlime_62: -51216637
+      5: -917222743
+      DemonSlime_58: -1907655802
+      DemonSlime_60: -1772683061
+      DemonSlime_174: 176409945
+      DemonSlime_204: 1729049556
+      DemonSlime_214: 1289948315
+      DemonSlime_222: -1554922052
+      DemonSlime_234: -1813854971
+      DemonSlime_176: 907577618
+      DemonSlime_158: 746128973
+      DemonSlime_150: 1137867508
+      DemonSlime_133: 16941007
+      DemonSlime_149: 613149536
+      DemonSlime_125: 906684163
+      DemonSlime_123: 848203411
+      DemonSlime_69: -311760451
+      DemonSlime_237: -1852999058
+      DemonSlime_15: 905711060
+      DemonSlime_223: -1963330530
+      d2: -595630532
+      DemonSlime_20: -236122242
+      DemonSlime_5: -1634283534
+      DemonSlime_109: 45633242
+      d19: 854503829
+      DemonSlime_6: -98502880
+      DemonSlime_143: -605883123
+      DemonSlime_132: 1004313380
+      DemonSlime_108: 709095035
+      DemonSlime_228: 1216888873
+      d11: -1614699749
+      DemonSlime_130: -1948953879
+      DemonSlime_103: -509077091
+      DemonSlime_162: 1987475123
+      d5: 1118546771
+      DemonSlime_22: -1491687786
+      DemonSlime_53: -1020175233
+      DemonSlime_79: 460045815
+      d22: 685947239
+      DemonSlime_70: 979501761
+      DemonSlime_41: -2001811675
+      DemonSlime_67: 1943335348
+      DemonSlime_0: -2142628601
+      DemonSlime_23: 598260509
+      d16: 1508290367
+      DemonSlime_56: -529128665
+      DemonSlime_104: 2108276472
+      DemonSlime_74: -682495324
+      DemonSlime_134: 1778757687
+      DemonSlime_224: 1345789715
+      3: 1678731879
+      DemonSlime_160: 713681574
+      DemonSlime_81: 432270747
+      DemonSlime_131: 1894053157
+      d6: 1309917420
+      DemonSlime_181: 92092070
+      DemonSlime_187: -1890445608
+      DemonSlime_151: 1925591693
+      DemonSlime_114: 578667357
+      DemonSlime_135: 1883891024
+      DemonSlime_192: 32633149
+      DemonSlime_197: -273390673
+      d15: 625326444
+      d8: -729934677
+      DemonSlime_92: -1901827678
+      DemonSlime_83: -923553589
+      d18: -1325135971
+      DemonSlime_159: 773208189
+      DemonSlime_94: -97598876
+      DemonSlime_178: 1371217973
+      DemonSlime_210: -885240165
+      DemonSlime_147: 382287899
+      DemonSlime_148: -1209538967
+      DemonSlime_194: 94202648
+      d13: 1509848274
+      DemonSlime_85: -1744498762
+      DemonSlime_2: -1870905424
+      DemonSlime_51: -904757498
+      DemonSlime_120: 1554656567
+      DemonSlime_193: 1915372369
+      DemonSlime_184: -348202796
+      DemonSlime_218: 37613197
+      DemonSlime_212: 2051620885
+      DemonSlime_138: 1453492350
+      DemonSlime_80: -976362
+      DemonSlime_127: 865565925
+      DemonSlime_142: 927307325
+      d21: 364274183
+      DemonSlime_63: -158502159
+      11: -1924963215
+      DemonSlime_73: -1628576002
+      DemonSlime_126: 1683697066
+      DemonSlime_54: 371904688
+      DemonSlime_28: 754204577
+      DemonSlime_52: 1857322199
+      DemonSlime_102: 2039307841
+      DemonSlime_24: 1932654169
+      DemonSlime_19: 1733044834
+      DemonSlime_33: -2062204181
+      DemonSlime_40: -1644407330
+      DemonSlime_171: 929820699
+      DemonSlime_38: 2053125882
+      DemonSlime_213: 1380897701
+      DemonSlime_77: 2045596269
+      13: -1370955041
+      DemonSlime_156: 1424664411
+      DemonSlime_137: -975677549
+      DemonSlime_59: -971987033
+      DemonSlime_155: 1634020418
+      7: 554346230
+      DemonSlime_65: -611415462
+      DemonSlime_217: 1903176323
+      d12: -677968144
+      DemonSlime_153: -530426346
+      DemonSlime_76: -328709390
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

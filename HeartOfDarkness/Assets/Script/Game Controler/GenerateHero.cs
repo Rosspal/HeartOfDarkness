@@ -2025,6 +2025,42 @@ public class GenerateHero : MonoBehaviour
         return hero;
     }
 
+    public Hero GenerateBoss()
+    {
+        hero = new Hero();
+        genEq = GetComponent<GenerateEquipment>();
+
+        hero.Race = "Demon";
+        hero.Specialization = "Boss";
+        hero.Modelname = "DemonBoss";
+
+        baseAttack b = new baseAttack();
+        hero.AddSpell(b);
+
+        hero.Health.SetBone(1, 666);
+        hero.Health.HpForLevel = 25;
+
+        hero.Characteristic.AddStrength(25);
+        hero.Characteristic.AddAgility(25);
+        hero.Characteristic.AddIntelect(25);
+        hero.Characteristic.AddWisdom(25);
+        hero.Characteristic.AddCharisma(25);
+        hero.Characteristic.AddPhysique(25);
+        hero.Initiative = hero.Characteristic.Modifier("Agility");
+
+        hero.RefreshStats();
+        hero.RefreshSkills();
+
+        hero.Nickname = "Бальтазар";
+
+        hero.Equipment = genEq.GenerateBase();
+
+        hero.Attack = 15;
+        hero.Armor = 5;
+
+        return hero;
+    }
+
     public string NameGenerate(string race)
     {
         string fileName ="Assets/Resources/Name/" + race + ".txt";

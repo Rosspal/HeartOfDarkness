@@ -30,6 +30,7 @@ public class UiTraining : MonoBehaviour
         int skill = int.Parse(str[1].ToString());
         TC.Friend.GetHero(number).SkillPoint -= 1;
 
+        GetComponent<UiEventManager>().Click();
         switch (skill)
         {
             case 1:
@@ -57,6 +58,7 @@ public class UiTraining : MonoBehaviour
 
     public void ArmorUp(int number)
     {
+        GetComponent<SoundBox>().PlaySound("ItemBuy");
         TC.AddMoney(-cost);
         TC.Friend.GetHero(number).Armor += 1;
         Init();
@@ -64,6 +66,7 @@ public class UiTraining : MonoBehaviour
 
     public void WeaponUp(int number)
     {
+        GetComponent<SoundBox>().PlaySound("ItemBuy");
         TC.AddMoney(-cost);
         TC.Friend.GetHero(number).Attack += 1;
         Init();

@@ -9,6 +9,9 @@ public class UiEventManager : MonoBehaviour
 
     [SerializeField] Canvas Menu;
 
+    private bool map = true;
+
+    public bool Map { get => map; set => map = value; }
 
     void Start()
     {
@@ -29,6 +32,14 @@ public class UiEventManager : MonoBehaviour
         }
     }
 
+    public void Click()
+    {
+        if (map)
+        {
+            GetComponent<SoundBox>().PlayClick();
+        }
+    }
+
     public void CloseMenu()
     {
         Menu.enabled = false;
@@ -38,13 +49,19 @@ public class UiEventManager : MonoBehaviour
 
     public void OpenTown()
     {
+        MainCam.GetComponent<MoveCamera>().useCameraMovement = false;
+        MainCam.GetComponent<TileClicker>().Activ = false;
+        map = false;
         Town.enabled = true;
+        GetComponent<SoundBox>().PlayTownMusic();
         GetComponent<ManagerUiTown>().RefreshHealingCost();
         //MainCam.GetComponent<TileClicker>().Activ = false;
     }
 
     public void CloseTown()
     {
+        map = true;
+        GetComponent<SoundBox>().PlayMapMusic();
         Town.enabled = false;
         //MainCam.GetComponent<TileClicker>().Activ = true;
     }
@@ -59,7 +76,7 @@ public class UiEventManager : MonoBehaviour
 
     public void OpenBattleEvent(string str)
     {
-        
+        GetComponent<SoundBox>().PlayBattleMusic();
         BattleEvent.enabled = true;
         MainCam.GetComponent<TileClicker>().Activ = false;
         BattleCam.enabled = true;
@@ -69,9 +86,9 @@ public class UiEventManager : MonoBehaviour
 
     public void CloseBattleEvent()
     {
+        GetComponent<SoundBox>().PlayMapMusic();
         BattleEvent.enabled = false;
         MainCam.GetComponent<TileClicker>().Activ = true;
         BattleCam.enabled = false;
-
     }
 }

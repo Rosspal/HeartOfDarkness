@@ -46,7 +46,7 @@ public class TileClicker : MonoBehaviour
         {
             if (Input.GetMouseButtonDown(0))
             {
-
+                uiEventManager.Click();
                 clickWorldPosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
                 Vector3Int clickCellPosition = mapGround.WorldToCell(clickWorldPosition);
                 Vector3Int cellGround = CellClickToCellGround(clickCellPosition);
@@ -66,15 +66,15 @@ public class TileClicker : MonoBehaviour
 
 
         //для тестов
-        if (Input.GetMouseButtonDown(1))
-        {
+        //if (Input.GetMouseButtonDown(1))
+        //{
 
-            clickWorldPosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
-            Vector3Int clickCellPosition = mapSurface.WorldToCell(clickWorldPosition);
-            Vector3Int cellGround = CellClickToCellGround(clickCellPosition);
-            Debug.Log(clickCellPosition);
-            Debug.Log(mapSurface.GetTile(cellGround).name);
-        }
+        //    clickWorldPosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
+        //    Vector3Int clickCellPosition = mapSurface.WorldToCell(clickWorldPosition);
+        //    Vector3Int cellGround = CellClickToCellGround(clickCellPosition);
+        //    Debug.Log(clickCellPosition);
+        //    Debug.Log(mapSurface.GetTile(cellGround).name);
+        //}
     }
 
     private Vector3Int CellClickToCellGround(Vector3Int pos)
@@ -349,7 +349,6 @@ public class TileClicker : MonoBehaviour
             if (Random.Range(0, 100) < eventChance)
             {
                 uiEventManager.OpenBattleEvent("Cлучайный бой");
-                CameraMove(false);
                 protection = 3;
                 return false;
             }
