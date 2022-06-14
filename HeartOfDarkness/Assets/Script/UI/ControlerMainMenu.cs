@@ -26,6 +26,7 @@ public class ControlerMainMenu : MonoBehaviour
         CloseTab.SetActive(false);
         LoadScreen.enabled = false;
         About.enabled = false;
+        GetComponent<ScoringTable>().LoadTable();
     }
 
     public void OpenScoring()
@@ -33,6 +34,7 @@ public class ControlerMainMenu : MonoBehaviour
         Scoring.enabled = true;
         MainMenu.enabled = false;
         sound.Play();
+        
 
         for(int i = 0; i < 5; i++)
         {

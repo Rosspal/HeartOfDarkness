@@ -54,10 +54,10 @@ public class Person
 
     public void AddExp(int n)
     {
-        if ((exp + n) >= 100)
+        if ((exp + n) >= 50)
         {
             LevelUp();
-            int next = (exp + n) - 100;
+            int next = (exp + n) - 50;
             exp = 0;
             AddExp(next);
             

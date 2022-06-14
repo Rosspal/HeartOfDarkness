@@ -14,6 +14,8 @@ public class UiFigh : MonoBehaviour
     [SerializeField] GameObject[] Waiting = new GameObject[8];
     [SerializeField] Image Portret;
 
+    private int count = 0;
+
 
 
     public void ActivHero(int n, int n2)
@@ -29,10 +31,20 @@ public class UiFigh : MonoBehaviour
         }
         else
         {
-            int temp = 4 - TC.Friend.Count();
-            ready[n + temp].SetActive(true);
-            Preparation[n + temp].SetActive(false);
-            Waiting[n + temp].SetActive(false);
+            if (TC.Evil.GetHero(0).Modelname == "DemonBoss")
+            {
+                int temp = 4 - TC.Friend.Count();
+                ready[n + 1 + temp].SetActive(true);
+                Preparation[n + 1 + temp].SetActive(false);
+                Waiting[n + 1 + temp].SetActive(false);
+            }
+            else
+            {
+                int temp = 4 - TC.Friend.Count();
+                ready[n + temp].SetActive(true);
+                Preparation[n + temp].SetActive(false);
+                Waiting[n + temp].SetActive(false);
+            }   
         }
 
         //prep
@@ -45,10 +57,20 @@ public class UiFigh : MonoBehaviour
         }
         else
         {
-            int temp = 4 - TC.Friend.Count();
-            ready[n2 + temp].SetActive(false);
-            Preparation[n2 + temp].SetActive(true);
-            Waiting[n2 + temp].SetActive(false);
+            if (TC.Evil.GetHero(0).Modelname == "DemonBoss")
+            {
+                int temp = 4 - TC.Friend.Count();
+                ready[n2 + 1 + temp].SetActive(false);
+                Preparation[n2 + 1 + temp].SetActive(true);
+                Waiting[n2 + 1 + temp].SetActive(false);
+            }
+            else
+            {
+                int temp = 4 - TC.Friend.Count();
+                ready[n2 + temp].SetActive(false);
+                Preparation[n2 + temp].SetActive(true);
+                Waiting[n2 + temp].SetActive(false);
+            }
         }
     }
 
@@ -81,7 +103,7 @@ public class UiFigh : MonoBehaviour
     public void Defeat()
     {
         Canvas.transform.Find("DeathPanel").gameObject.SetActive(true);
-        Canvas.transform.Find("DeathPanel").Find("Image").Find("ScoreImage").Find("Text (TMP)").GetComponent<TextMeshProUGUI>().text = "Счёт = " + TC.Score;
+        Canvas.transform.Find("DeathPanel").Find("Image").Find("ScoreImage").Find("Text (TMP)").GetComponent<TextMeshProUGUI>().text = "Счёт  " + TC.Score + "\n Вы не победили финального босса, ваш счёт не будет запомнен.";
     }
 
     public void InitState()
@@ -92,13 +114,22 @@ public class UiFigh : MonoBehaviour
             ready[i].SetActive(false);
             Preparation[i].SetActive(false);
         }
-
-        for (int i = 0; i < TC.Evil.Count(); i++)
+        if (TC.Evil.GetHero(0).Modelname == "DemonBoss")
         {
-            Waiting[i + 4].SetActive(true);
-            ready[i + 4].SetActive(false);
-            Preparation[i + 4].SetActive(false);
+            Waiting[5].SetActive(true);
+            ready[5].SetActive(false);
+            Preparation[5].SetActive(false);
         }
+        else
+        {
+            for (int i = 0; i < TC.Evil.Count(); i++)
+            {
+                Waiting[i + 4].SetActive(true);
+                ready[i + 4].SetActive(false);
+                Preparation[i + 4].SetActive(false);
+            }
+        }
+        
     }
 
     public void ResetState()
@@ -142,19 +173,35 @@ public class UiFigh : MonoBehaviour
             }
         }
 
-        for (int i = 0; i < 4; i++)
+        if (TC.Evil.GetHero(0).Modelname == "DemonBoss")
         {
-            if (TC.Evil.GetHero(i).Nickname == "Void")
+            for (int i = 0; i < 4; i++)
             {
                 Canvas.transform.Find("SelectPanel").Find("SelectE" + i).gameObject.SetActive(false);
             }
-            else
+            Canvas.transform.Find("SelectPanel").Find("SelectE" + 1).gameObject.SetActive(true);
+            Canvas.transform.Find("SelectPanel").Find("SelectE" + 1).Find("HealthSystemE" + 1).GetComponent<HealthSystem>().SetSystem(TC.Evil.GetHero(0).Health.Hp,
+                                                                                                                                        TC.Evil.GetHero(0).Health.MaxHP,
+                                                                                                                                        TC.Evil.GetHero(0).Health.Mp,
+                                                                                                                                        TC.Evil.GetHero(0).Health.MaxMP
+                                                                                                                                        );
+        }
+        else
+        {
+            for (int i = 0; i < 4; i++)
             {
-                Canvas.transform.Find("SelectPanel").Find("SelectE" + i).Find("HealthSystemE" + i).GetComponent<HealthSystem>().SetSystem(TC.Evil.GetHero(i).Health.Hp,
-                                                                                                                                    TC.Evil.GetHero(i).Health.MaxHP,
-                                                                                                                                    TC.Evil.GetHero(i).Health.Mp,
-                                                                                                                                    TC.Evil.GetHero(i).Health.MaxMP
-                                                                                                                                    );
+                if (TC.Evil.GetHero(i).Nickname == "Void")
+                {
+                    Canvas.transform.Find("SelectPanel").Find("SelectE" + i).gameObject.SetActive(false);
+                }
+                else
+                {
+                    Canvas.transform.Find("SelectPanel").Find("SelectE" + i).Find("HealthSystemE" + i).GetComponent<HealthSystem>().SetSystem(TC.Evil.GetHero(i).Health.Hp,
+                                                                                                                                        TC.Evil.GetHero(i).Health.MaxHP,
+                                                                                                                                        TC.Evil.GetHero(i).Health.Mp,
+                                                                                                                                        TC.Evil.GetHero(i).Health.MaxMP
+                                                                                                                                        );
+                }
             }
         }
     }
@@ -169,15 +216,25 @@ public class UiFigh : MonoBehaviour
                                                                                                                                     TC.Friend.GetHero(i).Health.MaxMP
                                                                                                                                     );
         }
-
-        for (int i = 0; i < TC.Evil.Count(); i++)
+        if (TC.Evil.GetHero(0).Modelname == "DemonBoss")
         {
-            Canvas.transform.Find("SelectPanel").Find("SelectE" + i).Find("HealthSystemE" + i).GetComponent<HealthSystem>().SetSystem(TC.Evil.GetHero(i).Health.Hp,
-                                                                                                                                    TC.Evil.GetHero(i).Health.MaxHP,
-                                                                                                                                    TC.Evil.GetHero(i).Health.Mp,
-                                                                                                                                    TC.Evil.GetHero(i).Health.MaxMP
-                                                                                                                                    );
+            Canvas.transform.Find("SelectPanel").Find("SelectE" + 1).Find("HealthSystemE" + 1).GetComponent<HealthSystem>().SetSystem(TC.Evil.GetHero(0).Health.Hp,
+                                                                                                                                        TC.Evil.GetHero(0).Health.MaxHP,
+                                                                                                                                        TC.Evil.GetHero(0).Health.Mp,
+                                                                                                                                        TC.Evil.GetHero(0).Health.MaxMP
+                                                                                                                                        );
         }
+        else
+        {
+            for (int i = 0; i < TC.Evil.Count(); i++)
+            {
+                Canvas.transform.Find("SelectPanel").Find("SelectE" + i).Find("HealthSystemE" + i).GetComponent<HealthSystem>().SetSystem(TC.Evil.GetHero(i).Health.Hp,
+                                                                                                                                        TC.Evil.GetHero(i).Health.MaxHP,
+                                                                                                                                        TC.Evil.GetHero(i).Health.Mp,
+                                                                                                                                        TC.Evil.GetHero(i).Health.MaxMP
+                                                                                                                                        );
+            }
+        } 
     }
 
     public void NoButtom()
@@ -226,7 +283,18 @@ public class UiFigh : MonoBehaviour
 
     public void WriteLog(string str)
     {
-       Log.text = str;
+        if (count < 4)
+        {
+            Log.text += str + "\n";
+            count++;
+        }
+        else
+        {
+            ResetLog();
+            Log.text += str + "\n";
+            count = 1;
+        }
+       
     }
 
     public void WriteLineLog(string str)

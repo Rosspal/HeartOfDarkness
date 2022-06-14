@@ -165,9 +165,21 @@ public class Fight : MonoBehaviour
                 break;
             case "Корабли":
                 break;
+            case "Храм":
+                TC.AddScore(666);
+                break;
         }
 
-        GetComponent<UiEventManager>().CloseBattleEvent();
+        if (GetComponent<GameControler>().EventName == "Храм")
+        {
+            GetComponent<UiEventManager>().EndGame();
+        }
+        else
+        {
+            GetComponent<UiEventManager>().CloseBattleEvent();
+            GetComponent<GameControler>().PermissionCamp = true;
+        }
+        
     }
 
     public void NextMove()
@@ -221,12 +233,31 @@ public class Fight : MonoBehaviour
     public void EnemyTurn()
     {
         int target = 0;
+        int min = 9999;
+        bool check = true;
+
+        int minId = target;
         for (int i = 0; i < TC.Friend.Count(); i++)
         {
-            if (TC.Friend.GetHero(i).Health.Hp > 0)
+            if ((TC.Friend.GetHero(i).Health.Hp > 0) && (TC.Friend.GetHero(i).Health.Hp < min))
+            {
+                min = TC.Friend.GetHero(i).Health.Hp;
+                minId = i;
+            }
+        }
+
+        for (int i = 0; i < TC.Friend.Count(); i++)
+        {
+            if (((TC.Friend.GetHero(i).Specialization == "Монах") || (TC.Friend.GetHero(i).Specialization == "Жрец")) && (TC.Friend.GetHero(i).Health.Hp > 0))
             {
                 target = i;
+                check = false;
             }
+        }
+
+        if (check)
+        {
+            target = minId;
         }
         selectHero = target;
         SpellAction(0);
@@ -259,7 +290,15 @@ public class Fight : MonoBehaviour
     public void SetSelected(int n)
     {
         GetComponent<SoundBox>().PlaySound("Click2");
-        selectHero = n;
+        if (TC.Evil.GetHero(0).Modelname == "DemonBoss")
+        {
+            selectHero = n - 1;
+        }
+        else
+        {
+            selectHero = n;
+        }
+        
     }
 
     public void ResetBattle()

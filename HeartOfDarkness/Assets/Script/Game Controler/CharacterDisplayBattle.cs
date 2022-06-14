@@ -17,6 +17,9 @@ public class CharacterDisplayBattle : MonoBehaviour
     public GameObject EPosThree;
     public GameObject EPosFour;
 
+    [Header("Позиция босса")]
+    public GameObject PosBoss;
+
     private GameObject[] newHero = new GameObject[8];
 
     private void Start()
@@ -81,33 +84,40 @@ public class CharacterDisplayBattle : MonoBehaviour
 
 
         name = GetComponent<GameControler>().EvilModelNameAll();
-        hero = GetComponent<CharacterModel>().GetCharacter(name[0]);
-        newHero[4] = Instantiate(hero, EPosOne.transform.position, EPosOne.transform.rotation);
-        switch (name.Length)
+        if (name[0] == "DemonBoss")
         {
-            case 2:
-                hero = GetComponent<CharacterModel>().GetCharacter(name[1]);
-                newHero[5] = Instantiate(hero, EPosTwo.transform.position, EPosTwo.transform.rotation);
-                break;
-            case 3:
-                hero = GetComponent<CharacterModel>().GetCharacter(name[1]);
-                newHero[5] = Instantiate(hero, EPosTwo.transform.position, EPosTwo.transform.rotation);
-
-                hero = GetComponent<CharacterModel>().GetCharacter(name[2]);
-                newHero[6] = Instantiate(hero, EPosThree.transform.position, EPosThree.transform.rotation);
-                break;
-            case 4:
-                hero = GetComponent<CharacterModel>().GetCharacter(name[1]);
-                newHero[5] = Instantiate(hero, EPosTwo.transform.position, EPosTwo.transform.rotation);
-
-                hero = GetComponent<CharacterModel>().GetCharacter(name[2]);
-                newHero[6] = Instantiate(hero, EPosThree.transform.position, EPosThree.transform.rotation);
-
-                hero = GetComponent<CharacterModel>().GetCharacter(name[3]);
-                newHero[7] = Instantiate(hero, EPosFour.transform.position, EPosFour.transform.rotation);
-                break;
+            hero = GetComponent<CharacterModel>().GetCharacter(name[0]);
+            newHero[4] = Instantiate(hero, EPosTwo.transform.position, EPosTwo.transform.rotation);
         }
+        else
+        {
+            hero = GetComponent<CharacterModel>().GetCharacter(name[0]);
+            newHero[4] = Instantiate(hero, EPosOne.transform.position, EPosOne.transform.rotation);
+            switch (name.Length)
+            {
+                case 2:
+                    hero = GetComponent<CharacterModel>().GetCharacter(name[1]);
+                    newHero[5] = Instantiate(hero, EPosTwo.transform.position, EPosTwo.transform.rotation);
+                    break;
+                case 3:
+                    hero = GetComponent<CharacterModel>().GetCharacter(name[1]);
+                    newHero[5] = Instantiate(hero, EPosTwo.transform.position, EPosTwo.transform.rotation);
 
+                    hero = GetComponent<CharacterModel>().GetCharacter(name[2]);
+                    newHero[6] = Instantiate(hero, EPosThree.transform.position, EPosThree.transform.rotation);
+                    break;
+                case 4:
+                    hero = GetComponent<CharacterModel>().GetCharacter(name[1]);
+                    newHero[5] = Instantiate(hero, EPosTwo.transform.position, EPosTwo.transform.rotation);
+
+                    hero = GetComponent<CharacterModel>().GetCharacter(name[2]);
+                    newHero[6] = Instantiate(hero, EPosThree.transform.position, EPosThree.transform.rotation);
+
+                    hero = GetComponent<CharacterModel>().GetCharacter(name[3]);
+                    newHero[7] = Instantiate(hero, EPosFour.transform.position, EPosFour.transform.rotation);
+                    break;
+            }
+        }
     }
 
     public void ClearDisplay()

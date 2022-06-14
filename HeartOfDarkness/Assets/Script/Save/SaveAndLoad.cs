@@ -38,26 +38,29 @@ public class SaveAndLoad : MonoBehaviour
 
     public void CreateTable()
     {
-        SaveTable(GetComponent<ScoringTable>().Table);
+        SaveTable(GetComponent<ScoringTable>().NewTable());
     }
 
     public Table LoadTable()
     {
         
-
+        Run[] run = new Run[5];
         Table table = new Table();
+        table.list = run;
         if (PlayerPrefs.HasKey("name0"))
         {
             for (int i = 0; i < table.list.Length; i++)
             {
                 table.list[i].name = PlayerPrefs.GetString("name" + i);
-                table.list[i].scoring = PlayerPrefs.GetInt("name" + i);
+                table.list[i].scoring = PlayerPrefs.GetInt("score" + i);
             }
         }
         else
         {
             CreateTable();
+            LoadTable();
         }
+
         return table;
     }
 

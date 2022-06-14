@@ -24,6 +24,8 @@ public class ManagerUiTown : MonoBehaviour
         Town.enabled = false;
         Taverna.enabled = false;
         TavernaUi.enabled = false;
+        TrainingUi.enabled = false;
+        Training.enabled = false;
         
     }
 
@@ -36,6 +38,7 @@ public class ManagerUiTown : MonoBehaviour
         TrainingUi.enabled = true;
         GetComponent<UiTraining>().Init();
         GetComponent<CharacterDisplayTraining>().Display();
+        GetComponent<GameControler>().PermissionCamp = true;
     }
 
     public void CloseTraining()

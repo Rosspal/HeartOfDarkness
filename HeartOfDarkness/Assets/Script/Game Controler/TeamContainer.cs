@@ -7,9 +7,12 @@ public class TeamContainer : MonoBehaviour
     public HeroTeam Evil = new HeroTeam(); // заменить
     public HeroTeam Friend = new HeroTeam();
 
-    [SerializeField] int money = 11110;
+    [SerializeField] int money = 100;
     private int score = 0;
     [SerializeField] bool cheat = false;
+
+    private string nameUser = "User";
+    public string NameUser { get => nameUser; set => nameUser = value; }
 
     public int Money { get => money; }
     public int Score { get => score; }

@@ -16,7 +16,7 @@ public class TileClicker : MonoBehaviour
     private Vector3Int heroPos = new Vector3Int(-14,2,0);
     private bool activ = true;
     [SerializeField] UiEventManager uiEventManager;
-    [SerializeField] int eventChance = 15;
+    [SerializeField] int eventChance = 22;
     [SerializeField] int protection = 5;
 
 
@@ -333,6 +333,8 @@ public class TileClicker : MonoBehaviour
                     CameraMove(false);
                     return false;
                 case "Tile_surface_17"://затеряный храм
+                    uiEventManager.OpenBattleEvent("Храм");
+                    protection = 3;
                     break;
                 case "Tile_surface_28"://деревня 1 уровень
                     uiEventManager.OpenBattleEvent("Деревня");

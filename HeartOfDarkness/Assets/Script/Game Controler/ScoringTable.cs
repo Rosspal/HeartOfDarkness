@@ -41,23 +41,37 @@ public struct Table
 public class ScoringTable : MonoBehaviour
 {
     private Table table;
+    private bool check = true;
     internal Table Table { get => table; set => table = value; }
 
     private void Start()
     {
         Run[] temp = new Run[5];
+        table.list = temp;
+
+        LoadTable();
+    }
+
+    public void LoadTable()
+    {
+        table = GetComponent<SaveAndLoad>().LoadTable();
+    }
+
+    public Table NewTable()
+    {
+        Run[] temp = new Run[5];
 
         temp[0].name = "Артур";
-        temp[0].scoring = 2450;
+        temp[0].scoring = 50;
 
         temp[1].name = "Варвар";
         temp[1].scoring = 450;
 
         temp[2].name = "Конан";
-        temp[2].scoring = 820;
+        temp[2].scoring = 620;
 
         temp[3].name = "Моргана";
-        temp[3].scoring = 1320;
+        temp[3].scoring = 20;
 
         temp[4].name = "Мерлин";
         temp[4].scoring = 1980;
@@ -65,6 +79,7 @@ public class ScoringTable : MonoBehaviour
         table.list = temp;
 
         table.Sort();
+        return table;
     }
 
     public string RunToString(int i)
@@ -78,11 +93,13 @@ public class ScoringTable : MonoBehaviour
     {
         for (int i = 0; i < 5; i++)
         {
-            if (scor >= table.list[i].scoring)
+            if (scor > table.list[i].scoring)
             {
                 table.SetValue(table.list.Length - 1, name, scor);
+                break;
             }
         }
+        GetComponent<SaveAndLoad>().SaveTable(table);
     }
 
 }

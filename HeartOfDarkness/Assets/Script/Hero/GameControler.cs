@@ -20,8 +20,11 @@ public class GameControler : MonoBehaviour
     private string eventName = "";
 
     private bool checkTaverna = false;
+    private bool permissionCamp = true;
+    private bool helpInfo = true;
 
     public string EventName { get => eventName; set => eventName = value; }
+    public bool PermissionCamp { get => permissionCamp; set => permissionCamp = value; }
 
     private void Start()
     {
@@ -34,6 +37,12 @@ public class GameControler : MonoBehaviour
 
     void Update()
     {
+
+        if (helpInfo)
+        {
+            TC.AddMoney(0);
+            helpInfo = false;
+        }
 
         if (cheat)
         {
@@ -52,7 +61,7 @@ public class GameControler : MonoBehaviour
     {
         if (TC.Money >= HealingCost())
         {
-            TC.AddMoney(HealingCost());
+            TC.AddMoney(-1 * HealingCost());
             GetComponent<InfoUi>().Refresh();
             GetComponent<ManagerUiTown>().RefreshHealingCost();
             TC.Friend.HealTeam();
@@ -170,6 +179,7 @@ public class GameControler : MonoBehaviour
 
     public void BattleCemeteryStart()
     {
+        permissionCamp = false;
         eventName = "Кладбище";
         TC.Evil.AddHero(Gen.Generate("Скелет", "Варвар", 4));
         TC.Evil.GetHero(0).Modelname = TC.Evil.GetHero(0).Modelname + 1;
@@ -186,6 +196,7 @@ public class GameControler : MonoBehaviour
 
     public void BattleStart(string str)
     {
+        permissionCamp = false;
         eventName = str;
 
         switch (str)
@@ -201,6 +212,7 @@ public class GameControler : MonoBehaviour
                 TC.Evil.GetHero(3).Modelname = TC.Evil.GetHero(3).Modelname + 1;
                 break;
             case "Храм":
+                TC.Evil.AddHero(Gen.GenerateBoss());
                 break;
             default:
                 if (TC.Friend.Count() != 1)

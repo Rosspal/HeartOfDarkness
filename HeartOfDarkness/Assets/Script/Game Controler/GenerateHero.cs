@@ -1033,6 +1033,12 @@ public class GenerateHero : MonoBehaviour
         hero.Initiative = hero.Characteristic.Modifier("Agility");
 
         hero.SkillPoint = 2 * (level - 1);
+
+        for (int i = level; i > 1; i--)
+        {
+            hero.LevelUp();
+        }
+
         while (hero.SkillPoint < 0)
         {
             short rand = (short)UnityEngine.Random.Range(1, 7);
@@ -1061,6 +1067,8 @@ public class GenerateHero : MonoBehaviour
             }
             temp--;
         }
+
+
         return hero;
     }
 
@@ -2037,7 +2045,7 @@ public class GenerateHero : MonoBehaviour
         baseAttack b = new baseAttack();
         hero.AddSpell(b);
 
-        hero.Health.SetBone(1, 666);
+        hero.Health.SetBone(1, 220);
         hero.Health.HpForLevel = 25;
 
         hero.Characteristic.AddStrength(25);
@@ -2055,7 +2063,7 @@ public class GenerateHero : MonoBehaviour
 
         hero.Equipment = genEq.GenerateBase();
 
-        hero.Attack = 15;
+        hero.Attack = 12;
         hero.Armor = 5;
 
         return hero;
