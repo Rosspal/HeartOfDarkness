@@ -179,27 +179,6 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: idle_1
-      rect:
-        serializedVersion: 2
-        x: 3806
-        y: 3404
-        width: 677
-        height: 584
-      alignment: 9
-      pivot: {x: 0.45, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 47024f2531f94c648b0fcf310e1e050f
-      internalID: -1242421897
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
       name: GoblinTank-Sheet_4
       rect:
         serializedVersion: 2
@@ -934,6 +913,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: GoblinTank-Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 3806
+        y: 3407
+        width: 677
+        height: 581
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 407e95aecf2cdd74585eab24bc95e848
+      internalID: -2122302078
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -949,7 +949,7 @@ TextureImporter:
       GoblinTank-Sheet_28: 1172331821
       GoblinTank-Sheet_35: 1364847431
       GoblinTank-Sheet_15: -932938673
-      GoblinTank-Sheet_20: 1977218928
+      GoblinTank-Sheet_36: 1036143623
       GoblinTank-Sheet_22: 1224247106
       GoblinTank-Sheet_11: 776884722
       GoblinTank-Sheet_4: 1208381145
@@ -957,8 +957,9 @@ TextureImporter:
       GoblinTank-Sheet_8: 1877079147
       GoblinTank-Sheet_31: -1951572636
       GoblinTank-Sheet_33: 1456684532
+      GoblinTank-Sheet_34: 34634370
       GoblinTank-Sheet_29: -1293241717
-      idle_1: -1242421897
+      GoblinTank-Sheet_3: -2122302078
       GoblinTank-Sheet_23: -454974954
       GoblinTank-Sheet_18: -2123191978
       GoblinTank-Sheet_24: -1166300382
@@ -976,14 +977,13 @@ TextureImporter:
       GoblinTank-Sheet_1: -1627978160
       GoblinTank-Sheet_6: -402045140
       GoblinTank-Sheet_19: -1090819737
-      GoblinTank-Sheet_27: -1867841456
       GoblinTank-Sheet_5: -1700729283
-      GoblinTank-Sheet_34: 34634370
-      GoblinTank-Sheet_21: -1429038098
-      GoblinTank-Sheet_36: 1036143623
       GoblinTank-Sheet_26: 1857390773
-      GoblinTank-Sheet_0: -2030656219
       GoblinTank-Sheet_32: 1018716889
+      GoblinTank-Sheet_0: -2030656219
+      GoblinTank-Sheet_21: -1429038098
+      GoblinTank-Sheet_27: -1867841456
+      GoblinTank-Sheet_20: 1977218928
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -22,7 +22,7 @@ public class UiCommand : MonoBehaviour
 
     public void Display()
     {
-        string[] name = GetComponent<GameControler>().TeamModelNameAll();
+        string[] name = GetComponent<GameControler>().FriendModelNameAll();
         GameObject hero = GetComponent<CharacterModel>().GetCharacter(name[0]);
         newHero[0] = Instantiate(hero, PosOne.transform.position, Quaternion.identity);
 

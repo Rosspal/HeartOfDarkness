@@ -6,11 +6,27 @@ public class HeroTeam : Team
 {
     public new List<Hero> team = new();
 
+    public void AddExp(int n)
+    {
+        for (int i = 0; i < team.Count; i++)
+        {
+            team[i].AddExp(n);
+        }
+    }
+
     public void AddHero(Hero hero)
     {
         if (team.Count < 4)
         {
             team.Add(hero);// подправить
+        }
+    }
+
+    public void HealTeam()
+    {
+        for (int i = 0; i < team.Count; i++)
+        {
+            team[i].Health.Hp = team[i].Health.MaxHP;
         }
     }
 
@@ -25,6 +41,15 @@ public class HeroTeam : Team
         {
             team.Clear();
         }
+    }
+
+    public void DeleteHero(int n)
+    {
+        if (team.Count > n)
+        {
+            team.RemoveAt(n);
+        }
+        
     }
 
     public string Info(int i)
@@ -53,6 +78,7 @@ public class HeroTeam : Team
             return team[n];
         }
         Hero hero = new Hero();
+        hero.Nickname = "Void";
         return hero; // улучшить защиту
     }
 }

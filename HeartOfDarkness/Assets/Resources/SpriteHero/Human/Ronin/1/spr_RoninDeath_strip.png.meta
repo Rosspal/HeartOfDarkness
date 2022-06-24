@@ -66,7 +66,7 @@ TextureImporter:
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
-    maxTextureSize: 2048
+    maxTextureSize: 4096
     resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 0
@@ -114,7 +114,343 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
-    sprites: []
+    sprites:
+    - serializedVersion: 2
+      name: spr_RoninDeath_strip_0
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 19
+        width: 29
+        height: 32
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 71a825ce58d006a4697b43e404374db6
+      internalID: 1350021760
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_RoninDeath_strip_1
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 19
+        width: 26
+        height: 31
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 63c6cd47cd78a2a4fb434b1d20404ce2
+      internalID: -1241874941
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_RoninDeath_strip_2
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 19
+        width: 24
+        height: 23
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d7cd53e71f12c5749b7ffd081f7df3ba
+      internalID: 1840827532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_RoninDeath_strip_3
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 19
+        width: 24
+        height: 26
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7921c54db58fa954495e469ab06dc3dd
+      internalID: -341309985
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_RoninDeath_strip_4
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 19
+        width: 24
+        height: 26
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34e295e2f55153344b8c9f8a56ccb5ce
+      internalID: -600130919
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_RoninDeath_strip_5
+      rect:
+        serializedVersion: 2
+        x: 337
+        y: 19
+        width: 24
+        height: 26
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 276bf88bb2aed0a47a86f7e4220de130
+      internalID: 710400736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_RoninDeath_strip_6
+      rect:
+        serializedVersion: 2
+        x: 401
+        y: 19
+        width: 24
+        height: 26
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfb868ce4a4e50a4aa2dbeaa1eaf2e81
+      internalID: 1964736667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_RoninDeath_strip_7
+      rect:
+        serializedVersion: 2
+        x: 465
+        y: 19
+        width: 24
+        height: 26
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 626b1fcbbd4ea754e8b0c515b74dddd5
+      internalID: 416517448
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_RoninDeath_strip_8
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 19
+        width: 24
+        height: 26
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b93e4944b606cdc4aab9d0c41876eeb4
+      internalID: -324005321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_RoninDeath_strip_9
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 19
+        width: 24
+        height: 26
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 876889f035493b640b6a9544e863d162
+      internalID: 2069377021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_RoninDeath_strip_10
+      rect:
+        serializedVersion: 2
+        x: 657
+        y: 19
+        width: 24
+        height: 26
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b5511037215fc54e801237b517d396d
+      internalID: -326913152
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_RoninDeath_strip_11
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 19
+        width: 24
+        height: 26
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d421afeb590209342a16f3dcfec35d1c
+      internalID: 1125124217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_RoninDeath_strip_12
+      rect:
+        serializedVersion: 2
+        x: 785
+        y: 19
+        width: 24
+        height: 26
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 55146401081abcc40a4f401838fe454a
+      internalID: 1297431322
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_RoninDeath_strip_13
+      rect:
+        serializedVersion: 2
+        x: 849
+        y: 19
+        width: 24
+        height: 26
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7bfb63d2fceb4e74ba86e59c0417c487
+      internalID: 1893715411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_RoninDeath_strip_14
+      rect:
+        serializedVersion: 2
+        x: 913
+        y: 19
+        width: 24
+        height: 26
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 015f80c22470c7b4698444a9a86e33ad
+      internalID: -1334448058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: spr_RoninDeath_strip_15
+      rect:
+        serializedVersion: 2
+        x: 977
+        y: 19
+        width: 24
+        height: 26
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d40fc8447c713d4bb29b3654e84170d
+      internalID: -352231491
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -125,7 +461,23 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      spr_RoninDeath_strip_1: -1241874941
+      spr_RoninDeath_strip_6: 1964736667
+      spr_RoninDeath_strip_14: -1334448058
+      spr_RoninDeath_strip_4: -600130919
+      spr_RoninDeath_strip_5: 710400736
+      spr_RoninDeath_strip_2: 1840827532
+      spr_RoninDeath_strip_13: 1893715411
+      spr_RoninDeath_strip_15: -352231491
+      spr_RoninDeath_strip_9: 2069377021
+      spr_RoninDeath_strip_3: -341309985
+      spr_RoninDeath_strip_11: 1125124217
+      spr_RoninDeath_strip_10: -326913152
+      spr_RoninDeath_strip_12: 1297431322
+      spr_RoninDeath_strip_7: 416517448
+      spr_RoninDeath_strip_8: -324005321
+      spr_RoninDeath_strip_0: 1350021760
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0

@@ -14,7 +14,10 @@ public class TileClicker : MonoBehaviour
     public Tilemap mapSurface;
     public Tilemap mapDecorations;
     private Vector3Int heroPos = new Vector3Int(-14,2,0);
-    public Canvas Town;
+    private bool activ = true;
+    [SerializeField] UiEventManager uiEventManager;
+    [SerializeField] int eventChance = 22;
+    [SerializeField] int protection = 5;
 
 
     private Camera mainCamera;
@@ -22,6 +25,8 @@ public class TileClicker : MonoBehaviour
     public int speed = 55;
 
     private Vector3 clickWorldPosition;
+
+    public bool Activ { get => activ; set => activ = value; }
 
     void Start()
     {
@@ -37,24 +42,28 @@ public class TileClicker : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0))
+        if (activ)
         {
-            
-            clickWorldPosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
-            Vector3Int clickCellPosition = mapGround.WorldToCell(clickWorldPosition);
-            Vector3Int cellGround = CellClickToCellGround(clickCellPosition);
-
-            if (CheckMove(heroPos,clickCellPosition))
+            if (Input.GetMouseButtonDown(0))
             {
-                if (CheckTileCost(cellGround))
+                uiEventManager.Click();
+                clickWorldPosition = mainCamera.ScreenToWorldPoint(Input.mousePosition);
+                Vector3Int clickCellPosition = mapGround.WorldToCell(clickWorldPosition);
+                Vector3Int cellGround = CellClickToCellGround(clickCellPosition);
+
+                if (CheckMove(heroPos, clickCellPosition))
                 {
-                    Vector3Int cellPos = mapHero.WorldToCell(clickWorldPosition);
-                    mapHero.SetTile(heroPos, nullTile);
-                    heroPos = cellPos;
-                    mapHero.SetTile(cellPos, tile);
-                } 
-            }  
+                    if (CheckTileCost(cellGround))
+                    {
+                        Vector3Int cellPos = mapHero.WorldToCell(clickWorldPosition);
+                        mapHero.SetTile(heroPos, nullTile);
+                        heroPos = cellPos;
+                        mapHero.SetTile(cellPos, tile);
+                    }
+                }
+            }
         }
+
 
         //для тестов
         //if (Input.GetMouseButtonDown(1))
@@ -64,7 +73,7 @@ public class TileClicker : MonoBehaviour
         //    Vector3Int clickCellPosition = mapSurface.WorldToCell(clickWorldPosition);
         //    Vector3Int cellGround = CellClickToCellGround(clickCellPosition);
         //    Debug.Log(clickCellPosition);
-        //    Debug.Log(mapSurface.GetTile(cellGround));
+        //    Debug.Log(mapSurface.GetTile(cellGround).name);
         //}
     }
 
@@ -291,10 +300,9 @@ public class TileClicker : MonoBehaviour
                 return false;
             }
 
-            if (speed - cost >= 0)
+            if (speed - 0 >= 0)
             {
-                speed -= cost;
-                Debug.Log(speed);
+                speed -= 0;
                 return true;
             }
             return false;
@@ -315,18 +323,42 @@ public class TileClicker : MonoBehaviour
             switch (mapSurface.GetTile(pos).name)
             {
                 case "Tile_surface_27": //город 
-                    Town.enabled = true;
+                    uiEventManager.OpenTown();
                     CameraMove(false);
+                    protection = 3;
                     return false;
                 case "Tile_surface_2"://погост
-                    break;
+                    uiEventManager.OpenCemetery();
+                    protection = 3;
+                    CameraMove(false);
+                    return false;
                 case "Tile_surface_17"://затеряный храм
+                    uiEventManager.OpenBattleEvent("Храм");
+                    protection = 3;
                     break;
                 case "Tile_surface_28"://деревня 1 уровень
-                    break;
+                    uiEventManager.OpenBattleEvent("Деревня");
+                    protection = 3;
+                    CameraMove(false);
+                    return false;
                 case "Tile_surface_1"://пещера
                     break;
             }
+        }
+
+        if (protection == 0)
+        {
+            if (Random.Range(0, 100) < eventChance)
+            {
+                uiEventManager.OpenBattleEvent("Cлучайный бой");
+                protection = 3;
+                return false;
+            }
+        }
+
+        if (protection > 0)
+        {
+            protection -= 1;
         }
         
 

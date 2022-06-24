@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Equipment : MonoBehaviour
+public class Equipment
 {
     private Weapon hand;
     private Armor helmet;
@@ -10,12 +10,10 @@ public class Equipment : MonoBehaviour
     private Armor pants;
     private Armor torso;
     private Belt belt;
-    private Accessory oneRing;
-    private Accessory twoRing;
-    private Accessory gloves;
-    private Accessory amulet;
-
-    public Equipment() { }
+    private Item oneRing;
+    private Item twoRing;
+    private Item gloves;
+    private Item amulet;
 
     public Weapon Hand { get => hand; set => hand = value; }
     public Armor Helmet { get => helmet; set => helmet = value; }
@@ -23,14 +21,40 @@ public class Equipment : MonoBehaviour
     public Armor Pants { get => pants; set => pants = value; }
     public Armor Torso { get => torso; set => torso = value; }
     public Belt Belt { get => belt; set => belt = value; }
-    public Accessory OneRing { get => oneRing; set => oneRing = value; }
-    public Accessory TwoRing { get => twoRing; set => twoRing = value; }
-    public Accessory Gloves { get => gloves; set => gloves = value; }
-    public Accessory Amulet { get => amulet; set => amulet = value; }
+    public Item OneRing { get => oneRing; set => oneRing = value; }
+    public Item TwoRing { get => twoRing; set => twoRing = value; }
+    public Item Gloves { get => gloves; set => gloves = value; }
+    public Item Amulet { get => amulet; set => amulet = value; }
 
-    public void SetItem(Accessory item)
+    public void SetBase(Armor armor)
     {
-        switch (item.Type)
+        helmet = armor;
+        footwear = armor;
+        pants = armor;
+        torso = armor;
+    }
+
+    public void SetBase(Item item)
+    {
+        oneRing = item;
+        TwoRing = item;
+        gloves = item;
+        amulet = item;
+    }
+
+    public void SetBase(Weapon weapon)
+    {
+        hand = weapon;
+    }
+
+    public void SetBase(Belt item)
+    {
+        belt = item;
+    }
+
+    public void SetItem(Item item)
+    {
+        switch (item.type)
         {
             case "oneRing":
                 oneRing = item;
@@ -54,7 +78,8 @@ public class Equipment : MonoBehaviour
 
     public void SetItem(Armor item)
     {
-        switch(item.Type){
+        switch (item.type)
+        {
             case "helmet":
                 helmet = item;
                 break;
@@ -92,16 +117,16 @@ public class Equipment : MonoBehaviour
                 torso = new Armor();
                 break;
             case "oneRing":
-                oneRing = new Accessory();
+                oneRing = new Item();
                 break;
             case "twoRing":
-                twoRing = new Accessory();
+                twoRing = new Item();
                 break;
             case "gloves":
-                gloves = new Accessory();
+                gloves = new Item();
                 break;
             case "amulet":
-                amulet = new Accessory();
+                amulet = new Item();
                 break;
             case "weapon":
                 hand = new Weapon();
@@ -115,6 +140,6 @@ public class Equipment : MonoBehaviour
     //вывод общей брони
     public int GetAllArmor()
     {
-        return helmet.ArmorClass + footwear.ArmorClass + pants.ArmorClass + torso.ArmorClass;
+        return helmet.armorClass + footwear.armorClass + pants.armorClass + torso.armorClass;
     }
 }
